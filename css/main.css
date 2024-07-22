@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Sora", sans-serif;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+}
+
+
+header{
+    background-image: url(../img/slideshow_2.webp);
+    min-height: 100vh;
+    min-width: 100vw;  
+}
+
+.container{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(232 232 232)  ;
+    width: 100vw;
+}
+
+.logo{
+    padding: 10px 30px;
+    position: relative;
+    left: 50px;
+}
+
+.logo-img{
+    border-radius: 0;
+    height: 60px;
+    width: 14   0px;
+}
+
+/* navbar */
+.navbar__list{
+    display: flex;
+    font-size: 23px;
+    padding: 0 157px;
+}
+
+.navbar-item{
+    padding: 10px 30px;
+}
+.navbar__link{
+    text-decoration: none;
+}
+
+.action{
+    display: flex;
+    padding-top: 10px;
+    font-size: 22px;
+    position: relative;
+    right: 50px;
+}
+
+.action a{
+    color: rgb(36, 35, 35);
+}
+
+.action a:hover{
+    text-shadow: 1px 0 0 #fff;
+    color: rgb(69, 133, 133);
+    text-decoration: underline;
+}
+
+.action__cart>a>i{
+    padding-right: 7px;
+}
+
+.fa-cart-shopping{
+    padding-right: 8px;
+}
+
+.fa-bell{
+    padding-right: 8px;
+}
+
+.navbar-item a{
+    text-decoration: none;
+    color: rgb(91, 65, 65);
+}
+
+.navbar__link:hover {
+    text-shadow: 1px 0 0 #fff;
+    color: rgb(69, 133, 133);
+    text-decoration: underline;
+}
+
+
+/* rgb(232 232 232) background */
+
+/* ---------------main--------------- */
+.allitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
