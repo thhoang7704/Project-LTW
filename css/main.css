@@ -9,26 +9,25 @@ body{
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
 }
-
-
-header{
+.slider{
     background-image: url(../img/slideshow_2.webp);
     min-height: 100vh;
-    min-width: 100vw;  
+    min-width: 100vw;
+    margin-top: 82.4px;
 }
-
 .container{
     width: 100vw;
     margin: 0 auto;
 }
 
 .header-top{
+    top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 1;
-    background-color: rgb(232 232 232)  ;
+    background-color: rgba(198, 196, 196, 0.568)  ;
     width: 100vw;
 }
 
@@ -52,12 +51,66 @@ header{
 }
 
 .navbar-item{
+    
     padding: 10px 30px;
 }
 .navbar__link{
+    position: relative;
     text-decoration: none;
 }
+.navbar-item a{    
+    display: block;
+    text-decoration: none;
+    color: rgb(91, 65, 65);
+}
 
+.navbar__link:hover {
+    text-shadow: 1px 0 0 #fff;
+    color: rgb(69, 133, 133);
+    text-decoration: none;
+}
+.sub-navbar{
+    position: absolute;
+    background-color:rgba(198, 196, 196, 0.568);
+    padding: auto;
+    width: 150px;
+    height: 220px;
+    list-style: none;
+    visibility: hidden;
+    z-index: 1;
+    border-radius: 5%;
+    
+}
+.navbar-item:hover .sub-navbar{
+    visibility: visible;
+}
+.sub-navbar li{   
+    margin-bottom: 5px;
+}
+.sub-navbar a{  
+    margin-top: 20px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #333;  
+}
+.sub-navbar li:last-child a{
+    border: none;
+}
+.sub-navbar li:hover a{
+    border-bottom: 1px solid #acacac;
+}
+/* Thiết lập border cho item của header */
+.navbar-item .navbar__link::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #f00;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+ }
+ .navbar-item:hover .navbar__link::before{
+    width: 100%;
+ }   
 .action{
     display: flex;
     padding-top: 10px;
@@ -87,19 +140,6 @@ header{
 .fa-bell{
     padding-right: 8px;
 }
-
-.navbar-item a{
-    text-decoration: none;
-    color: rgb(91, 65, 65);
-}
-
-.navbar__link:hover {
-    text-shadow: 1px 0 0 #fff;
-    color: rgb(69, 133, 133);
-    text-decoration: underline;
-}
-
-
 /* rgb(232 232 232) background */
 
 /* ---------------main--------------- */
