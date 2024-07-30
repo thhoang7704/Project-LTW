@@ -95,6 +95,7 @@ body{
 .sub-navbar li:last-child a{
     border: none;
 }
+
 .sub-navbar li:hover a{
     border-bottom: 1px solid #acacac;
 }
@@ -126,7 +127,7 @@ body{
 .action a:hover{
     text-shadow: 1px 0 0 #fff;
     color: rgb(69, 133, 133);
-    text-decoration: underline;
+    text-decoration:  underline;
 }
 
 .action__cart>a>i{
@@ -151,4 +152,77 @@ body{
     font-size: 30px;
 }
 
+.layout{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
 
+.layout__item{
+    width: 90vw;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.each-item{
+    width: 300px;
+    height: 300px;
+    margin: 0 0 18px 26px;
+}
+
+.img{
+    width: 68%;
+    height: 250px;
+    display: flex;
+    position: relative;
+}
+
+.img-item{
+    width: 100%;
+    height: 117%;
+    left: 42px;
+    position: absolute;
+}
+
+.icon{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    left: 220px;
+}
+.icon>i{
+    font-size: 20px;
+}
+
+.fa-cart-shopping{
+    position: absolute;
+    bottom: 20px;
+}
+
+.fa-heart:hover{
+    color: #f00;
+}
+
+.fa-cart-shopping:hover{
+    color: #acacac;
+}
+
+.fa-heart{
+    position: absolute;
+    bottom: 45px;
+    left: 2px;
+}
+
+.name-item{
+    font-size: 25px;
+}
+
+.cost-item{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
