@@ -27,7 +27,7 @@ body{
     align-items: center;
     position: fixed;
     z-index: 1;
-    background-color: rgba(198, 196, 196, 0.568)  ;
+    background-color: rgba(101, 94, 94, 0.568)  ;
     width: 100vw;
 }
 
@@ -117,7 +117,7 @@ body{
     padding-top: 10px;
     font-size: 22px;
     position: relative;
-    right: 70px;
+    right: 100px;
 }
 
 .action a{
@@ -256,7 +256,8 @@ body{
 }
 
 .name-item{
-    font-size: 25px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .cost-item{
@@ -265,14 +266,30 @@ body{
     margin-top: 10px;
 }
 
+del{
+    font-weight:10px;
+}
 
-.moresee-btn{
+.sale{
+    color: #acacac;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.discount{
+    position: relative;
+    left: 100px;
+}
+
+
+/* .moresee-btn{
     text-decoration: none;
     border: 0;
     padding: 0;
     position: relative;
     left: 43%;
     top: 20px;
+    display: block;
 }
 
 .btn-more{
@@ -280,9 +297,10 @@ body{
     font-size: 25px;
     border-radius: 5px;
     border: 1px ;
+    display: block;
 }
 
 .btn-more:hover{
     color: #a54f4f;
     background-color: #acacac;
-}
+} */
