@@ -11,6 +11,7 @@ body{
 }
 /* slide - show */
 .slider{
+    
     min-height: 100vh;
     min-width: 100vw;
     margin-top: 82.4px;
@@ -118,8 +119,9 @@ body{
     font-size: 23px;
     padding: 0 120px;
     position: relative;
-    left: -62px;
+    left: -70px;
     height: 10.6vh;
+    font-family: "Asap", sans-serif;
 }
 
 .navbar-item{
@@ -132,7 +134,7 @@ body{
 .navbar-item a{    
     display: block;
     text-decoration: none;
-    color: rgb(80 58 58);
+    color: rgb(54 39 39);
 }
 
 .navbar__link:hover {
@@ -188,7 +190,7 @@ body{
     padding-top: 10px;
     font-size: 22px;
     position: relative;
-    right: 100px;
+    right: 168px;
 }
 
 .action a{
@@ -231,12 +233,14 @@ main{
     align-items: center;
     font-weight: bold;
     font-size: 30px;
+    font-family: "Asap", sans-serif;
 }
 
 .layout{
     width: 100vw;
     height: 1500px;
     position: relative;
+    font-family: "Asap", sans-serif;
 }
 
 .layout__item{
@@ -266,6 +270,7 @@ main{
     cursor: pointer;
 }
 .more {
+    font-family: "Asap", sans-serif;
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
