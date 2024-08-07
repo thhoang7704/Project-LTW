@@ -95,31 +95,34 @@ body{
     z-index: 1;
     background-color: rgba(101, 94, 94, 0.568)  ;
     width: 100vw;
-    height: 82.4px;
 }
 
 .logo{
     padding: 10px 30px;
-    position: relative; 
+    position: relative;
     left: 50px;
 }
 
 .logo-img{
     border-radius: 0;
-    height: 60px;
-    width: 14   0px;
+    position: relative;
+    top: 2px;
 }
 
 /* navbar */
 .navbar__list{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-size: 23px;
     padding: 0 157px;
+    position: relative;
+    left: 21%;
+    height: 10.6vh;
 }
 
 .navbar-item{
-    
-    padding: 10px 30px;
+    padding-left: 48px;
 }
 .navbar__link{
     position: relative;
