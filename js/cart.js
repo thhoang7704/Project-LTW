@@ -18,7 +18,7 @@ btn.forEach(function(button,index){
 })
 function addCart(productPrice,productImg,productName){
     var addtr = document.createElement("tr")
-    var trcontent = '<tr><td style="display: flex; align-items: center"><img src="'+productImg+'" alt="" />'+productName+'</td><td><p><span>'+productPrice+'</span></p></td><td><input type="number" value="1" min="1" /></td><td class="xoa-btn">Xóa</td></tr>'
+    var trcontent = '<tr><td style="display: flex; align-items: center; padding: 0px;"><img src="'+productImg+'" alt="" />'+productName+'</td><td><p><span>'+productPrice+'</span></p></td><td><input type="number" value="1" min="1" /></td><td class="xoa-btn">Xóa</td></tr>'
     addtr.innerHTML = trcontent
     var cartTable = document.querySelector("tbody")
     // console.log(cartTable)
