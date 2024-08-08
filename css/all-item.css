@@ -113,7 +113,7 @@ body{
     padding-top: 10px;
     font-size: 22px;
     position: relative;
-    right: 100px;
+    right: 168px;
 }
 
 .action a{
@@ -235,7 +235,7 @@ body{
     bottom: 20px;
 }
 
-.fa-heart:hover{
+.fa-plus:hover{
     color: rgb(238, 34, 34);
     cursor: pointer;
 }
@@ -245,7 +245,7 @@ body{
     cursor: pointer;
 }
 
-.fa-heart{
+.fa-plus{
     position: absolute;
     bottom: 45px;
     left: 2px;

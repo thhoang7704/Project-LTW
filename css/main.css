@@ -433,25 +433,44 @@ del{
 }
 
 
-/* .moresee-btn{
-    text-decoration: none;
-    border: 0;
-    padding: 0;
-    position: relative;
-    left: 43%;
-    top: 20px;
-    display: block;
-}
-
-.btn-more{
-    cursor: pointer;
-    font-size: 25px;
-    border-radius: 5px;
-    border: 1px ;
-    display: block;
-}
-
-.btn-more:hover{
-    color: #a54f4f;
+/* footer */
+footer{
+    height: 200px;
+    width: 100vw;
     background-color: #acacac;
-} */
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.email{
+    font-weight: bold;
+}
+
+.last-footer{
+    font-weight: bold;
+}
+
+@media screen  and (max-width: 1450px) {
+    footer{
+        position: relative;
+        bottom: -724px;
+    }
+}
+
+@media screen  and (max-width: 1086.8px) {
+    footer {
+        position: relative;
+        bottom: -1450px;
+        
+    }
+}
+
