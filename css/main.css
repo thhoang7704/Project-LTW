@@ -362,6 +362,22 @@ main{
     position: relative;
     left: 240px;
 }
+
+.icon-sale{
+    position: absolute;
+    background-color: rgb(246, 110, 110);
+    font-size: 15px;
+    top: 65px;
+    right: 0px;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: rgb(28, 63, 128);
+}
+
 .icon>i{
     font-size: 20px;
 }
