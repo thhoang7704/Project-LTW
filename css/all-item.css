@@ -190,7 +190,7 @@ body{
     padding-top: 10px;
     font-size: 22px;
     position: relative;
-    right: 168px;
+    right: 90px;
 }
 
 .action a{
@@ -246,6 +246,9 @@ body{
     border: none;
     cursor: pointer;
     color: #fff; /* Màu chữ trắng */
+    position: absolute;
+    right: 5px;
+    top: 17px;
 }
 
 .search-bar i {

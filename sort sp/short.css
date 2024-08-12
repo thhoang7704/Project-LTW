@@ -10,78 +10,7 @@ body{
     font-family: "Asap", sans-serif;
 }
 /* slide - show */
-.slider{
-    
-    min-height: 100vh;
-    min-width: 100vw;
-    margin-top: 82.4px;
-    overflow: hidden;
-    position: relative;
-}
-.list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    width: max-content;
-    transition: all 0.3s ease;
-}
-.list-images img {
-    min-width: 100vw;
-    height: 100%;
-    object-fit: cover;
-}
-.buttons {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-.buttons button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-}
-.dots {
-    position: absolute;
-    bottom: 10px;
-    color: #fff;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-.dots li {
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 20px;
-}
-.dots li.active {
-    width: 30px;
-}
-/* reponsive */
-@media screen  and (max-width: 768px) {
-    .slider {
-        height: 400px;
-    }
-    body {
-        height: 400px;
-    }
-}
+
 .container{
     width: 100vw;
     margin: 0 auto;
@@ -236,7 +165,7 @@ body{
     border: none;
     outline: none;
     padding: 10px;
-    font-size: 16px; 
+    font-size: 16px; /* Điều chỉnh kích thước font */
     color: black; 
     background-color: transparent;
 }
@@ -246,6 +175,9 @@ body{
     border: none;
     cursor: pointer;
     color: #fff; /* Màu chữ trắng */
+    position: absolute;
+    right: 5px;
+    top: 17px;
 }
 
 .search-bar i {
@@ -289,11 +221,6 @@ main{
     top: 105px;
 }
 
-.layout__item a{
-    text-decoration:none;
-    color: #333;
-}
-
 .each-item{
     width: 300px;
     height: 350px;
@@ -312,6 +239,11 @@ main{
     translate: -3px -10px;
     cursor: pointer;
     overflow: hidden;
+}
+
+.layout__item a{
+    text-decoration: none;
+    color: #333;
 }
 /* .more {
     font-family: "Asap", sans-serif;
@@ -383,6 +315,10 @@ main{
     display: block;
     height: 110%;
 }
+.each-item:hover .img-31{
+    display: block;
+    height: 110%;
+}
 .each-item:hover .img-33{
     display: block;
     height: 110%;
@@ -416,6 +352,22 @@ main{
     position: relative;
     left: 240px;
 }
+
+.icon-sale{
+    position: absolute;
+    background-color: rgb(246, 110, 110);
+    font-size: 15px;
+    top: 65px;
+    right: 0px;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: rgb(28, 63, 128);
+}
+
 .icon>i{
     font-size: 20px;
 }
@@ -493,27 +445,7 @@ footer{
     width: 100vw;
     background-color: #acacac;
     position: relative;
-    top: 10px;
-}
-
-.sale{
-    color: #acacac;
-    font-weight: lighter;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.each-item:hover .buy-sale{
-    position: relative;
-    bottom: 20px;
-    top: 4px;
-}
-.discount{
-    position: relative;
-    left: 5px;
-    bottom: 5px;
-    color: #333;
+    top: 150px;
 }
 
 .footer-container{
@@ -543,14 +475,20 @@ strong{
 @media screen  and (max-width: 1450px) {
     footer{
         position: relative;
-        bottom: -724px;
+        bottom: -594px;
+    }
+}
+@media screen  and (max-width: 1084.9px) {
+    footer{
+        position: relative;
+        top: 820px;
     }
 }
 
-@media screen  and (max-width: 1086.8px) {
+@media screen  and (max-width: 1447.8px) {
     footer {
         position: relative;
-        bottom: -1450px;
+        top: 400px;
         
     }
 }

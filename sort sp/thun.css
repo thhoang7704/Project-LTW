@@ -175,6 +175,9 @@ body{
     border: none;
     cursor: pointer;
     color: #fff; /* Màu chữ trắng */
+    position: absolute;
+    right: 5px;
+    top: 17px;
 }
 
 .search-bar i {
@@ -422,7 +425,7 @@ footer{
     width: 100vw;
     background-color: #acacac;
     position: relative;
-    top: 350px;
+    top: 450px;
 }
 
 .footer-container{

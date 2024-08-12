@@ -248,6 +248,9 @@ body{
     border: none;
     cursor: pointer;
     color: #fff; /* Màu chữ trắng */
+    position: absolute;
+    right: 5px;
+    top: 17px;
 }
 
 .search-bar i {
@@ -293,6 +296,8 @@ main{
     flex-wrap: wrap;
     top: 35px;
 }
+
+
 
 .each-item{
     width: 300px;
@@ -382,6 +387,7 @@ main{
 .each-item:hover .img-item{
     display: none;
 }
+
 
 .each-item:hover .buy{
     display: block;
