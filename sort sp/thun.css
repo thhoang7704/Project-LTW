@@ -253,7 +253,6 @@ main{
     right: 5%;
     display: flex;
     flex-wrap: wrap;
-    top: 35px;
     top: 75px;
 }
 
@@ -275,6 +274,11 @@ main{
     translate: -3px -10px;
     cursor: pointer;
     overflow: hidden;
+}
+
+.layout__item a{
+    text-decoration: none;
+    color: #333;
 }
 /* .more {
     font-family: "Asap", sans-serif;
@@ -343,6 +347,10 @@ main{
 }
 
 .each-item:hover .img-29{
+    display: block;
+    height: 110%;
+}
+.each-item:hover .img-31{
     display: block;
     height: 110%;
 }
@@ -452,7 +460,7 @@ footer{
     width: 100vw;
     background-color: #acacac;
     position: relative;
-    top: 80px;
+    top: 350px;
 }
 
 .footer-container{
@@ -482,14 +490,20 @@ strong{
 @media screen  and (max-width: 1450px) {
     footer{
         position: relative;
-        bottom: -724px;
+        bottom: -994px;
+    }
+}
+@media screen  and (max-width: 1084.9px) {
+    footer{
+        position: relative;
+        top: 1150px;
     }
 }
 
 @media screen  and (max-width: 1086.8px) {
     footer {
         position: relative;
-        bottom: -1450px;
+        bottom: -1720px;
         
     }
 }
