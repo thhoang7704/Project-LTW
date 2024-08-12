@@ -15,7 +15,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="../sort sp/short.css">
     <link rel="stylesheet" href="../css/reset.css" /> 
-    
+    <link rel="stylesheet" href="../css/cart.css">
    
     <title>Clean Coin</title>
   </head>
@@ -54,6 +54,10 @@
               </li>
             </ul>
           </nav>
+          <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm sản phẩm">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
           <div class="action">
             <div class="action__notify">
               <a href="">
@@ -61,7 +65,6 @@
               </a>
             </div>
             <div class="action__cart">
-              <a href="">
                 <i class="fa-solid fa-cart-shopping cart__head"></i>
               </a>
             </div>
@@ -89,8 +92,8 @@
                     </div>
                 </div>
                 <div class="name-item" align="center">SYMMETRY PANTS</div>
-                <div class="cost-item" align="center">690,000VND</div>
-                <a href="" class="buy">Mua ngay</a>
+                <div class="cost-item" align="center"><span>690.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.html" class="buy">Mua ngay</a>
             </div>
             <div class="each-item">
                 <div class="img">
@@ -102,8 +105,8 @@
                     </div>
                 </div>
                 <div class="name-item" align="center">ABYSS SS24 ECHINIDERM PANTS</div>
-                <div class="cost-item" align="center">690,000VND</div>
-                <a href="" class="buy">Mua ngay</a>
+                <div class="cost-item" align="center"><span>690.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.html" class="buy">Mua ngay</a>
             </div>
             <div class="each-item">
                 <div class="img">
@@ -115,8 +118,8 @@
                     </div>
                 </div>
                 <div class="name-item" align="center">SPLINTERED PANTS</div>
-                <div class="cost-item" align="center">690,000VND</div>
-                <a href="" class="buy">Mua ngay</a>
+                <div class="cost-item" align="center"><span>690.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.html" class="buy">Mua ngay</a>
             </div>
             <div class="each-item item1">
                 <div class="img">
@@ -128,8 +131,8 @@
                     </div>
                 </div>
                 <div class="name-item" align="center">TORNADO ROUTE PANTS</div>
-                <div class="cost-item" align="center">690,000VND</div>
-                <a href="" class="buy">Mua ngay</a>
+                <div class="cost-item" align="center"><span>690.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.html" class="buy">Mua ngay</a>
             </div>
             <div class="each-item">
                 <div class="img">
@@ -141,14 +144,37 @@
                     </div>
                 </div>
                 <div class="name-item" align="center">PLAID CASUAL PANTS</div>
-                <div class="cost-item" align="center">690,000VND</div>
-                <a href="" class="buy">Mua ngay</a>
+                <div class="cost-item" align="center"><span>690.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.html" class="buy">Mua ngay</a>
               </div>
         
       </div>
       
     </main>    
-   
+    <div class="cart">
+      <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
+      <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="../img/2.png" alt="" class="cart-img">
+          <div class="detail-box">
+            <div class="cart-product-title">STUFFED WOLF TEE</div>
+            <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
+            <input type="number" value="1" class="cart-quantity">
+          </div>
+          <i class="fa-solid fa-trash cart-remove"></i>
+        </div> -->
+      </div>  
+      <!-- total -->
+      <div class="total">
+        <div class="total-title">Tổng tiền:</div>
+        <div class="total-price"><span>0</span><sup>đ</sup></div>
+      </div>
+      <!-- button -->
+       <button type="button" class="btn-buy">Thanh toán</button>
+       <!-- close -->
+       <i class="fa-solid fa-x" id="close-cart"></i>  
+    </div>  
+    <script src="../js/cart.js"></script>
     <footer>
       <div class="footer-container">
 
@@ -160,7 +186,7 @@
         <div class="ms">
           <h1>MSSV</h1>
           <h3>2251040023</h3>
-          <h3>2251040023</h3>
+          <h3>2251150079</h3>
         </div>
         <div class="project">
           <h1 class="last-footer">Đề Tài:</h2>
@@ -168,6 +194,7 @@
         </div>
         <div class="contact">
           <h2><span class="email">Email:</span> 2251040023@ut.edu.vn</h2>
+          <h2><span class="email">Email:</span> 2251150079@ut.edu.vn</h2>
         </div>
       </div>
     </footer>
