@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Đặt chiều cao modal bằng với chiều cao viewport */
   overflow: auto; /* Thêm cuộn nếu nội dung quá dài */
   background-color: rgba(0, 0, 0, 0.5); /* Màu nền nửa trong suốt */
 }
@@ -14,13 +14,16 @@
 /* Modal Content */
 .modal-content {
   background-color: #fff; /* Màu nền trắng cho nội dung modal */
-  margin: 10% auto; /* Căn giữa modal theo chiều dọc và ngang */
+  margin: 5% auto; /* Căn giữa modal theo chiều dọc và ngang */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Điều chỉnh chiều rộng của modal */
   max-width: 500px; /* Đặt chiều rộng tối đa cho modal */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 8px 16px rgba(0, 0, 0, 0.15); /* Tạo hiệu ứng bóng đổ */
   border-radius: 10px; /* Bo tròn góc của modal */
+  position: relative;
+  top: 80px;
+  font-family: "Asap", sans-serif;
 }
 
 /* Close Button */
@@ -41,21 +44,28 @@
 /* Form styling */
 .form-nd {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
 }
 
+/* Label styling */
 .form-nd label {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Khoảng cách giữa label và ô input */
+  margin-top: 50px;
 }
 
+/* Input styling */
 .form-nd input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của form */
+  box-sizing: border-box; /* Đảm bảo padding và border được bao gồm trong chiều rộng */
+  margin-bottom: 10px; /* Khoảng cách giữa các ô input */
+  margin-top: 3px;
 }
 
+/* Button styling */
 .form-nd button {
   padding: 10px;
   background-color: #d74b4b;
@@ -64,6 +74,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của form */
 }
 
 .form-nd button:hover {
@@ -83,4 +94,11 @@
 
 .form-nd a:hover {
   text-decoration: underline;
+}
+
+.form-nd h2{
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
