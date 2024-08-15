@@ -97,6 +97,7 @@ body{
     z-index: 3;
     background-color: rgba(101, 94, 94, 0.568)  ;
     width: 100vw;
+    left: 0px;
 }
 
 .logo{
@@ -279,6 +280,7 @@ main{
     height: 1500px;
     position: relative;
     font-family: "Asap", sans-serif;
+    
 }
 
 .layout__item{
@@ -290,7 +292,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     top: 35px;
-    top: 75px;
+    top: 75px; 
 }
 
 
@@ -303,6 +305,7 @@ main{
     overflow: hidden;
     position: relative;
     top: 20px;
+
 }
 
 .each-item:hover{
@@ -572,3 +575,92 @@ strong{
     }
 }
 
+/* Modal Container */
+.modal {
+    display: none; /* Ẩn modal khi không được kích hoạt */
+    position: fixed; /* Định vị modal theo viewport */
+    z-index: 1000; /* Đảm bảo modal xuất hiện trên các phần tử khác */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Thêm cuộn nếu nội dung quá dài */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền nửa trong suốt */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff; /* Màu nền trắng cho nội dung modal */
+    margin: 10% auto; /* Căn giữa modal theo chiều dọc và ngang */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Điều chỉnh chiều rộng của modal */
+    max-width: 500px; /* Đặt chiều rộng tối đa cho modal */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Bo tròn góc của modal */
+  }
+  
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Form styling */
+  .form-nd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-nd label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-nd input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-nd button {
+    padding: 10px;
+    background-color: #d74b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .form-nd button:hover {
+    background-color: #ac3b3b;
+  }
+  
+  .form-nd p {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .form-nd a {
+    color: #d74b4b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .form-nd a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  

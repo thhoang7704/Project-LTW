@@ -99,6 +99,7 @@ body{
     z-index: 1;
     background-color: rgba(101, 94, 94, 0.568)  ;
     width: 100vw;
+    left: 0px;
 }
 
 .logo{
