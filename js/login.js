@@ -18,6 +18,7 @@ var showLogin = document.getElementById("showLogin");
 // Get the login button
 var loginButton = document.getElementById("loginButton");
 
+
 // When the user clicks the login icon, open the modal and show the login form
 loginIcon.onclick = function(event) {
     event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
@@ -58,6 +59,11 @@ loginButton.onclick = function(event) {
 
     // Xử lý đăng nhập ở đây
     // Ví dụ: Gửi dữ liệu form bằng AJAX hoặc thực hiện một hành động nào đó
+    var password = document.getElementById("password");
+    var username = document.getElementById("username");
 
-    console.log("Đăng nhập thành công!");
+    console.log(password.value);
+    console.log(username.value);
+
+    alert("Đăng nhập thành công!");
 }
