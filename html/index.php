@@ -138,7 +138,7 @@
         <!-- button prev and next -->
         <div class="buttons">
             <button id="prev">
-                << /button>
+                < </button>
                     <button id="next">></button>
         </div>
         <!-- dots -->
@@ -162,8 +162,8 @@
                             <img src="../img/2.png" alt="" class="img-item">
                             <img src="../img/i1-1.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">STUFFED WOLF TEE</div>
@@ -178,8 +178,8 @@
                             <img src="../img/i2.png" alt="" class="img-item">
                             <img src="../img/i2-2.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">OBSTREPEROUS VARSITY JACKET</div>
@@ -194,8 +194,8 @@
                             <img src="../img/i3.png" alt="" class="img-item">
                             <img src="../img/i3-3.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SYMMETRY PANTS</div>
@@ -210,8 +210,8 @@
                             <img src="../img/i4.png" alt="" class="img-item">
                             <img src="../img/i4-4.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">BACKPACK LEATHER 24</div>
@@ -226,8 +226,8 @@
                             <img src="../img/i5.png" alt="" class="img-item">
                             <img src="../img/i5-5.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">MASCOT HOCKEY JERSEY</div>
@@ -242,8 +242,8 @@
                             <img src="../img/i6.png" alt="" class="img-item">
                             <img src="../img/i6-6.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">WHITE ASTRAL SHIRT</div>
@@ -263,8 +263,8 @@
                             <img src="../img/i17.png" alt="" class="img-item">
                             <img src="../img/i17-17.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 ECHINIDERM PANTS</div>
@@ -279,8 +279,8 @@
                             <img src="../img/i8.png" alt="" class="img-item">
                             <img src="../img/i8-8.png " alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 INSECT AFFECTION TEE</div>
@@ -295,8 +295,8 @@
                             <img src="../img/i9.png" alt="" class="img-item">
                             <img src="../img/i9-9.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SPLINTERED PANTS</div>
@@ -311,8 +311,8 @@
                             <img src="../img/i10.png" alt="" class="img-item">
                             <img src="../img/i10-10.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">STRIPED SHIRT 24</div>
@@ -327,8 +327,8 @@
                             <img src="../img/i11.png" alt="" class="img-item">
                             <img src="../img/i11-11.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">BROKEN HEART TEE</div>
@@ -343,8 +343,8 @@
                             <img src="../img/i12.png" alt="" class="img-item">
                             <img src="../img/i12-12.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ESSENCE TEE</div>
@@ -359,8 +359,8 @@
                             <img src="../img/i13.png" alt="" class="img-item">
                             <img src="../img/i13-13.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">CERISE CRAVAT TEE</div>
@@ -375,8 +375,8 @@
                             <img src="../img/i14.png" alt="" class="img-item">
                             <img src="../img/i14-14.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">WASH JEANS SHORT</div>
@@ -391,8 +391,8 @@
                             <img src="../img/i15.png" alt="" class="img-item">
                             <img src="../img/i15-15.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">TORNADO ROUTE PANTS</div>
@@ -407,8 +407,8 @@
                             <img src="../img/i16.png" alt="" class="img-item">
                             <img src="../img/i16-16.png" alt="" class="img-hover">
                             <div class="icon">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <!-- <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-cart-shopping"></i> -->
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SCUFFERS LOVE POLO</div>

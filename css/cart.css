@@ -78,6 +78,9 @@
     font-weight: 500;
     cursor: pointer;
 }
+.btn-buy a {
+    text-decoration: none;
+}
 .btn-buy:hover{
     background-color: #f01621;
 }

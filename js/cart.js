@@ -2,7 +2,7 @@
 let cartIcon = document.querySelector('.fa-solid.fa-cart-shopping.cart__head')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
-const btn = document.querySelectorAll('.icon .fa-solid.fa-cart-shopping')
+const btn = document.querySelector('.add')
 // console.log(btn)
 // open cart
 cartIcon.onclick = () => {
@@ -26,19 +26,21 @@ function ready(){
     //remove items from cart
     // quantity changes
     //add to cart
-    btn.forEach(function(button,index){
-        button.addEventListener('click',function(event){
-            var btnItem = event.target
-            var preProduct = btnItem.parentElement
-            var ppProduct = preProduct.parentElement
-            var product = ppProduct.parentElement
-            var productImg = product.querySelector('.img-item').src
-            var productName = product.querySelector('.name-item').innerText
-            var productPrice = product.querySelector('.cost-item span').innerText
-            // console.log(productImg,productName,productPrice)
-            addCartClicked(productImg,productName,productPrice)
+    if (btn) {
+        btn.addEventListener('click', function(event) {
+          var btnItem = event.target;
+          var preProduct = btnItem.parentElement;
+          var ppProduct = preProduct.parentElement;
+          var product = ppProduct.parentElement;
+          var productImg = product.querySelector('.img').src;
+          var productName = product.querySelector('.name-item').innerText;
+          var productPrice = product.querySelector('.cost span').innerText;
+        //   console.log(productImg, productName, productPrice);
+          addCartClicked(productImg, productName, productPrice);
         })
-    })
+      } else {
+        console.error("Element with class '.add' not found!");
+      }
 }
 function removeCartItem() {
     var cartItem = document.querySelectorAll('.cart-content .cart-box')
