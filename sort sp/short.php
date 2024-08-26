@@ -52,7 +52,7 @@
                 <a href="" class="navbar__link">Liên Hệ</a>
               </li>
               <li class="navbar-item">
-                <a href="" class="navbar__link">Giới Thiệu</a>
+                <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
               </li>
             </ul>
           </nav>
