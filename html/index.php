@@ -26,23 +26,23 @@
         <header>
             <div class="header-top">
                 <div class="logo">
-                    <a href="../html/index.html">
+                    <a href="../html/index.php">
                         <img class="logo-img" src="../img/1.png" alt="/" style="width: 200px; height: 200px;">
                     </a>
                 </div>
                 <nav class="navbar">
                     <ul class="navbar__list">
                         <li class="navbar-item">
-                            <a href="../html/index.html" class="navbar__link">Trang Chủ</a>
+                            <a href="../html/index.php" class="navbar__link">Trang Chủ</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="all-item.html" class="navbar__link">Sản Phẩm</a>
+                            <a href="all-item.php" class="navbar__link">Sản Phẩm</a>
                             <ul class="sub-navbar">
-                                <li><a href="../sort sp/thun.html">Áo thun</a></li>
-                                <li><a href="../sort sp/somi.html">Áo sơ mi</a></li>
-                                <li><a href="../sort sp/short.html">Quần short</a></li>
-                                <li><a href="../sort sp/jeans.html">Quần jean</a></li>
-                                <li class="last__sub"><a href="../sort sp/non.html">Nón</a></li>
+                                <li><a href="../sort sp/thun.php">Áo thun</a></li>
+                                <li><a href="../sort sp/somi.php">Áo sơ mi</a></li>
+                                <li><a href="../sort sp/short.php">Quần short</a></li>
+                                <li><a href="../sort sp/jeans.php">Quần jean</a></li>
+                                <li class="last__sub"><a href="../sort sp/non.php">Nón</a></li>
                             </ul>
                         </li>
                         <li class="navbar-item">
@@ -155,7 +155,7 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/stuffed.html">
+                <a href="../sp/stuffed.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -168,10 +168,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">STUFFED WOLF TEE</div>
                         <div class="cost-item" style="text-align: center"><span>470.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/obs.html">
+                <a href="../sp/obs.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -187,7 +187,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/sym.html">
+                <a href="../sp/sym.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -200,10 +200,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">SYMMETRY PANTS</div>
                         <div class="cost-item" style="text-align: center"><span>690.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/backpack.html">
+                <a href="../sp/backpack.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -216,10 +216,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">BACKPACK LEATHER 24</div>
                         <div class="cost-item" style="text-align: center"><span>795.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/mascot.html">
+                <a href="../sp/mascot.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -232,10 +232,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">MASCOT HOCKEY JERSEY</div>
                         <div class="cost-item" style="text-align: center"><span>590.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/astral.html">
+                <a href="../sp/astral.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -253,10 +253,10 @@
                         <div class="icon-sale">
                             -25%
                         </div>
-                        <a href="../html/checkout.html" class="buy buy-sale">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy buy-sale">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/abypant.html">
+                <a href="../sp/abypant.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -269,10 +269,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 ECHINIDERM PANTS</div>
                         <div class="cost-item" style="text-align: center"><span>690.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/abytee.html">
+                <a href="../sp/abytee.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -285,10 +285,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 INSECT AFFECTION TEE</div>
                         <div class="cost-item" style="text-align: center"><span>200.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/splin.html">
+                <a href="../sp/splin.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -301,10 +301,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">SPLINTERED PANTS</div>
                         <div class="cost-item" style="text-align: center"><span>690.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/striped.html">
+                <a href="../sp/striped.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -317,10 +317,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">STRIPED SHIRT 24</div>
                         <div class="cost-item" style="text-align: center"><span>495.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/brokenheart.html">
+                <a href="../sp/brokenheart.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -333,10 +333,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">BROKEN HEART TEE</div>
                         <div class="cost-item" style="text-align: center"><span>450.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/essence.html">
+                <a href="../sp/essence.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -349,10 +349,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">ESSENCE TEE</div>
                         <div class="cost-item" style="text-align: center"><span>450.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/cerise.html">
+                <a href="../sp/cerise.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -365,10 +365,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">CERISE CRAVAT TEE</div>
                         <div class="cost-item" style="text-align: center"><span>450.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/wash.html">
+                <a href="../sp/wash.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -381,10 +381,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">WASH JEANS SHORT</div>
                         <div class="cost-item" style="text-align: center"><span>690.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/tornado.html">
+                <a href="../sp/tornado.php">
 
                     <div class="each-item item1">
                         <div class="img">
@@ -397,10 +397,10 @@
                         </div>
                         <div class="name-item" style="text-align: center">TORNADO ROUTE PANTS</div>
                         <div class="cost-item" style="text-align: center"><span>690.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/scuffer.html">
+                <a href="../sp/scuffer.php">
 
                     <div class="each-item">
                         <div class="img">
@@ -413,7 +413,7 @@
                         </div>
                         <div class="name-item" style="text-align: center">SCUFFERS LOVE POLO</div>
                         <div class="cost-item" style="text-align: center;"><span>450.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.html" class="buy">Mua ngay</a>
+                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
 
                     </div>
                 </a>
@@ -421,7 +421,7 @@
             </div>
 
     </main>
-    <a href="all-item.html" class="more">
+    <a href="all-item.php" class="more">
         <span> Xem thêm >
         </span>
     </a>

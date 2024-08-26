@@ -58,12 +58,15 @@ loginButton.onclick = function(event) {
     event.preventDefault(); // Ngăn chặn hành vi mặc định của form
 
     // Xử lý đăng nhập ở đây
-    // Ví dụ: Gửi dữ liệu form bằng AJAX hoặc thực hiện một hành động nào đó
-    var password = document.getElementById("password");
-    var username = document.getElementById("username");
+    var password = document.getElementById("password").value;
+    var username = document.getElementById("username").value;
 
-    console.log(password.value);
-    console.log(username.value);
+    console.log("Tên đăng nhập:", username);
+    console.log("Mật khẩu:", password);
+   
 
     alert("Đăng nhập thành công!");
+
+    // Đóng modal sau khi đăng nhập thành công
+    
 }

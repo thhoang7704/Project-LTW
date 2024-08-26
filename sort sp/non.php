@@ -13,14 +13,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <!-- Css -->
-    <link rel="stylesheet" href="../css/gioithieu.css" />
+    <link rel="stylesheet" href="../sort sp/non.css">
     <link rel="stylesheet" href="../css/reset.css" /> 
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/login.css">
+    
+   
     <title>Clean Coin</title>
   </head>
   <body>
-    
+    <div class="container">
     <header> 
         <div class="header-top">
           <div class="logo">
@@ -34,7 +36,7 @@
                 <a href="../html/index.php" class="navbar__link">Trang Chủ</a>
               </li>
               <li class="navbar-item">
-                <a href="all-item.php" class="navbar__link">Sản Phẩm</a>
+                <a href="../html/all-item.php" class="navbar__link">Sản Phẩm</a>
                 <ul class="sub-navbar">
                   <li><a href="../sort sp/thun.php" >Áo thun</a></li>
                   <li><a href="../sort sp/somi.php" >Áo sơ mi</a></li>
@@ -57,7 +59,7 @@
           <div class="search-bar">
             <input type="text" placeholder="Tìm kiếm sản phẩm">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div> 
+          </div>
           <div class="action">
             <div class="action__notify">
               <a href="">
@@ -69,13 +71,13 @@
               </a>
             </div>
             <div class="action__login">
-              <a href="../html/login.php">
+              <a href="#">
                 <i class="fa-regular fa-user"></i>
               </a>
             </div>
           </div>
         </div>
-      
+      </div>
     </header>
     <!-- Modal -->
     <div id="authModal" class="modal">
@@ -119,23 +121,119 @@
       </div>
   </div>
     <main>
-        <div class="container">
-            <h1>NHÓM 12</h1>
-            <h2>SHOP BÁN QUẦN ÁO LOCAL BRAND</h2>
-            <h3>Mô tả về Website</h3>
-            <span>Website làm về một web bán quần áo local brand thương hiệu dành cho giới trẻ hiện nay. Web bán áo thun, áo sơ mi, quân jeans, quần short, nón. Có các chức năng chính như:
-                <br>
-                Mua hàng <br>
-                Thêm vào giỏ hàng <br>
-                Đăng ký tài khoản <br>
-                Đăng nhập tài khoản <br>
-                Xem chi tiết các sản Phẩm <br>
-                Phân loại sản phẩm <br>
-                Và các chức năng cơ bản khác của một Website bán hàng
-            </span>
-        </div>
-    </main>
-   
+      <div class="allitem">TẤT CẢ SẢN PHẨM</div>
+      <div class="layout">
+        <div class="layout__item">
+          <a href="../sp/backpack.php">
+
+            <div class="each-item">
+                <div class="img">
+                    <img src="../img/i4.png" alt="" class="img-item">
+                    <img src="../img/i4-4.png" alt="" class="img-hover">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+                <div class="name-item" align="center">BACKPACK LEATHER 24</div>
+                <div class="cost-item" align="center"><span>795.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.php" class="buy">Mua ngay</a>
+            </div>
+          </a>
+          <a href="../sp/cap5.php">
+
+            <div class="each-item">
+                <div class="img">
+                    <img src="../img/i19.png" alt="" class="img-item">
+                    <img src="../img/i19-19.png" alt="" class="img-hover">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+                <div class="name-item" align="center">CAP 5</div>
+                <div class="cost-item" align="center"><span>490.000</span><sup>đ</sup></div>
+                <a href="../html/checkout.php" class="buy">Mua ngay</a>
+              </div>
+          </a>
+          <a href="../sp/snapback.php">
+
+            <div class="each-item">
+              <div class="img">
+                  <img src="../img/i26.png" alt="" class="img-item">
+                  <img src="../img/i26-26.png" alt="" class="img-hover">
+                  <div class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                      <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+              </div>
+              <div class="name-item" align="center">SNAPBACK CAP</div>
+              <div class="cost-item" align="center">332,000VND</div>
+              <a href="" class="buy">Mua ngay</a>
+            </div>
+          </a>
+          <a href="../sp/classic.php">
+
+            <div class="each-item">
+              <div class="img">
+                  <img src="../img/i27.png" alt="" class="img-item">
+                  <img src="../img/i27-27.png" alt="" class="img-hover">
+                  <div class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                      <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+              </div>
+              <div class="name-item" align="center">CLASSIC CAP</div>
+              <div class="cost-item" align="center">275,000VND</div>
+              <a href="" class="buy">Mua ngay</a>
+            </div>
+          </a>
+          <a href="../sp/hucap.php">
+
+            <div class="each-item">
+              <div class="img">
+                  <img src="../img/i32.png" alt="" class="img-item img-32">
+                  <img src="../img/i32-32.png" alt="" class="img-hover">
+                  <div class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                      <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+              </div>
+              <div class="name-item" align="center">HUG CAP</div>
+              <div class="cost-item" align="center">275,000VND</div>
+              <a href="" class="buy">Mua ngay</a>
+            </div>
+          </a>
+
+            
+        
+      </div>
+      
+    </main>    
+    <div class="cart">
+      <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
+      <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="../img/2.png" alt="" class="cart-img">
+          <div class="detail-box">
+            <div class="cart-product-title">STUFFED WOLF TEE</div>
+            <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
+            <input type="number" value="1" class="cart-quantity">
+          </div>
+          <i class="fa-solid fa-trash cart-remove"></i>
+        </div> -->
+      </div>  
+      <!-- total -->
+      <div class="total">
+        <div class="total-title">Tổng tiền:</div>
+        <div class="total-price"><span>0</span><sup>đ</sup></div>
+      </div>
+      <!-- button -->
+       <button type="button" class="btn-buy">Thanh toán</button>
+       <!-- close -->
+       <i class="fa-solid fa-x" id="close-cart"></i>  
+    </div>  
+    <script src="../js/cart.js"></script>
     <footer>
       <div class="footer-container">
 
