@@ -123,7 +123,7 @@
             <h1>NHÓM 12</h1>
             <h2>SHOP BÁN QUẦN ÁO LOCAL BRAND</h2>
             <h3>Mô tả về Website</h3>
-            <span>Website làm về một web bán quần áo local brand thương hiệu dành cho giới trẻ hiện nay. Web bán áo thun, áo sơ mi, quân jeans, quần short, nón. Có các chức năng chính như:
+            <span style="font-size: 25px;">Website làm về một web bán quần áo local brand thương hiệu dành cho giới trẻ hiện nay. Web bán áo thun, áo sơ mi, quân jeans, quần short, nón. Có các chức năng chính như:
                 <br>
                 Mua hàng <br>
                 Thêm vào giỏ hàng <br>

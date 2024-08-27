@@ -221,6 +221,7 @@ main{
 }
 
 .container h2{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,6 +230,9 @@ main{
     font-size: 20px;
 }
 
+.container span{
+    font-size: 30px;
+}
 
 
 
