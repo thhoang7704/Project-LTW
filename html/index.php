@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <!-- js -->
     <script src="../js/login.js"></script>
-    <title>Clean Coin</title>
+    <title>TH Fashion</title>
 </head>
 
 <body>
@@ -93,7 +93,7 @@
                     <label for="username">Tên đăng nhập:</label>
                     <input type="text" id="username" name="username" required placeholder="Tên đăng nhập">
                     <label for="password">Mật khẩu:</label>
-                    <input type="password" id="password" name="password" required placeholder="mật khẩu">
+                    <input type="password" id="password" name="password" required placeholder="Mật khẩu">
                     <button type="submit" id="loginButton">Đăng Nhập</button>
                 </form>
                 <p>Bạn chưa có tài khoản? <a href="#" id="showRegister">Đăng ký ngay</a></p>
