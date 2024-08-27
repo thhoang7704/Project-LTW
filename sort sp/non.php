@@ -27,7 +27,7 @@
             <div class="header-top">
                 <div class="logo">
                     <a href="../html/index.php">
-                        <img class="logo-img" src="../img/1.png" alt="" / style="width: 200px; height: 200px;">
+                        <img class="logo-img" src="../img/1.png" alt=""  style="width: 200px; height: 200px;">
                     </a>
                 </div>
                 <nav class="navbar">

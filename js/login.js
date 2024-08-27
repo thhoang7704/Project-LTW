@@ -65,8 +65,6 @@ loginButton.onclick = function(event) {
     console.log("Mật khẩu:", password);
    
 
-    alert("Đăng nhập thành công!");
-
     // Đóng modal sau khi đăng nhập thành công
     
 }
