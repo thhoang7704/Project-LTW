@@ -204,7 +204,7 @@
         <div class="layout">
             <div class="layout__item">
 
-                <a href="../sp/cerise.php">
+                <a href="../sp/cerise.php?idSP=SM5">
 
                     <div class="each-item">
                         <div class="img">

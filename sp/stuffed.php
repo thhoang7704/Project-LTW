@@ -1,3 +1,36 @@
+<?php
+require_once "../html/connectdb.php";
+
+// Tạo kết nối
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+// Lấy ID sản phẩm từ URL
+$idSP = isset($_GET['idSP']) ? intval($_GET['idSP']) : 0;
+
+// Truy vấn cơ sở dữ liệu để lấy thông tin sản phẩm
+$sql = "SELECT * FROM sanpham WHERE idSP = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $idSP);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $product = $result->fetch_assoc();
+} else {
+    echo "Không tìm thấy sản phẩm.";
+    exit();
+}
+
+// Đóng kết nối
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -22,6 +55,7 @@
 </head>
 
 <body>
+  
   <div class="container">
     <header>
       <div class="header-top">
@@ -147,7 +181,7 @@
       <div class="item-sidebar">
         <div class="detail-item-sidebar">
           <div class="name-item">STUFFED WOLF TEE</div>
-          <div class="masp">SKU: HBHT0001</div>
+          <div class="masp">SKU: <?php echo htmlspecialchars($product["idSP"]); // Mã sản phẩm ?></div>
           <div class="cost"><span>470.000</span><sup>đ</sup></div>
           <div class="color">
             Màu sắc
@@ -204,7 +238,7 @@
     <div class="layout">
       <div class="layout__item">
 
-        <a href="../sp/lamp.php">
+        <a href="../sp/lamp.php?idSP=T8">
           <div class="each-item">
             <div class="img">
               <img src="../img/i31.png" alt="" class="img-item">

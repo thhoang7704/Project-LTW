@@ -125,7 +125,7 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/stuffed.php">
+                <a href="../sp/stuffed.php?idSP=T1">
 
                     <div class="each-item">
                         <div class="img">
@@ -141,7 +141,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/abytee.php">
+                <a href="../sp/abytee.php?idSP=T2">
 
                     <div class="each-item">
                         <div class="img">
@@ -157,7 +157,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/brokenheart.php">
+                <a href="../sp/brokenheart.php?idSP=T3">
 
                     <div class="each-item">
                         <div class="img">
@@ -173,7 +173,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/essence.php">
+                <a href="../sp/essence.php?idSP=T4">
 
                     <div class="each-item">
                         <div class="img">
@@ -189,7 +189,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/basic.php">
+                <a href="../sp/basic.php?idSP=T5">
 
                     <div class="each-item">
                         <div class="img">
@@ -205,7 +205,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/angle.php">
+                <a href="../sp/angle.php?idSP=T6">
 
                     <div class="each-item">
                         <div class="img">
@@ -221,7 +221,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/lod.php">
+                <a href="../sp/lod.php?idSP=T7">
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/i30.png" alt="" class="img-item">
@@ -237,7 +237,7 @@
                     </div>
 
                 </a>
-                <a href="../sp/lamp.php">
+                <a href="../sp/lamp.php?idSP=T8">
 
                     <div class="each-item">
                         <div class="img">
@@ -253,7 +253,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/abyss.php">
+                <a href="../sp/abyss.php?idSP=T8">
 
                     <div class="each-item">
                         <div class="img">

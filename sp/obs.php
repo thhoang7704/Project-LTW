@@ -148,7 +148,7 @@
                 <div class="detail-item-sidebar">
                     <div class="name-item">OBSTREPEROUS VARSITY JACKET</div>
                     <div class="masp">SKU: HBHT0001</div>
-                    <div class="cost"><span>900.000</span><sup>đ</sup></div>
+                    <div class="cost"><span>1.900.000</span><sup>đ</sup></div>
                     <div class="color">
                         Màu sắc
                         <div class="color-item"></div>
@@ -204,7 +204,7 @@
         <div class="layout">
             <div class="layout__item">
 
-                <a href="../sp/lamp.php">
+                <a href="../sp/lamp.php?idSP=T8">
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/i31.png" alt="" class="img-item">

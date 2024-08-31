@@ -203,7 +203,7 @@
         <div class="layout">
             <div class="layout__item">
 
-                <a href="../sp/lamp.php">
+                <a href="../sp/lamp.php?idSP=T8">
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/i31.png" alt="" class="img-item">

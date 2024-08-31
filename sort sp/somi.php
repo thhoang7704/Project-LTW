@@ -126,7 +126,7 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/obs.php">
+                <a href="../sp/obs.php?idSP=SM1">
 
                     <div class="each-item">
                         <div class="img">
@@ -142,7 +142,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/mascot.php">
+                <a href="../sp/mascot.php?idSP=SM2">
 
                     <div class="each-item">
                         <div class="img">
@@ -158,7 +158,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/astral.php">
+                <a href="../sp/astral.php?idSP=SM3">
 
                     <div class="each-item">
                         <div class="img">
@@ -179,7 +179,7 @@
                         <a href="" class="buy buy-sale">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/striped.php">
+                <a href="../sp/striped.php?idSP=SM4">
 
                     <div class="each-item">
                         <div class="img">
@@ -195,7 +195,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/cerise.php">
+                <a href="../sp/cerise.php?idSP=SM5">
 
                     <div class="each-item">
                         <div class="img">
@@ -211,7 +211,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/scuffer.php">
+                <a href="../sp/scuffer.php?idSP=SM6">
 
                     <div class="each-item">
                         <div class="img">
@@ -227,7 +227,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/tracer.php">
+                <a href="../sp/tracer.php?idSP=SM7">
 
                     <div class="each-item">
                         <div class="img">
