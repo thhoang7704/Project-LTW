@@ -122,20 +122,129 @@
   </div>
     <main>
         <div class="container">
+          <style>
+     /* Container cho hiệu ứng hình tròn */
+/* Container cho hiệu ứng */
+.marquee-container {
+    width: 100%; /* Chiều rộng của container */
+    overflow: hidden; /* Ẩn phần text bị tràn */
+    white-space: nowrap; /* Giữ nguyên dòng chữ không ngắt dòng */
+    position: relative; /* Để có thể sử dụng position: absolute trong marquee-text */
+    background-color: #767b3f;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%; /* Bắt đầu ngoài khung nhìn */
+    animation: marquee 10s linear infinite; /* Thời gian chạy và hiệu ứng liên tục */
+    
+    
+}
+
+.marquee-text span {
+    display: inline-block;
+    padding-right: 50px; /* Khoảng cách giữa các đoạn text */
+    font-size: 40px;
+    color: #96ee1c;
+    text-shadow: 0 0 100px #96ee1c;
+}
+span > ul {
+    list-style:circle ; /* Bỏ dấu chấm tròn mặc định */
+    padding-left: 0; /* Bỏ khoảng cách bên trái */
+}
+
+span ul li {
+    position: relative;
+    padding-left: 25px; /* Khoảng cách bên trái cho nội dung */
+    color: black;
+}
+
+span ul li::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 33%;
+    width: 7px; /* Đường kính dấu chấm tròn */
+    height: 7px; /* Đường kính dấu chấm tròn */
+    background-color: black; /* Màu sắc của dấu chấm tròn */
+    border-radius: 50%; /* Tạo hình tròn */
+    transform:translateY(-50%);
+    color: black;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0); /* Bắt đầu từ vị trí ban đầu */
+    }
+    100% {
+        transform: translateX(-100%); /* Dịch chuyển hết ra khỏi khung nhìn */
+    }
+}
+.direction{
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.direction-info{
+  position: relative;
+  width: 50vw;
+  left: 100px;
+}
+
+.direction-img{
+  position: relative;
+  left: 300px;
+  
+}
+
+img{
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+span ul li strong{
+  font-weight: bold;
+}
+
+          </style>
             <h1>NHÓM 12</h1>
-            <h2>SHOP BÁN QUẦN ÁO LOCAL BRAND</h2>
-            <h3>Mô tả về Website</h3>
-            <span style="font-size: 25px;">Website làm về một web bán quần áo local brand thương hiệu dành cho giới trẻ hiện nay. Web bán áo thun, áo sơ mi, quân jeans, quần short, nón. Có các chức năng chính như:
+             <br>
+            <div class="marquee-container">
+              <div class="marquee-text">
+                  <span>Chào mừng bạn đến với shop Local Brand Dành Cho Giới Trẻ</span>
+                  
+              </div>
+            </div>
+
+
+            <span style="font-size: 25px;">
+              <span class="direction">
+                <span class="direction-info">
+                Website này là điểm đến lý tưởng cho các tín đồ thời trang yêu thích phong cách local brand – xu hướng đang làm mưa làm gió trong cộng đồng giới trẻ hiện nay. 
+                Với sứ mệnh mang đến những bộ trang phục chất lượng, độc đáo, và mang đậm dấu ấn cá nhân, website cung cấp một loạt sản phẩm đa dạng từ áo thun, áo sơ mi, quần jeans, quần short đến nón thời trang. <br>  <br>
+                
+                </span>
+                <span class="direction-img">
+                  <img src="../img/ONLINESHOPPING.jpg" alt="">
+                </span>
+              </span>
+             
                 <br>
-                Mua hàng <br>
-                Thêm vào giỏ hàng <br>
-                Đăng ký tài khoản <br>
-                Đăng nhập tài khoản <br>
-                Xem chi tiết các sản Phẩm <br>
-                Phân loại sản phẩm <br>
-                Và các chức năng cơ bản khác của một Website bán hàng
+                <ul>
+                Các tính năng nổi bật:
+                  <li><strong>Trải nghiệm mua sắm dễ dàng:</strong> Giao diện website thân thiện và dễ sử dụng, cho phép bạn nhanh chóng chọn lựa và mua sắm các món đồ yêu thích chỉ với vài thao tác đơn giản.</li>
+                  <li><strong>Thêm vào giỏ hàng:</strong> Không cần vội vàng quyết định, bạn có thể thêm các sản phẩm vào giỏ hàng và xem lại khi đã sẵn sàng mua.</li>
+                  <li><strong>Tạo tài khoản cá nhân:</strong> Đăng ký tài khoản để dễ dàng quản lý đơn hàng, theo dõi lịch sử mua sắm và nhận thông tin khuyến mãi mới nhất.</li>
+                  <li><strong>Đăng nhập nhanh chóng:</strong> Đăng nhập vào tài khoản của bạn để truy cập nhanh vào các tính năng cá nhân hóa, từ danh sách yêu thích đến quản lý thông tin thanh toán.</li>
+                  <li><strong>Chi tiết sản phẩm rõ ràng:</strong> Mỗi sản phẩm đều được trình bày chi tiết với hình ảnh chân thực, mô tả chất liệu, kích thước, và các tùy chọn màu sắc, giúp bạn dễ dàng đưa ra quyết định mua sắm đúng đắn.</li>
+                  <li><strong>Phân loại sản phẩm linh hoạt:</strong> Duyệt qua hàng trăm sản phẩm theo danh mục như áo, quần, nón, hoặc theo các bộ sưu tập đặc biệt để nhanh chóng tìm thấy những món đồ phù hợp với phong cách của bạn.</li>
+                  <li><strong>Các tính năng hữu ích khác:</strong> Bao gồm thanh tìm kiếm thông minh, hệ thống lọc sản phẩm nâng cao, quy trình thanh toán bảo mật, và dịch vụ chăm sóc khách hàng tận tâm.</li>
+                
+                </ul> 
             </span>
-        </div>
+        </>
     </main>
    
     <footer>

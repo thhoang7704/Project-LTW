@@ -1,18 +1,18 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 62.5%;
     font-family: "Asap", sans-serif;
 }
-body{
+
+body {
     font-size: 1.6rem;
     font-family: "Asap", sans-serif;
 }
 
-
-
-.header-top{
+.header-top {
     height: 82px;
     top: 0px;
     display: flex;
@@ -20,25 +20,25 @@ body{
     align-items: center;
     position: fixed;
     z-index: 1;
-    background-color: rgba(101, 94, 94, 0.568)  ;
+    background-color: rgba(101, 94, 94, 0.568);
     width: 100vw;
     left: 0px;
 }
 
-.logo{
+.logo {
     padding: 10px 13px;
     position: relative;
     left: 50px;
 }
 
-.logo-img{
+.logo-img {
     border-radius: 0;
     position: relative;
     top: 2px;
 }
 
 /* navbar */
-.navbar__list{
+.navbar__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -50,14 +50,16 @@ body{
     font-family: "Asap", sans-serif;
 }
 
-.navbar-item{
+.navbar-item {
     padding-left: 48px;
 }
-.navbar__link{
+
+.navbar__link {
     position: relative;
     text-decoration: none;
 }
-.navbar-item a{    
+
+.navbar-item a {
     display: block;
     text-decoration: none;
     color: rgb(54 39 39);
@@ -68,9 +70,10 @@ body{
     color: rgb(69, 133, 133);
     text-decoration: none;
 }
-.sub-navbar{
+
+.sub-navbar {
     position: absolute;
-    background-color:rgba(198, 196, 196, 0.568);
+    background-color: rgba(198, 196, 196, 0.568);
     padding: auto;
     width: 150px;
     height: 220px;
@@ -78,28 +81,32 @@ body{
     visibility: hidden;
     z-index: 1;
     border-radius: 5%;
-    
 }
-.navbar-item:hover .sub-navbar{
+
+.navbar-item:hover .sub-navbar {
     visibility: visible;
 }
-.sub-navbar li{   
+
+.sub-navbar li {
     margin-bottom: 5px;
 }
-.sub-navbar a{  
+
+.sub-navbar a {
     margin-top: 20px;
     padding: 0px 10px;
-    border-bottom: 1px solid #333;  
+    border-bottom: 1px solid #333;
 }
-.sub-navbar li:last-child a{
+
+.sub-navbar li:last-child a {
     border: none;
 }
 
-.sub-navbar li:hover a{
+.sub-navbar li:hover a {
     border-bottom: 1px solid #acacac;
 }
+
 /* Thiết lập border cho item của header */
-.navbar-item .navbar__link::before{
+.navbar-item .navbar__link::before {
     content: "";
     height: 2px;
     width: 0px;
@@ -107,11 +114,13 @@ body{
     position: absolute;
     bottom: 0px;
     transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
- }
- .navbar-item:hover .navbar__link::before{
+}
+
+.navbar-item:hover .navbar__link::before {
     width: 100%;
- }   
-.action{
+}
+
+.action {
     display: flex;
     padding-top: 10px;
     font-size: 22px;
@@ -119,43 +128,44 @@ body{
     right: 90px;
 }
 
-.action a{
+.action a {
     color: rgb(36, 35, 35);
 }
 
-.action a:hover{
+.action a:hover {
     text-shadow: 1px 0 0 #fff;
     color: rgb(69, 133, 133);
-    text-decoration:  underline;
+    text-decoration: underline;
 }
 
-.action__cart>a>i{
+.action__cart>a>i {
     padding-right: 7px;
 }
 
-.cart__head{
+.cart__head {
     position: relative;
     top: 10px;
     left: 50px;
 }
 
-.fa-cart-shopping{
+.fa-cart-shopping {
     padding-right: 8px;
 }
 
-.fa-bell{
+.fa-bell {
     padding-right: 8px;
 }
+
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: white; 
+    background-color: white;
     border-radius: 50px;
     padding: 5px 10px; /* Giữ khoảng cách với các phần tử khác */
     position: relative; /* Để định vị icon tìm kiếm */
     margin-right: 90px;
     width: 200px;
-}   
+}
 
 .search-bar input {
     flex: 1;
@@ -163,7 +173,7 @@ body{
     outline: none;
     padding: 10px;
     font-size: 16px; /* Điều chỉnh kích thước font */
-    color: black; /* Màu chữ trắng */
+    color: black; /* Màu chữ */
     background-color: transparent;
 }
 
@@ -171,20 +181,18 @@ body{
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #fff; /* Màu chữ trắng */
+    color: #fff; /* Màu chữ */
     position: absolute;
     right: 5px;
     top: 17px;
 }
 
-.fa-cart-shopping{
+.fa-cart-shopping {
     position: absolute;
     bottom: 20px;
 }
 
-
-
-.fa-cart-shopping:hover{
+.fa-cart-shopping:hover {
     color: #acacac;
     cursor: pointer;
 }
@@ -194,34 +202,31 @@ body{
     right: 10px; /* Đặt icon tìm kiếm bên phải */
     color: black;
 }
-/* rgb(232 232 232) background */
 
 /* ---------------main--------------- */
-main{
+main {
     height: auto;
 }
 
-.container{
+.container {
     height: 1000px;
     width: 100vw;
     margin: 0 auto;
     position: relative;
     top: 82px;
-    
 }
 
-.container h1{
+.container h1 {
     font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 4px;
-    color:#f00;
+    color: #f00;
 }
 
-.container h2{
-    
+.container h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,15 +235,18 @@ main{
     font-size: 20px;
 }
 
-.container span{
-    font-size: 30px;
-}
-
-
-
+/* Container cho hiệu ứng hình tròn */
+@keyframes marquee {
+    from {
+        transform: translateX(0); /* Bắt đầu từ vị trí ban đầu */
+    }
+    to {
+        transform: translateX(-100%); /* Dịch chuyển hết ra khỏi khung nhìn */
+    }
+}   
 
 /* footer */
-footer{
+footer {
     height: 200px;
     width: 100vw;
     background-color: #acacac;
@@ -246,7 +254,7 @@ footer{
     bottom: 0;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -255,33 +263,32 @@ footer{
     font-family: "Asap", sans-serif;
 }
 
-strong{
+strong {
     font-weight: bold;
 }
 
-.email{
+.email {
     font-weight: bold;
 }
 
-.ms>h1{
-    font-weight: bold;
-}
-.last-footer{
+.ms>h1 {
     font-weight: bold;
 }
 
-@media screen  and (max-width: 1450px) {
-    footer{
+.last-footer {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1450px) {
+    footer {
         position: relative;
         bottom: -724px;
     }
 }
 
-@media screen  and (max-width: 1086.8px) {
+@media screen and (max-width: 1086.8px) {
     footer {
         position: relative;
         bottom: -1450px;
-        
     }
 }
-
