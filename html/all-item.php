@@ -59,9 +59,11 @@
           </ul>
         </nav>
         <div class="search-bar">
-          <input type="text" placeholder="Tìm kiếm sản phẩm">
-          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+                        <form action="search.php" method="get">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
+                            <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
         <div class="action">
           <div class="action__notify">
             <a href="">

@@ -57,7 +57,7 @@
                     </ul>
                 </nav>
                 <!-- SEARCH -->
-                    <div class="search-bar">
+                <div class="search-bar">
                         <form action="search.php" method="get">
                             <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
                             <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
