@@ -218,7 +218,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/lor.php">
+                <a href="../sp/lor.php?idSP=QS5">
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/i33.png" alt="" class="img-item">
@@ -233,7 +233,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/classic.php">
+                <a href="../sp/classic.php?idSP=N4">
 
                     <div class="each-item">
                         <div class="img">

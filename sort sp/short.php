@@ -125,7 +125,7 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/wash.php">
+                <a href="../sp/wash.php?idSP=QS1">
 
                     <div class="each-item">
                         <div class="img">
@@ -141,7 +141,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/boxer.php">
+                <a href="../sp/boxer.php?idSP=QS2">
 
                     <div class="each-item">
                         <div class="img">
@@ -157,7 +157,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/boxer2.php">
+                <a href="../sp/boxer2.php?idSP=QS3">
 
                     <div class="each-item">
                         <div class="img">
@@ -173,7 +173,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/reflect.php">
+                <a href="../sp/reflect.php?idSP=QS4">
 
                     <div class="each-item">
                         <div class="img">
@@ -189,7 +189,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/lor.php">
+                <a href="../sp/lor.php?idSP=QS5">
 
                     <div class="each-item">
                         <div class="img">
@@ -202,6 +202,22 @@
                         </div>
                         <div class="name-item" align="center">LORRYLOAD CARGO SHORT</div>
                         <div class="cost-item" align="center">270,000VND</div>
+                        <a href="" class="buy">Mua ngay</a>
+                    </div>
+                </a>
+                <a href="../sp/sheen.php?idSP=QS6">
+
+                    <div class="each-item">
+                        <div class="img">
+                            <img src="../img/i25.png" alt="" class="img-item">
+                            <img src="../img/i25-25.png" alt="" class="img-hover img-33">
+                            <div class="icon">
+                                <!-- <i class="fa-solid fa-plus"></i>
+                      <i class="fa-solid fa-cart-shopping"></i> -->
+                            </div>
+                        </div>
+                        <div class="name-item" align="center">SHEENYBEL SHORT</div>
+                        <div class="cost-item" align="center">680,000VND</div>
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>

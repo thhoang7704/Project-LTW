@@ -219,7 +219,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/striped.php">
+                <a href="../sp/boxer2.php?idSP=QS3">
 
                     <div class="each-item">
                         <div class="img">
@@ -235,7 +235,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/classic.php">
+                <a href="../sp/classic.php?idSP=N4">
 
                     <div class="each-item">
                         <div class="img">

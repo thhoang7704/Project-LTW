@@ -125,7 +125,7 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/backpack.php">
+                <a href="../sp/backpack.php?idSP=N1">
 
                     <div class="each-item">
                         <div class="img">
@@ -141,7 +141,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/cap5.php">
+                <a href="../sp/cap5.php?idSP=N2">
 
                     <div class="each-item">
                         <div class="img">
@@ -157,7 +157,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/snapback.php">
+                <a href="../sp/snapback.php?idSP=N3">
 
                     <div class="each-item">
                         <div class="img">
@@ -173,7 +173,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/classic.php">
+                <a href="../sp/classic.php?idSP=N4">
 
                     <div class="each-item">
                         <div class="img">
@@ -189,7 +189,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/hucap.php">
+                <a href="../sp/hucap.php?idSP=N5">
 
                     <div class="each-item">
                         <div class="img">

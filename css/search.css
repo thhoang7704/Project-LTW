@@ -504,7 +504,8 @@ footer{
     width: 100vw;
     background-color: #acacac;
     position: relative;
-    bottom: 0;
+    bottom: 1000px;
+    top: 100px;
 }
 
 .footer-container{

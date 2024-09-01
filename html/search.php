@@ -230,7 +230,7 @@
         <i class="fa-solid fa-x" id="close-cart"></i>
     </div>
     <script src="../js/cart.js"></script>
-    <footer>
+    <footer style="top: 1000px;">
         <div class="footer-container">
 
             <div class="information">

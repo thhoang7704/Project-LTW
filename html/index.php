@@ -192,7 +192,7 @@
                         <a href="" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/sym.php">
+                <a href="../sp/sym.php?idSP=QJ1">
 
                     <div class="each-item">
                         <div class="img">
@@ -208,7 +208,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/backpack.php">
+                <a href="../sp/backpack.php?idSP=N1">
 
                     <div class="each-item">
                         <div class="img">
@@ -261,7 +261,7 @@
                         <a href="../html/checkout.php" class="buy buy-sale">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/abypant.php">
+                <a href="../sp/abypant.php?idSP=QJ2">
 
                     <div class="each-item">
                         <div class="img">
@@ -293,7 +293,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/splin.php">
+                <a href="../sp/splin.php?idSP=QJ3">
 
                     <div class="each-item">
                         <div class="img">
@@ -373,7 +373,7 @@
                         <a href="../html/checkout.php" class="buy">Mua ngay</a>
                     </div>
                 </a>
-                <a href="../sp/wash.php">
+                <a href="../sp/wash.php?idSP=QS1">
 
                     <div class="each-item">
                         <div class="img">
