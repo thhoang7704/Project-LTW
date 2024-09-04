@@ -47,7 +47,62 @@
                 <a href="" class="navbar__link">Bài Viết</a>
               </li>
               <li class="navbar-item">
-                <a href="" class="navbar__link">Liên Hệ</a>
+              <style>
+                            .contact-overlay {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
+                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                            }
+
+                            .contact-modal {
+                                display: none;
+                                position: fixed; 
+                                top: 0;
+                                right: 0;
+                                height: 100%;
+                                width: 30%;
+                                background-color: white;
+                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                z-index: 999; /* Trên overlay */
+                                overflow-y: auto;
+                            }
+
+                            .contact-modal-content {
+                                padding: 20px;
+                            }
+
+                            .contact-close {
+                                color: #aaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+
+                            .contact-close:hover,
+                            .contact-close:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+
+                        </style>
+                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+
+                        <div id="contactOverlay" class="contact-overlay"></div>
+
+                        <div id="contactModal" class="contact-modal">
+                            <div class="contact-modal-content">
+                                <span class="contact-close">&times;</span>
+                                <h2>Thông Tin Liên Hệ</h2>
+                                <p>Đây là nội dung bên trong modal liên hệ.</p>
+                            </div>
+                        </div>
+                        <script src="../js/contact.js"></script>
               </li>
               <li class="navbar-item">
                 <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
@@ -126,11 +181,11 @@
      /* Container cho hiệu ứng hình tròn */
 /* Container cho hiệu ứng */
 .marquee-container {
-    width: 100%; /* Chiều rộng của container */
+    width: 100vw; /* Chiều rộng của container */
     overflow: hidden; /* Ẩn phần text bị tràn */
     white-space: nowrap; /* Giữ nguyên dòng chữ không ngắt dòng */
     position: relative; /* Để có thể sử dụng position: absolute trong marquee-text */
-    background-color: #767b3f;
+    background-color: #1874CD;
 }
 
 .marquee-text {
@@ -190,6 +245,11 @@ span ul li::before {
   position: relative;
   width: 50vw;
   left: 100px;
+  top: 30px;
+}
+
+.direction-info strong{
+  font-weight: bold;
 }
 
 .direction-img{
@@ -207,6 +267,24 @@ img{
 span ul li strong{
   font-weight: bold;
 }
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-logo{
+  font-size: 20px;
+  width: 500px;
+}
+
+.info-logo strong{
+  font-weight: bold;
+}
+
+footer{
+  width: 100vw;
+}
 
           </style>
             <h1>NHÓM 12</h1>
@@ -222,7 +300,8 @@ span ul li strong{
             <span style="font-size: 25px;">
               <span class="direction">
                 <span class="direction-info">
-                Website này là điểm đến lý tưởng cho các tín đồ thời trang yêu thích phong cách local brand – xu hướng đang làm mưa làm gió trong cộng đồng giới trẻ hiện nay. 
+                  <strong>Website</strong>
+                 này là điểm đến lý tưởng cho các tín đồ thời trang yêu thích phong cách local brand – xu hướng đang làm mưa làm gió trong cộng đồng giới trẻ hiện nay. 
                 Với sứ mệnh mang đến những bộ trang phục chất lượng, độc đáo, và mang đậm dấu ấn cá nhân, website cung cấp một loạt sản phẩm đa dạng từ áo thun, áo sơ mi, quần jeans, quần short đến nón thời trang. <br>  <br>
                 
                 </span>
@@ -244,6 +323,15 @@ span ul li strong{
                 
                 </ul> 
             </span>
+            <div class="logo">
+            <div class="info-logo">
+                <strong>LOGO</strong> của Shop thiết kế được đại diện cho tên của 2 thành viên chủ chốt trong nhóm sáng lập ra shop.
+            </div>
+              <div class="img-logo">
+                  <img src="../img/1.png" alt="">
+              </div>
+               
+            </div>
         </>
     </main>
    

@@ -49,7 +49,62 @@
                             <a href="" class="navbar__link">Bài Viết</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="" class="navbar__link">Liên Hệ</a>
+                        <style>
+                            .contact-overlay {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
+                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                            }
+
+                            .contact-modal {
+                                display: none;
+                                position: fixed; 
+                                top: 0;
+                                right: 0;
+                                height: 100%;
+                                width: 30%;
+                                background-color: white;
+                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                z-index: 999; /* Trên overlay */
+                                overflow-y: auto;
+                            }
+
+                            .contact-modal-content {
+                                padding: 20px;
+                            }
+
+                            .contact-close {
+                                color: #aaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+
+                            .contact-close:hover,
+                            .contact-close:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+
+                        </style>
+                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+
+                        <div id="contactOverlay" class="contact-overlay"></div>
+
+                        <div id="contactModal" class="contact-modal">
+                            <div class="contact-modal-content">
+                                <span class="contact-close">&times;</span>
+                                <h2>Thông Tin Liên Hệ</h2>
+                                <p>Đây là nội dung bên trong modal liên hệ.</p>
+                            </div>
+                        </div>
+                        <script src="../js/contact.js"></script>
                         </li>
                         <li class="navbar-item">
                             <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
