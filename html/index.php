@@ -49,8 +49,8 @@
                             <a href="" class="navbar__link">Bài Viết</a>
                         </li>
                         <li class="navbar-item">
-                        
-                        <style>
+
+                            <style>
                             .contact-overlay {
                                 display: none;
                                 position: fixed;
@@ -58,20 +58,23 @@
                                 left: 0;
                                 width: 100%;
                                 height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
-                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                                background-color: rgba(0, 0, 0, 0.5);
+                                /* Màu nền mờ tối */
+                                z-index: 998;
+                                /* Dưới modal nhưng trên các nội dung khác */
                             }
 
                             .contact-modal {
                                 display: none;
-                                position: fixed; 
+                                position: fixed;
                                 top: 0;
                                 right: 0;
                                 height: 100%;
                                 width: 30%;
                                 background-color: white;
                                 box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999; /* Trên overlay */
+                                z-index: 999;
+                                /* Trên overlay */
                                 overflow-y: auto;
                                 border-radius: 5px;
                             }
@@ -96,12 +99,12 @@
                                 cursor: pointer;
                             }
 
-                            .facebook{
+                            .facebook {
                                 display: flex;
                             }
-                            
 
-                            .contact-modal-content h2{
+
+                            .contact-modal-content h2 {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -109,69 +112,69 @@
                                 font-size: 33px;
                             }
 
-                            p{
+                            p {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                             }
 
-                            .sdt{
-                                
+                            .sdt {}
+
+                            .sdt i {
+                                padding: 15px 0px;
+                                font-size: 20px;
+
                             }
 
-                            .sdt i{
-                                padding: 15px 0px;
-                                font-size: 20px;
-                                
-                            }
-                            .email-contact i{
+                            .email-contact i {
                                 padding: 15px 0px;
                                 font-size: 20px;
                             }
-                            .facebook a{
+
+                            .facebook a {
                                 padding-top: 15px;
                                 padding-bottom: 40px;
                             }
 
-                            .thank{
+                            .thank {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 font-size: 18px;
                             }
+                            </style>
+                            <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
-                        </style>
-                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+                            <div id="contactOverlay" class="contact-overlay"></div>
 
-                        <div id="contactOverlay" class="contact-overlay"></div>
+                            <div id="contactModal" class="contact-modal">
+                                <div class="contact-modal-content">
+                                    <span class="contact-close">&times;</span>
+                                    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                                    <p>Trung tâm Tư vấn Khách hàng</p>
 
-                        <div id="contactModal" class="contact-modal">
-                            <div class="contact-modal-content">
-                                <span class="contact-close">&times;</span>
-                                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-                                <p>Trung tâm Tư vấn Khách hàng</p>
-                                
-                                <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
-                                <span class="email">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251040023@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                                <span class="email-contact">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251150079@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                               <span class="facebook">
-                               
-                               <a href="https://www.facebook.com/linhvai.hon"><i class="fa-brands fa-facebook"></i>Facebook</a>
-                               </span>
-                                <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                    <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                    <span class="email">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251040023@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="email-contact">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251150079@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="facebook">
+
+                                        <a href="https://www.facebook.com/linhvai.hon"><i
+                                                class="fa-brands fa-facebook"></i>Facebook</a>
+                                    </span>
+                                    <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                </div>
                             </div>
-                        </div>
-                        <script src="../js/contact.js"></script>
+                            <script src="../js/contact.js"></script>
                         </li>
                         <li class="navbar-item">
                             <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
@@ -179,14 +182,14 @@
                     </ul>
                 </nav>
                 <!-- SEARCH -->
-                    <div class="search-bar">
-                        <form action="search.php" method="get">
-                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
-                            <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                
-                
+                <div class="search-bar">
+                    <form action="search.php" method="get">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
+                        <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+
+
                 <div class="action">
                     <div class="action__notify">
                         <a href="">
@@ -235,7 +238,7 @@
                     <label for="new-username">Tên đăng nhập:</label>
                     <input type="text" id="new-username" name="new-username" required placeholder="Tên đăng nhập">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" name="email">
                     <label for="sdt">SDT</label>
                     <input type="tel" name="sdt" id="" placeholder="SDT">
                     <label for="new-password">Mật khẩu:</label>
@@ -601,5 +604,5 @@
     </footer>
     </div>
 </body>
-    
+
 </html>
