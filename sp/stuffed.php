@@ -83,7 +83,128 @@ $conn->close();
               <a href="" class="navbar__link">Bài Viết</a>
             </li>
             <li class="navbar-item">
-              <a href="" class="navbar__link">Liên Hệ</a>
+            <style>
+                            .contact-overlay {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
+                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                            }
+
+                            .contact-modal {
+                                display: none;
+                                position: fixed; 
+                                top: 0;
+                                right: 0;
+                                height: 100%;
+                                width: 30%;
+                                background-color: white;
+                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                z-index: 999; /* Trên overlay */
+                                overflow-y: auto;
+                                border-radius: 5px;
+                            }
+
+                            .contact-modal-content {
+                                padding: 20px;
+                                position: relative;
+                                top: 80px;
+                            }
+
+                            .contact-close {
+                                color: #aaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+
+                            .contact-close:hover,
+                            .contact-close:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+
+                            .facebook{
+                                display: flex;
+                            }
+                            
+
+                            .contact-modal-content h2{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #990000;
+                                font-size: 33px;
+                            }
+
+                            p{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .sdt{
+                                
+                            }
+
+                            .sdt i{
+                                padding: 15px 0px;
+                                font-size: 20px;
+                                
+                            }
+                            .email-contact i{
+                                padding: 15px 0px;
+                                font-size: 20px;
+                            }
+                            .facebook a{
+                                padding-top: 15px;
+                                padding-bottom: 40px;
+                            }
+
+                            .thank{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 18px;
+                            }
+
+                        </style>
+                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+
+                        <div id="contactOverlay" class="contact-overlay"></div>
+
+                        <div id="contactModal" class="contact-modal">
+                            <div class="contact-modal-content">
+                                <span class="contact-close">&times;</span>
+                                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                                <p>Trung tâm Tư vấn Khách hàng</p>
+                                
+                                <br>
+                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                <span class="email">
+                                    <i class="fa-regular fa-envelope">
+                                    <span class="email-detail">2251040023@ut.edu.vn</span>
+                                    </i>
+                                </span><br>
+                                <span class="email-contact">
+                                    <i class="fa-regular fa-envelope">
+                                    <span class="email-detail">2251150079@ut.edu.vn</span>
+                                    </i>
+                                </span><br>
+                               <span class="facebook">
+                               
+                               <a href="https://www.facebook.com/linhvai.hon"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                               </span>
+                                <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                            </div>
+                        </div>
+                        <script src="../js/contact.js"></script>
             </li>
             <li class="navbar-item">
               <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>

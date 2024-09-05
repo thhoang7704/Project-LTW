@@ -73,12 +73,13 @@
                                 box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
                                 z-index: 999; /* Trên overlay */
                                 overflow-y: auto;
+                                border-radius: 5px;
                             }
 
                             .contact-modal-content {
                                 padding: 20px;
                                 position: relative;
-                                top: 40px;
+                                top: 80px;
                             }
 
                             .contact-close {
@@ -99,10 +100,45 @@
                                 display: flex;
                             }
                             
-                            .email{
 
+                            .contact-modal-content h2{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #990000;
+                                font-size: 33px;
                             }
 
+                            p{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .sdt{
+                                
+                            }
+
+                            .sdt i{
+                                padding: 15px 0px;
+                                font-size: 20px;
+                                
+                            }
+                            .email-contact i{
+                                padding: 15px 0px;
+                                font-size: 20px;
+                            }
+                            .facebook a{
+                                padding-top: 15px;
+                                padding-bottom: 40px;
+                            }
+
+                            .thank{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 18px;
+                            }
 
                         </style>
                         <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
@@ -116,23 +152,23 @@
                                 <p>Trung tâm Tư vấn Khách hàng</p>
                                 
                                 <br>
-                                <span class="sdt"><i class="fa-solid fa-phone"></i> 0372605077</span> <br>
-                                <span class="sdt"><i class="fa-solid fa-phone"></i> 0372605077</span>
+                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
                                 <span class="email">
                                     <i class="fa-regular fa-envelope">
                                     <span class="email-detail">2251040023@ut.edu.vn</span>
                                     </i>
                                 </span><br>
-                                <span class="email">
+                                <span class="email-contact">
                                     <i class="fa-regular fa-envelope">
                                     <span class="email-detail">2251150079@ut.edu.vn</span>
                                     </i>
                                 </span><br>
                                <span class="facebook">
-                               <i class="fa-brands fa-facebook"></i>
-                               <span class="facebook-info"><a href="https://www.facebook.com/linhvai.hon">facebook</a></span>
+                               
+                               <a href="https://www.facebook.com/linhvai.hon"><i class="fa-brands fa-facebook"></i>Facebook</a>
                                </span>
-                                <p>THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
                             </div>
                         </div>
                         <script src="../js/contact.js"></script>
