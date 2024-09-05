@@ -80,7 +80,7 @@ $conn->close();
               </ul>
             </li>
             <li class="navbar-item">
-              <a href="" class="navbar__link">Bài Viết</a>
+              <a href="../html/baiviet.php" class="navbar__link">Bài Viết</a>
             </li>
             <li class="navbar-item">
             <style>

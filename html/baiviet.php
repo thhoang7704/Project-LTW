@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../css/reset.css" /> 
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/baiviet.css">
+
     <title>Clean Coin</title>
   </head>
   <body>
@@ -242,163 +244,23 @@
       </div>
   </div>
     <main>
+        <style>
+            
+        </style>
         <div class="container">
-          <style>
-     /* Container cho hiệu ứng hình tròn */
-/* Container cho hiệu ứng */
-.marquee-container {
-    width: 100vw; /* Chiều rộng của container */
-    overflow: hidden; /* Ẩn phần text bị tràn */
-    white-space: nowrap; /* Giữ nguyên dòng chữ không ngắt dòng */
-    position: relative; /* Để có thể sử dụng position: absolute trong marquee-text */
-    background-color: #1874CD;
-}
-
-.marquee-text {
-    display: inline-block;
-    padding-left: 100%; /* Bắt đầu ngoài khung nhìn */
-    animation: marquee 10s linear infinite; /* Thời gian chạy và hiệu ứng liên tục */
-    
-    
-}
-
-.marquee-text span {
-    display: inline-block;
-    padding-right: 50px; /* Khoảng cách giữa các đoạn text */
-    font-size: 40px;
-    color: #96ee1c;
-    text-shadow: 0 0 100px #96ee1c;
-}
-span > ul {
-    list-style:circle ; /* Bỏ dấu chấm tròn mặc định */
-    padding-left: 0; /* Bỏ khoảng cách bên trái */
-}
-
-span ul li {
-    position: relative;
-    padding-left: 25px; /* Khoảng cách bên trái cho nội dung */
-    color: black;
-}
-
-span ul li::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 33%;
-    width: 7px; /* Đường kính dấu chấm tròn */
-    height: 7px; /* Đường kính dấu chấm tròn */
-    background-color: black; /* Màu sắc của dấu chấm tròn */
-    border-radius: 50%; /* Tạo hình tròn */
-    transform:translateY(-50%);
-    color: black;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0); /* Bắt đầu từ vị trí ban đầu */
-    }
-    100% {
-        transform: translateX(-100%); /* Dịch chuyển hết ra khỏi khung nhìn */
-    }
-}
-.direction{
-  display: flex;
-  position: relative;
-  top: 10px;
-}
-
-.direction-info{
-  position: relative;
-  width: 50vw;
-  left: 100px;
-  top: 30px;
-}
-
-.direction-info strong{
-  font-weight: bold;
-}
-
-.direction-img{
-  position: relative;
-  left: 300px;
-  
-}
-
-img{
-  height: 200px;
-  width: 200px;
-  border-radius: 8px;
-}
-
-span ul li strong{
-  font-weight: bold;
-}
-.logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-logo{
-  font-size: 20px;
-  width: 500px;
-}
-
-.info-logo strong{
-  font-weight: bold;
-}
-
-footer{
-  width: 100vw;
-}
-
-          </style>
-            <h1>NHÓM 12</h1>
-             <br>
-            <div class="marquee-container">
-              <div class="marquee-text">
-                  <span>Chào mừng bạn đến với shop Local Brand Dành Cho Giới Trẻ</span>
-                  
-              </div>
+            <h2 style="font-size: 35px;">Chào mừng đến với  <div class="ten" style="color: #800000; padding: 0px 4px;"> THFashion</div> – Nơi phong cách gặp gỡ sự tinh tế!</h2>
+            <div class="detail">
+            Tại THFashion, chúng tôi tự hào mang đến cho bạn những bộ trang phục thời trang, hợp xu hướng, và chất lượng cao. Dù bạn đang tìm kiếm trang phục công sở, trang phục dạo phố hay những set đồ năng động, chúng tôi luôn có những lựa chọn phong phú phù hợp với mọi phong cách và cá tính.
             </div>
-
-
-            <span style="font-size: 25px;">
-              <span class="direction">
-                <span class="direction-info">
-                  <strong>Website</strong>
-                 này là điểm đến lý tưởng cho các tín đồ thời trang yêu thích phong cách local brand – xu hướng đang làm mưa làm gió trong cộng đồng giới trẻ hiện nay. 
-                Với sứ mệnh mang đến những bộ trang phục chất lượng, độc đáo, và mang đậm dấu ấn cá nhân, website cung cấp một loạt sản phẩm đa dạng từ áo thun, áo sơ mi, quần jeans, quần short đến nón thời trang. <br>  <br>
-                
-                </span>
-                <span class="direction-img">
-                  <img src="../img/ONLINESHOPPING.jpg" alt="">
-                </span>
-              </span>
-             
-                <br>
-                <ul>
-                Các tính năng nổi bật:
-                  <li><strong>Trải nghiệm mua sắm dễ dàng:</strong> Giao diện website thân thiện và dễ sử dụng, cho phép bạn nhanh chóng chọn lựa và mua sắm các món đồ yêu thích chỉ với vài thao tác đơn giản.</li>
-                  <li><strong>Thêm vào giỏ hàng:</strong> Không cần vội vàng quyết định, bạn có thể thêm các sản phẩm vào giỏ hàng và xem lại khi đã sẵn sàng mua.</li>
-                  <li><strong>Tạo tài khoản cá nhân:</strong> Đăng ký tài khoản để dễ dàng quản lý đơn hàng, theo dõi lịch sử mua sắm và nhận thông tin khuyến mãi mới nhất.</li>
-                  <li><strong>Đăng nhập nhanh chóng:</strong> Đăng nhập vào tài khoản của bạn để truy cập nhanh vào các tính năng cá nhân hóa, từ danh sách yêu thích đến quản lý thông tin thanh toán.</li>
-                  <li><strong>Chi tiết sản phẩm rõ ràng:</strong> Mỗi sản phẩm đều được trình bày chi tiết với hình ảnh chân thực, mô tả chất liệu, kích thước, và các tùy chọn màu sắc, giúp bạn dễ dàng đưa ra quyết định mua sắm đúng đắn.</li>
-                  <li><strong>Phân loại sản phẩm linh hoạt:</strong> Duyệt qua hàng trăm sản phẩm theo danh mục như áo, quần, nón, hoặc theo các bộ sưu tập đặc biệt để nhanh chóng tìm thấy những món đồ phù hợp với phong cách của bạn.</li>
-                  <li><strong>Các tính năng hữu ích khác:</strong> Bao gồm thanh tìm kiếm thông minh, hệ thống lọc sản phẩm nâng cao, quy trình thanh toán bảo mật, và dịch vụ chăm sóc khách hàng tận tâm.</li>
-                
-                </ul> 
-            </span>
-            <div class="logo">
-            <div class="info-logo">
-                <strong>LOGO</strong> của Shop thiết kế được đại diện cho tên của 2 thành viên chủ chốt trong nhóm sáng lập ra shop.
+            <img src="../img/slideshow_3.webp" alt="" class="img-slide">
+            <div class="detail2">
+            Với cam kết mang lại sự hài lòng tối đa cho khách hàng, chúng tôi không chỉ tập trung vào thiết kế độc đáo mà còn chú trọng đến chất lượng vải, đường may tỉ mỉ và kiểu dáng thoải mái. THFashion luôn cập nhật những mẫu mới nhất để bạn có thể tự tin thể hiện phong cách riêng của mình.
             </div>
-              <div class="img-logo">
-                  <img src="../img/1.png" alt="">
-              </div>
-               
-            </div>
-        </>
+            <img src="../img/slideshow_2.webp" alt="" class="img-slide2">
+            <div class="end">Hãy đến với THFashion, nơi bạn có thể tìm thấy sự tinh tế trong từng chi tiết và phong cách trong từng trang phục!</div>
+        </div>
+          
+        
     </main>
    
     <footer>
