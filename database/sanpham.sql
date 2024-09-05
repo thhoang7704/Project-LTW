@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th9 05, 2024 lúc 05:13 PM
+-- Thời gian đã tạo: Th9 05, 2024 lúc 05:12 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -75,30 +75,6 @@ INSERT INTO `sanpham` (`idSP`, `tenSP`, `size`, `loai`, `image`, `hover_image`, 
 ('T8', 'LAMP LEGEND TEE', '', 'áo thun', 'i31.png', 'i31-31.png', 420000),
 ('T9', 'ABYSS SS24 MYSTIC WING WAX TEE', '', 'áo thun', 'i18.png', 'i18-18.png', 490000);
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `taikhoan`
---
-
-CREATE TABLE `taikhoan` (
-  `idTK` int(11) NOT NULL,
-  `hoTen` varchar(100) NOT NULL,
-  `TenTK` varchar(100) NOT NULL,
-  `MK` varchar(200) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `sdt` int(100) NOT NULL,
-  `quyen` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `taikhoan`
---
-
-INSERT INTO `taikhoan` (`idTK`, `hoTen`, `TenTK`, `MK`, `email`, `sdt`, `quyen`) VALUES
-(1, 'Ad văn Min', 'Admin1', '123', 'admin1@gmail.com', 123456789, 'admin'),
-(3, 'Võ Quang Thành', 'thanhvo2505', '123456', '2251150079@ut.edu.vn', 976925204, 'user');
-
 --
 -- Chỉ mục cho các bảng đã đổ
 --
@@ -108,22 +84,6 @@ INSERT INTO `taikhoan` (`idTK`, `hoTen`, `TenTK`, `MK`, `email`, `sdt`, `quyen`)
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`idSP`);
-
---
--- Chỉ mục cho bảng `taikhoan`
---
-ALTER TABLE `taikhoan`
-  ADD PRIMARY KEY (`idTK`);
-
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `taikhoan`
---
-ALTER TABLE `taikhoan`
-  MODIFY `idTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
