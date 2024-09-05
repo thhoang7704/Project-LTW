@@ -77,6 +77,8 @@
 
                             .contact-modal-content {
                                 padding: 20px;
+                                position: relative;
+                                top: 40px;
                             }
 
                             .contact-close {
@@ -93,6 +95,15 @@
                                 cursor: pointer;
                             }
 
+                            .facebook{
+                                display: flex;
+                            }
+                            
+                            .email{
+
+                            }
+
+
                         </style>
                         <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
@@ -101,8 +112,27 @@
                         <div id="contactModal" class="contact-modal">
                             <div class="contact-modal-content">
                                 <span class="contact-close">&times;</span>
-                                <h2>Thông Tin Liên Hệ</h2>
-                                <p>Đây là nội dung bên trong modal liên hệ.</p>
+                                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                                <p>Trung tâm Tư vấn Khách hàng</p>
+                                
+                                <br>
+                                <span class="sdt"><i class="fa-solid fa-phone"></i> 0372605077</span> <br>
+                                <span class="sdt"><i class="fa-solid fa-phone"></i> 0372605077</span>
+                                <span class="email">
+                                    <i class="fa-regular fa-envelope">
+                                    <span class="email-detail">2251040023@ut.edu.vn</span>
+                                    </i>
+                                </span><br>
+                                <span class="email">
+                                    <i class="fa-regular fa-envelope">
+                                    <span class="email-detail">2251150079@ut.edu.vn</span>
+                                    </i>
+                                </span><br>
+                               <span class="facebook">
+                               <i class="fa-brands fa-facebook"></i>
+                               <span class="facebook-info"><a href="https://www.facebook.com/linhvai.hon">facebook</a></span>
+                               </span>
+                                <p>THFashion rất hân hạnh được hỗ trợ quý khách.</p>
                             </div>
                         </div>
                         <script src="../js/contact.js"></script>
