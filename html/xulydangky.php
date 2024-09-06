@@ -16,14 +16,38 @@ $email =  trim(strip_tags($email));
 settype($sdt, "int");
 ?>
 <?php
+// Kiểm tra xem username đã tồn tại chưa
+$sql_check = "SELECT * FROM taikhoan WHERE TenTK = '$username'";
+$result = $conn->query($sql_check);
+$sql_check_email = "SELECT * FROM taikhoan WHERE email = '$email'";
+$result_email = $conn->query($sql_check_email);
+$sql_check_sdt = "SELECT * FROM taikhoan WHERE sdt = '$sdt'";
+$result_sdt = $conn->query($sql_check_sdt);
 $loi = "";
-if ($sdt == 0) $loi .= "Bạn chưa nhập số điện thoại<br>";
-if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) $loi .= "Email không đúng<br>";
+$loi_username = "";
+$loi_email = "";
+$loi_sdt = "";
+if ($sdt == 0) $loi_sdt .= "Bạn chưa nhập số điện thoại<br>";
+if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) $loi_email .= "Email không đúng<br>";
 if ($password != $repass) $loi .= "Hai mật khẩu không giống nhau<br>";
-?>
-<?php
-$sql = "INSERT INTO taikhoan(hoTen,TenTK,MK,email,sdt,quyen) VALUES ('$hovaten', '$username', '$password','$email', '$sdt', 'user')";
-$kq = $conn->exec($sql);
-if ($kq == 1) {
-    echo "Đăng ký thành công";
-} else echo "Đăng ký không thành công";
+// Nếu username đã tồn tại
+if ($result->rowCount() > 0) {
+    $loi_username .= "Tên tài khoản đã tồn tại. Vui lòng chọn tên khác.<br>";
+}
+if ($result_email->rowCount() > 0) $loi_email .= "Email đã được sử dụng. Vui lòng chọn email khác.<br>";
+if ($result_sdt->rowCount() > 0) $loi_sdt .= "Số điện thoại đã được sử dụng. Vui lòng chọn số điện thoại khác.<br>";
+
+// Nếu không có lỗi nào, tiến hành insert
+if (empty($loi)) {
+    $sql = "INSERT INTO taikhoan(hoTen,TenTK,MK,email,sdt,quyen) VALUES ('$hovaten', '$username', '$password','$email', '$sdt', 'user')";
+    $kq = $conn->exec($sql);
+    if ($kq == 1) {
+        echo "Đăng ký thành công";
+    } else {
+        echo "Đăng ký không thành công";
+    }
+}
+if (!empty($loi_username) || !empty($loi_email) || !empty($loi_sdt)) {
+    header("Location: index.php?error_username=$loi_username&error_email=$loi_email&error_sdt=$loi_sdt");
+    exit();
+}

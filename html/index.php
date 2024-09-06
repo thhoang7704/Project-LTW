@@ -183,7 +183,7 @@
                 </nav>
                 <!-- SEARCH -->
                 <div class="search-bar">
-                    <form action="search.php" method="get">
+                    <form action="search.php" autocomplete="off" method="get">
                         <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
                         <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
@@ -247,6 +247,21 @@
                     <input type="password" id="confirm-password" name="confirm-password" required
                         placeholder="Xác nhận Mật Khẩu">
                     <button type="submit">Đăng Ký</button>
+                    <span class="error" id="error_username"></span>
+                    <span class="error" id="error_email"></span>
+                    <span class="error" id="error_sdt"></span>
+                    <script>
+                    // Kiểm tra xem có tham số error trong URL không
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const errorUsername = urlParams.get('error_username');
+                    const errorEmail = urlParams.get('error_email');
+                    // ... các biến khác ...
+
+                    // Hiển thị thông báo lỗi tương ứng với từng trường
+                    document.getElementById('error_username').textContent = errorUsername;
+                    document.getElementById('error_email').textContent = errorEmail;
+                    // ...
+                    </script>
                 </form>
                 <p>Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a></p>
             </div>

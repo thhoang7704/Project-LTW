@@ -23,12 +23,11 @@ if (isset($_POST['login'])) {
         $result = $stmt->fetch();
 
         if ($result['quyen'] == 'admin') {
-            header("Location: admin.php"); // Trang quản trị dành cho admin
+            header("Location: ../admin/admin.php"); // Trang quản trị dành cho admin
         } else {
             header("Location: index.php"); // Trang chủ dành cho người dùng thông thường
         }
     } else {
-        echo '<script>alert("Tài khoản hoặc mật khẩu không đúng, vui lòng nhập lại");</script>';
-        header("Location: gioithieu.php"); // file nào cũng được
+        echo 'Đăng nhập không thành công vui lòng đăng nhập lại';
     }
 }
