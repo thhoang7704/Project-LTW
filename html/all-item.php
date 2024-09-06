@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/cart.css">
   <link rel="stylesheet" href="../css/login.css">
-
+  <link rel="stylesheet" href="../css/notify.css">
 
 
 
@@ -191,6 +191,49 @@
               <i class="fa-regular fa-bell"></i>
             </a>
           </div>
+          <div class="header__notify">
+                        <header class="header__notify-header">
+                            <h3>THÔNG BÁO MỚI NHẬN</h3>
+                        </header>
+                            <a href="../html/gioithieu.php" class="link-notify">
+
+                                <div class="header__notify-list">
+                                    <div class="header__notify-item">
+                                        <div class="header__notify-link">
+                                            <img src="../img/we.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <div class="header__notify-name">Bài giới thiệu</div>
+                                                <div class="header__notify-description">Hãy xem bài viết giới thiệu về shop của chúng tôi để hiểu rõ về chúng tôi hơn.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="../html/baiviet.php" class="link-notify">
+
+                                <div class="header__notify-list">
+                                    <div class="header__notify-item">
+                                        <div class="header__notify-link">
+                                            <img src="../img/myshop.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <div class="header__notify-name">Các bài viết về Shop</div>
+                                                <div class="header__notify-description">Hãy xem các bài viết của chúng tôi để hiểu rõ hơn về nhu cầu của bạn.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                    
+                            <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
+                            <script>
+                                document.querySelector('.seeall').addEventListener('click', function(event) {
+                                    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                                    alert('Không có thông báo mới');
+                                });
+                            </script>
+                        
+                        
+                    </div>
           <div class="action__cart">
             <i class="fa-solid fa-cart-shopping cart__head"></i>
             </a>
