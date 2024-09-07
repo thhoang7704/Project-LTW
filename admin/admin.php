@@ -42,42 +42,32 @@
     if ($conn->connect_error) {
         die("Kết nối thất bại: " . $conn->connect_error);
     }
+    ?>
+    <?php
     $user = $_SESSION['login'];
     if (!empty($user)) { ?>
     <div>
         <h2>Trang chủ quản trị</h2>
         <p>Xin chào <?= $user ?> <a href="logoutadmin.php">Đăng xuất</a></p>
-        <form action="">
-
-
-            <div class="module">
-                <table>
-                    <tr>
-                        <td>Mã sản phẩm</td>
-                        <td>Tên</td>
-                        <td>Loại</td>
-                        <td>Hình ngoài</td>
-                        <td>Hình trong</td>
-                        <td>Giá</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <!-- <! thêm sản phẩm vào database và các trang sản phẩm -->
-                <!-- Xóa sản phẩm từ data và các trang sản phẩm -->
-                <!-- Sửa và cập nhật  -->
-            </div>
-        </form>
+        <a href="product_listing.php">Quản lý sản phẩm</a><br />
     </div>
     <?php }
-    ?>
 
+    ?>
+    <?php if (empty($_SESSION['login'])) { ?>
+    <link rel="stylesheet" href="../css/login.css">
+    <div id="loginForm" class="form-nd">
+        <h2>Đăng Nhập</h2>
+        <form action="xulyloginadmin.php" method="post">
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required placeholder="Tên đăng nhập">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required placeholder="Mật khẩu">
+            <button type="submit" id="loginButton" name="login">Đăng Nhập</button>
+        </form>
+    </div>
+    <?php
+    }  ?>
 
 
 </body>

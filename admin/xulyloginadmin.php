@@ -18,6 +18,6 @@ if (isset($_POST['login'])) {
         header("Location: admin.php");
     } else {
         // echo 'Đăng nhập không thành công vui lòng đăng nhập lại';
-        header("Location: dangnhapadmin.php");
+        header("Location: admin.php");
     }
 }
