@@ -51,97 +51,97 @@
                         </li>
                         <li class="navbar-item">
                             <style>
-                            .contact-overlay {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5);
-                                /* Màu nền mờ tối */
-                                z-index: 998;
-                                /* Dưới modal nhưng trên các nội dung khác */
-                            }
+                                .contact-overlay {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    /* Màu nền mờ tối */
+                                    z-index: 998;
+                                    /* Dưới modal nhưng trên các nội dung khác */
+                                }
 
-                            .contact-modal {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                right: 0;
-                                height: 100%;
-                                width: 30%;
-                                background-color: white;
-                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999;
-                                /* Trên overlay */
-                                overflow-y: auto;
-                                border-radius: 5px;
-                            }
+                                .contact-modal {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 30%;
+                                    background-color: white;
+                                    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                    z-index: 999;
+                                    /* Trên overlay */
+                                    overflow-y: auto;
+                                    border-radius: 5px;
+                                }
 
-                            .contact-modal-content {
-                                padding: 20px;
-                                position: relative;
-                                top: 80px;
-                            }
+                                .contact-modal-content {
+                                    padding: 20px;
+                                    position: relative;
+                                    top: 80px;
+                                }
 
-                            .contact-close {
-                                color: #aaa;
-                                float: right;
-                                font-size: 28px;
-                                font-weight: bold;
-                            }
+                                .contact-close {
+                                    color: #aaa;
+                                    float: right;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                }
 
-                            .contact-close:hover,
-                            .contact-close:focus {
-                                color: black;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
+                                .contact-close:hover,
+                                .contact-close:focus {
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
 
-                            .facebook {
-                                display: flex;
-                            }
+                                .facebook {
+                                    display: flex;
+                                }
 
 
-                            .contact-modal-content h2 {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #990000;
-                                font-size: 33px;
-                            }
+                                .contact-modal-content h2 {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #990000;
+                                    font-size: 33px;
+                                }
 
-                            p {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+                                p {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
 
-                            .sdt {}
+                                .sdt {}
 
-                            .sdt i {
-                                padding: 15px 0px;
-                                font-size: 20px;
+                                .sdt i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
 
-                            }
+                                }
 
-                            .email-contact i {
-                                padding: 15px 0px;
-                                font-size: 20px;
-                            }
+                                .email-contact i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
+                                }
 
-                            .facebook a {
-                                padding-top: 15px;
-                                padding-bottom: 40px;
-                            }
+                                .facebook a {
+                                    padding-top: 15px;
+                                    padding-bottom: 40px;
+                                }
 
-                            .thank {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 18px;
-                            }
+                                .thank {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                }
                             </style>
                             <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
@@ -224,10 +224,10 @@
 
                         <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
                         <script>
-                        document.querySelector('.seeall').addEventListener('click', function(event) {
-                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                            alert('Không có thông báo mới');
-                        });
+                            document.querySelector('.seeall').addEventListener('click', function(event) {
+                                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                                alert('Không có thông báo mới');
+                            });
                         </script>
 
 
@@ -367,16 +367,16 @@
             $conn->close();
             ?>
         <script>
-        function selectBox(element) {
-            // Xóa trạng thái chọn khỏi tất cả các ô
-            var boxes = document.querySelectorAll('.size-item');
-            boxes.forEach(function(box) {
-                box.classList.remove('selected');
-            });
+            function selectBox(element) {
+                // Xóa trạng thái chọn khỏi tất cả các ô
+                var boxes = document.querySelectorAll('.size-item');
+                boxes.forEach(function(box) {
+                    box.classList.remove('selected');
+                });
 
-            // Thêm trạng thái chọn cho ô hiện tại
-            element.classList.add('selected');
-        }
+                // Thêm trạng thái chọn cho ô hiện tại
+                element.classList.add('selected');
+            }
         </script>
         <div class="cart">
             <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
