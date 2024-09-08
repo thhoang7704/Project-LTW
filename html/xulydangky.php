@@ -27,15 +27,15 @@ $loi = "";
 $loi_username = "";
 $loi_email = "";
 $loi_sdt = "";
-if ($sdt == 0) $loi_sdt .= "Bạn chưa nhập số điện thoại<br>";
-if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) $loi_email .= "Email không đúng<br>";
-if ($password != $repass) $loi .= "Hai mật khẩu không giống nhau<br>";
+if ($sdt == 0) $loi_sdt .= "Bạn chưa nhập số điện thoại--";
+if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) $loi_email .= "Email không đúng--";
+if ($password != $repass) $loi .= "Hai mật khẩu không giống nhau--";
 // Nếu username đã tồn tại
 if ($result->rowCount() > 0) {
-    $loi_username .= "Tên tài khoản đã tồn tại. Vui lòng chọn tên khác.<br>";
+    $loi_username .= "Tên tài khoản đã tồn tại. Vui lòng chọn tên khác--";
 }
-if ($result_email->rowCount() > 0) $loi_email .= "Email đã được sử dụng. Vui lòng chọn email khác.<br>";
-if ($result_sdt->rowCount() > 0) $loi_sdt .= "Số điện thoại đã được sử dụng. Vui lòng chọn số điện thoại khác.<br>";
+if ($result_email->rowCount() > 0) $loi_email .= "Email đã được sử dụng. Vui lòng chọn email khác.--";
+if ($result_sdt->rowCount() > 0) $loi_sdt .= "Số điện thoại đã được sử dụng. Vui lòng chọn số điện thoại khác.";
 
 // Nếu không có lỗi nào, tiến hành insert
 if (empty($loi)) {
@@ -45,9 +45,12 @@ if (empty($loi)) {
         echo "Đăng ký thành công";
     } else {
         echo "Đăng ký không thành công";
+        exit();
     }
 }
 if (!empty($loi_username) || !empty($loi_email) || !empty($loi_sdt)) {
     header("Location: index.php?error_username=$loi_username&error_email=$loi_email&error_sdt=$loi_sdt");
     exit();
 }
+?>
+<a href="index.php"> Quay lại đăng nhập</a>

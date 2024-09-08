@@ -49,7 +49,7 @@
                             <a href="../html/baiviet.php" class="navbar__link">Bài Viết</a>
                         </li>
                         <li class="navbar-item">
-                        <style>
+                            <style>
                             .contact-overlay {
                                 display: none;
                                 position: fixed;
@@ -57,20 +57,23 @@
                                 left: 0;
                                 width: 100%;
                                 height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
-                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                                background-color: rgba(0, 0, 0, 0.5);
+                                /* Màu nền mờ tối */
+                                z-index: 998;
+                                /* Dưới modal nhưng trên các nội dung khác */
                             }
 
                             .contact-modal {
                                 display: none;
-                                position: fixed; 
+                                position: fixed;
                                 top: 0;
                                 right: 0;
                                 height: 100%;
                                 width: 30%;
                                 background-color: white;
                                 box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999; /* Trên overlay */
+                                z-index: 999;
+                                /* Trên overlay */
                                 overflow-y: auto;
                                 border-radius: 5px;
                             }
@@ -95,12 +98,12 @@
                                 cursor: pointer;
                             }
 
-                            .facebook{
+                            .facebook {
                                 display: flex;
                             }
-                            
 
-                            .contact-modal-content h2{
+
+                            .contact-modal-content h2 {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -108,69 +111,69 @@
                                 font-size: 33px;
                             }
 
-                            p{
+                            p {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                             }
 
-                            .sdt{
-                                
+                            .sdt {}
+
+                            .sdt i {
+                                padding: 15px 0px;
+                                font-size: 20px;
+
                             }
 
-                            .sdt i{
-                                padding: 15px 0px;
-                                font-size: 20px;
-                                
-                            }
-                            .email-contact i{
+                            .email-contact i {
                                 padding: 15px 0px;
                                 font-size: 20px;
                             }
-                            .facebook a{
+
+                            .facebook a {
                                 padding-top: 15px;
                                 padding-bottom: 40px;
                             }
 
-                            .thank{
+                            .thank {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 font-size: 18px;
                             }
+                            </style>
+                            <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
-                        </style>
-                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+                            <div id="contactOverlay" class="contact-overlay"></div>
 
-                        <div id="contactOverlay" class="contact-overlay"></div>
+                            <div id="contactModal" class="contact-modal">
+                                <div class="contact-modal-content">
+                                    <span class="contact-close">&times;</span>
+                                    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                                    <p>Trung tâm Tư vấn Khách hàng</p>
 
-                        <div id="contactModal" class="contact-modal">
-                            <div class="contact-modal-content">
-                                <span class="contact-close">&times;</span>
-                                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-                                <p>Trung tâm Tư vấn Khách hàng</p>
-                                
-                                <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
-                                <span class="email">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251040023@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                                <span class="email-contact">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251150079@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                               <span class="facebook">
-                               
-                               <a href="https://www.facebook.com/linhvai.hon"><i class="fa-brands fa-facebook"></i>Facebook</a>
-                               </span>
-                                <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                    <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                    <span class="email">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251040023@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="email-contact">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251150079@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="facebook">
+
+                                        <a href="https://www.facebook.com/linhvai.hon"><i
+                                                class="fa-brands fa-facebook"></i>Facebook</a>
+                                    </span>
+                                    <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                </div>
                             </div>
-                        </div>
-                        <script src="../js/contact.js"></script>
+                            <script src="../js/contact.js"></script>
                         </li>
                         <li class="navbar-item">
                             <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
@@ -178,11 +181,11 @@
                     </ul>
                 </nav>
                 <div class="search-bar">
-                        <form action="search.php" method="get">
-                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
-                            <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
+                    <form action="search.php" method="get">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
+                        <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
                 <div class="action">
                     <div class="action__notify">
                         <a href="">
@@ -193,44 +196,46 @@
                         <header class="header__notify-header">
                             <h3>THÔNG BÁO MỚI NHẬN</h3>
                         </header>
-                            <a href="../html/gioithieu.php" class="link-notify">
+                        <a href="../html/gioithieu.php" class="link-notify">
 
-                                <div class="header__notify-list">
-                                    <div class="header__notify-item">
-                                        <div class="header__notify-link">
-                                            <img src="../img/we.jpg" alt="" class="header__notify-img">
-                                            <div class="header__notify-info">
-                                                <div class="header__notify-name">Bài giới thiệu</div>
-                                                <div class="header__notify-description">Hãy xem bài viết giới thiệu về shop của chúng tôi để hiểu rõ về chúng tôi hơn.</div>
-                                            </div>
+                            <div class="header__notify-list">
+                                <div class="header__notify-item">
+                                    <div class="header__notify-link">
+                                        <img src="../img/we.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <div class="header__notify-name">Bài giới thiệu</div>
+                                            <div class="header__notify-description">Hãy xem bài viết giới thiệu về shop
+                                                của chúng tôi để hiểu rõ về chúng tôi hơn.</div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="../html/baiviet.php" class="link-notify">
+                            </div>
+                        </a>
+                        <a href="../html/baiviet.php" class="link-notify">
 
-                                <div class="header__notify-list">
-                                    <div class="header__notify-item">
-                                        <div class="header__notify-link">
-                                            <img src="../img/myshop.jpg" alt="" class="header__notify-img">
-                                            <div class="header__notify-info">
-                                                <div class="header__notify-name">Các bài viết về Shop</div>
-                                                <div class="header__notify-description">Hãy xem các bài viết của chúng tôi để hiểu rõ hơn về nhu cầu của bạn.</div>
-                                            </div>
+                            <div class="header__notify-list">
+                                <div class="header__notify-item">
+                                    <div class="header__notify-link">
+                                        <img src="../img/myshop.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <div class="header__notify-name">Các bài viết về Shop</div>
+                                            <div class="header__notify-description">Hãy xem các bài viết của chúng tôi
+                                                để hiểu rõ hơn về nhu cầu của bạn.</div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                    
-                            <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
-                            <script>
-                                document.querySelector('.seeall').addEventListener('click', function(event) {
-                                    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                                    alert('Không có thông báo mới');
-                                });
-                            </script>
-                        
-                        
+                            </div>
+                        </a>
+
+                        <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
+                        <script>
+                        document.querySelector('.seeall').addEventListener('click', function(event) {
+                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                            alert('Không có thông báo mới');
+                        });
+                        </script>
+
+
                     </div>
                     <div class="action__cart">
                         <i class="fa-solid fa-cart-shopping cart__head"></i>
@@ -292,15 +297,45 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/stuffed.php?idSP=T1">
+                <?php
+        require_once "../html/connectdb.php";
+        // Assuming you have a database connection established
+        $conn = new mysqli($host, $username, $password, $dbname);
+
+        // Fetch product data
+        $sql = "SELECT * FROM sanpham WHERE loai='áo thun'";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            // Populate the HTML form with product data
+            echo '
+                            <div class="each-item">
+                                <div class="img">
+                                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
+                                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
+                                </div>
+                                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
+                                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
+                            </div>
+                        ';
+          }
+        } else {
+          echo "Product not found.";
+        }
+
+        $conn->close();
+        ?>
+                <!-- <a href="../sp/stuffed.php?idSP=T1">
 
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/2.png" alt="" class="img-item">
                             <img src="../img/i1-1.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                       <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">STUFFED WOLF TEE</div>
@@ -315,8 +350,7 @@
                             <img src="../img/i8.png" alt="" class="img-item">
                             <img src="../img/i8-8.png " alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                       <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 INSECT AFFECTION TEE</div>
@@ -331,8 +365,7 @@
                             <img src="../img/i11.png" alt="" class="img-item">
                             <img src="../img/i11-11.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                          <i class="fa-solid fa-cart-shopping"></i> -->
+                 
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">BROKEN HEART TEE</div>
@@ -347,8 +380,7 @@
                             <img src="../img/i12.png" alt="" class="img-item">
                             <img src="../img/i12-12.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                          <i class="fa-solid fa-cart-shopping"></i> -->
+                 
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ESSENCE TEE</div>
@@ -363,8 +395,7 @@
                             <img src="../img/i29.png" alt="" class="img-item">
                             <img src="../img/i29-29.png" alt="" class="img-hover img-29">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                        <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" align="center">GUARDIAN BASIC TEE</div>
@@ -379,8 +410,7 @@
                             <img src="../img/i21.png" alt="" class="img-item">
                             <img src="../img/i21-21.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                        <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" align="center">GUARDIAN ANGLE TEE</div>
@@ -394,8 +424,7 @@
                             <img src="../img/i30.png" alt="" class="img-item">
                             <img src="../img/i30-30.png" alt="" class="img-hover img-29">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                       <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" align="center">LODESTAR BLUR TEE</div>
@@ -411,8 +440,7 @@
                             <img src="../img/i31.png" alt="" class="img-item">
                             <img src="../img/i31-31.png" alt="" class="img-hover img-31">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                       <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" align="center">LAMP LEGEND TEE</div>
@@ -427,15 +455,14 @@
                             <img src="../img/i18.png" alt="" class="img-item">
                             <img src="../img/i18-18.png" alt="" class="img-hover img-18">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                       <i class="fa-solid fa-cart-shopping"></i> -->
+                               
                             </div>
                         </div>
                         <div class="name-item" align="center">ABYSS SS24 MYSTIC WING WAX TEE</div>
                         <div class="cost-item" align="center">490,000VND</div>
                         <a href="" class="buy">Mua ngay</a>
                     </div>
-                </a>
+                </a> -->
 
 
             </div>

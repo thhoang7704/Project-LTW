@@ -270,7 +270,7 @@
                     <input type="text" id="username" name="username" required placeholder="Tên đăng nhập">
                     <label for="password">Mật khẩu:</label>
                     <input type="password" id="password" name="password" required placeholder="Mật khẩu">
-                    <button type="submit" id="loginButton">Đăng Nhập</button>
+                    <button type="submit" name="login">Đăng Nhập</button>
                 </form>
                 <p>Bạn chưa có tài khoản? <a href="#" id="showRegister">Đăng ký ngay</a></p>
             </div>
@@ -311,6 +311,7 @@
                 </form>
                 <p>Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a></p>
             </div>
+            <!-- <script src="../js/test.js"></script> -->
             <script src="../js/login.js"></script>
         </div>
     </div>
@@ -346,15 +347,45 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <a href="../sp/stuffed.php?idSP=T1">
+                <?php
+                require_once "connectdb.php";
+                // Assuming you have a database connection established
+                $conn = new mysqli($host, $username, $password, $dbname);
+
+                // Fetch product data
+                $sql = "SELECT * FROM sanpham LIMIT 20";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Populate the HTML form with product data
+                        echo '
+                            <div class="each-item">
+                                <div class="img">
+                                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
+                                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
+                                </div>
+                                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
+                                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
+                            </div>
+                        ';
+                    }
+                } else {
+                    echo "Product not found.";
+                }
+
+                $conn->close();
+                ?>
+                <!-- <a href="../sp/stuffed.php?idSP=T1">
 
                     <div class="each-item">
                         <div class="img">
                             <img src="../img/2.png" alt="" class="img-item">
                             <img src="../img/i1-1.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">STUFFED WOLF TEE</div>
@@ -369,8 +400,7 @@
                             <img src="../img/i2.png" alt="" class="img-item">
                             <img src="../img/i2-2.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">OBSTREPEROUS VARSITY JACKET</div>
@@ -385,8 +415,7 @@
                             <img src="../img/i3.png" alt="" class="img-item">
                             <img src="../img/i3-3.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SYMMETRY PANTS</div>
@@ -401,8 +430,7 @@
                             <img src="../img/i4.png" alt="" class="img-item">
                             <img src="../img/i4-4.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">BACKPACK LEATHER 24</div>
@@ -417,8 +445,7 @@
                             <img src="../img/i5.png" alt="" class="img-item">
                             <img src="../img/i5-5.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">MASCOT HOCKEY JERSEY</div>
@@ -433,8 +460,7 @@
                             <img src="../img/i6.png" alt="" class="img-item">
                             <img src="../img/i6-6.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">WHITE ASTRAL SHIRT</div>
@@ -454,8 +480,7 @@
                             <img src="../img/i17.png" alt="" class="img-item">
                             <img src="../img/i17-17.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 ECHINIDERM PANTS</div>
@@ -470,8 +495,7 @@
                             <img src="../img/i8.png" alt="" class="img-item">
                             <img src="../img/i8-8.png " alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ABYSS SS24 INSECT AFFECTION TEE</div>
@@ -486,8 +510,7 @@
                             <img src="../img/i9.png" alt="" class="img-item">
                             <img src="../img/i9-9.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SPLINTERED PANTS</div>
@@ -502,8 +525,7 @@
                             <img src="../img/i10.png" alt="" class="img-item">
                             <img src="../img/i10-10.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">STRIPED SHIRT 24</div>
@@ -518,8 +540,7 @@
                             <img src="../img/i11.png" alt="" class="img-item">
                             <img src="../img/i11-11.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">BROKEN HEART TEE</div>
@@ -534,8 +555,7 @@
                             <img src="../img/i12.png" alt="" class="img-item">
                             <img src="../img/i12-12.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">ESSENCE TEE</div>
@@ -550,8 +570,7 @@
                             <img src="../img/i13.png" alt="" class="img-item">
                             <img src="../img/i13-13.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">CERISE CRAVAT TEE</div>
@@ -566,8 +585,7 @@
                             <img src="../img/i14.png" alt="" class="img-item">
                             <img src="../img/i14-14.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">WASH JEANS SHORT</div>
@@ -582,8 +600,7 @@
                             <img src="../img/i15.png" alt="" class="img-item">
                             <img src="../img/i15-15.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">TORNADO ROUTE PANTS</div>
@@ -598,8 +615,7 @@
                             <img src="../img/i16.png" alt="" class="img-item">
                             <img src="../img/i16-16.png" alt="" class="img-hover">
                             <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-cart-shopping"></i> -->
+
                             </div>
                         </div>
                         <div class="name-item" style="text-align: center">SCUFFERS LOVE POLO</div>
@@ -609,7 +625,7 @@
                     </div>
                 </a>
 
-            </div>
+            </div>-->
 
     </main>
     <a href="all-item.php" class="more">
@@ -618,17 +634,17 @@
     </a>
     <div class="cart">
         <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
-        <div class="cart-content">
-            <!-- <div class="cart-box">
-          <img src="../img/2.png" alt="" class="cart-img">
-          <div class="detail-box">
-            <div class="cart-product-title">STUFFED WOLF TEE</div>
-            <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
-            <input type="number" value="1" class="cart-quantity">
-          </div>
-          <i class="fa-solid fa-trash cart-remove"></i>
+        <!-- <div class="cart-content">
+            <div class="cart-box">
+                <img src="../img/2.png" alt="" class="cart-img">
+                <div class="detail-box">
+                    <div class="cart-product-title">STUFFED WOLF TEE</div>
+                    <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
+                    <input type="number" value="1" class="cart-quantity">
+                </div>
+                <i class="fa-solid fa-trash cart-remove"></i>
+            </div>
         </div> -->
-        </div>
         <!-- total -->
         <div class="total">
             <div class="total-title">Tổng tiền:</div>
