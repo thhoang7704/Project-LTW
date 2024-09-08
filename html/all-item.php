@@ -791,7 +791,7 @@
 
     </div>
     <script src="../js/cart.js"></script>
-    <footer>
+    <footer style="top: 1600px;">
         <div class="footer-container">
 
             <div class="information">
