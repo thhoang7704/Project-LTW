@@ -544,5 +544,23 @@ strong{
     }
 }
 
+.user-info {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px;
+    top: 50px; /* Điều chỉnh vị trí theo nhu cầu */
+    right: 0;
+    z-index: 1001; /* Đảm bảo thông tin người dùng xuất hiện trên các phần tử khác */
+}
+
+/* Hiển thị thông tin khi hover */
+.action__login:hover .user-info {
+    display: block;
+}
+
 
 

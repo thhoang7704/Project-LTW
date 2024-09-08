@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once "connectdb.php";
 
@@ -12,9 +11,17 @@ if (isset($_POST['login'])) {
     $stmt->bindParam(':password', $password);
     $stmt->execute();
 
-    if ($stmt->rowCount() > 0) {
-        $_SESSION['login'] = $username;
-        header("Location: index.php"); // Trang chủ dành cho người dùng thông thường
+    // Lấy kết quả truy vấn
+    $user = $stmt->fetch(PDO::FETCH_ASSOC); // Sử dụng fetch để lấy một hàng dữ liệu
+
+    if ($user) {
+        // Lưu thông tin người dùng vào session
+        $_SESSION['login'] = $user['hoTen']; // Sửa để lưu họ và tên
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['sdt'] = $user['sdt'];
+        $_SESSION['success_message'] = "Đăng nhập thành công!";
+        // Chuyển hướng đến trang chủ
+        header("Location: index.php");
         exit();
     } else {
         echo 'Đăng nhập không thành công vui lòng đăng nhập lại';
@@ -22,5 +29,5 @@ if (isset($_POST['login'])) {
 ?>
     <a href="index.php">Quay lại đăng nhập</a>
 <?php
-
-} ?>
+}
+?>
