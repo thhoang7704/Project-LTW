@@ -298,19 +298,20 @@
         <div class="layout">
             <div class="layout__item">
                 <?php
-        require_once "../html/connectdb.php";
-        // Assuming you have a database connection established
-        $conn = new mysqli($host, $username, $password, $dbname);
+                require_once "../html/connectdb.php";
+                // Assuming you have a database connection established
+                $conn = new mysqli($host, $username, $password, $dbname);
 
-        // Fetch product data
-        $sql = "SELECT * FROM sanpham WHERE loai='áo thun'";
+                // Fetch product data
+                $sql = "SELECT * FROM sanpham WHERE loai='áo thun'";
 
-        $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            // Populate the HTML form with product data
-            echo '
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Populate the HTML form with product data
+                        echo '
+            <a href="../sp/product.php?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
                             <div class="each-item">
                                 <div class="img">
                                     <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
@@ -321,148 +322,13 @@
                                 <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
                             </div>
                         ';
-          }
-        } else {
-          echo "Product not found.";
-        }
+                    }
+                } else {
+                    echo "Product not found.";
+                }
 
-        $conn->close();
-        ?>
-                <!-- <a href="../sp/stuffed.php?idSP=T1">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/2.png" alt="" class="img-item">
-                            <img src="../img/i1-1.png" alt="" class="img-hover">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" style="text-align: center">STUFFED WOLF TEE</div>
-                        <div class="cost-item" style="text-align: center"><span>490.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/abytee.php?idSP=T2">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i8.png" alt="" class="img-item">
-                            <img src="../img/i8-8.png " alt="" class="img-hover">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" style="text-align: center">ABYSS SS24 INSECT AFFECTION TEE</div>
-                        <div class="cost-item" style="text-align: center"><span>200.000</span><sup>đ</sup></div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/brokenheart.php?idSP=T3">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i11.png" alt="" class="img-item">
-                            <img src="../img/i11-11.png" alt="" class="img-hover">
-                            <div class="icon">
-                 
-                            </div>
-                        </div>
-                        <div class="name-item" style="text-align: center">BROKEN HEART TEE</div>
-                        <div class="cost-item" style="text-align: center"><span>450.000</span><sup>đ</sup></div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/essence.php?idSP=T4">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i12.png" alt="" class="img-item">
-                            <img src="../img/i12-12.png" alt="" class="img-hover">
-                            <div class="icon">
-                 
-                            </div>
-                        </div>
-                        <div class="name-item" style="text-align: center">ESSENCE TEE</div>
-                        <div class="cost-item" style="text-align: center"><span>450.000</span><sup>đ</sup></div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/basic.php?idSP=T5">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i29.png" alt="" class="img-item">
-                            <img src="../img/i29-29.png" alt="" class="img-hover img-29">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">GUARDIAN BASIC TEE</div>
-                        <div class="cost-item" align="center">460,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/angle.php?idSP=T6">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i21.png" alt="" class="img-item">
-                            <img src="../img/i21-21.png" alt="" class="img-hover">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">GUARDIAN ANGLE TEE</div>
-                        <div class="cost-item" align="center">460,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/lod.php?idSP=T7">
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i30.png" alt="" class="img-item">
-                            <img src="../img/i30-30.png" alt="" class="img-hover img-29">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">LODESTAR BLUR TEE</div>
-                        <div class="cost-item" align="center">450,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-
-                </a>
-                <a href="../sp/lamp.php?idSP=T8">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i31.png" alt="" class="img-item">
-                            <img src="../img/i31-31.png" alt="" class="img-hover img-31">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">LAMP LEGEND TEE</div>
-                        <div class="cost-item" align="center">420,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/abyss.php?idSP=T8">
-
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i18.png" alt="" class="img-item">
-                            <img src="../img/i18-18.png" alt="" class="img-hover img-18">
-                            <div class="icon">
-                               
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">ABYSS SS24 MYSTIC WING WAX TEE</div>
-                        <div class="cost-item" align="center">490,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a> -->
+                $conn->close();
+                ?>
 
 
             </div>

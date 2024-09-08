@@ -50,7 +50,7 @@
                             <a href="../html/baiviet.php" class="navbar__link">Bài Viết</a>
                         </li>
                         <li class="navbar-item">
-                        <style>
+                            <style>
                             .contact-overlay {
                                 display: none;
                                 position: fixed;
@@ -58,20 +58,23 @@
                                 left: 0;
                                 width: 100%;
                                 height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ tối */
-                                z-index: 998; /* Dưới modal nhưng trên các nội dung khác */
+                                background-color: rgba(0, 0, 0, 0.5);
+                                /* Màu nền mờ tối */
+                                z-index: 998;
+                                /* Dưới modal nhưng trên các nội dung khác */
                             }
 
                             .contact-modal {
                                 display: none;
-                                position: fixed; 
+                                position: fixed;
                                 top: 0;
                                 right: 0;
                                 height: 100%;
                                 width: 30%;
                                 background-color: white;
                                 box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999; /* Trên overlay */
+                                z-index: 999;
+                                /* Trên overlay */
                                 overflow-y: auto;
                                 border-radius: 5px;
                             }
@@ -96,12 +99,12 @@
                                 cursor: pointer;
                             }
 
-                            .facebook{
+                            .facebook {
                                 display: flex;
                             }
-                            
 
-                            .contact-modal-content h2{
+
+                            .contact-modal-content h2 {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -109,69 +112,69 @@
                                 font-size: 33px;
                             }
 
-                            p{
+                            p {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                             }
 
-                            .sdt{
-                                
+                            .sdt {}
+
+                            .sdt i {
+                                padding: 15px 0px;
+                                font-size: 20px;
+
                             }
 
-                            .sdt i{
-                                padding: 15px 0px;
-                                font-size: 20px;
-                                
-                            }
-                            .email-contact i{
+                            .email-contact i {
                                 padding: 15px 0px;
                                 font-size: 20px;
                             }
-                            .facebook a{
+
+                            .facebook a {
                                 padding-top: 15px;
                                 padding-bottom: 40px;
                             }
 
-                            .thank{
+                            .thank {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 font-size: 18px;
                             }
+                            </style>
+                            <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
-                        </style>
-                        <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
+                            <div id="contactOverlay" class="contact-overlay"></div>
 
-                        <div id="contactOverlay" class="contact-overlay"></div>
+                            <div id="contactModal" class="contact-modal">
+                                <div class="contact-modal-content">
+                                    <span class="contact-close">&times;</span>
+                                    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                                    <p>Trung tâm Tư vấn Khách hàng</p>
 
-                        <div id="contactModal" class="contact-modal">
-                            <div class="contact-modal-content">
-                                <span class="contact-close">&times;</span>
-                                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-                                <p>Trung tâm Tư vấn Khách hàng</p>
-                                
-                                <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
-                                <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
-                                <span class="email">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251040023@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                                <span class="email-contact">
-                                    <i class="fa-regular fa-envelope">
-                                    <span class="email-detail">2251150079@ut.edu.vn</span>
-                                    </i>
-                                </span><br>
-                               <span class="facebook">
-                               
-                               <a href="https://www.facebook.com/linhvai.hon"><i class="fa-brands fa-facebook"></i>Facebook</a>
-                               </span>
-                                <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                    <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                    <span class="email">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251040023@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="email-contact">
+                                        <i class="fa-regular fa-envelope">
+                                            <span class="email-detail">2251150079@ut.edu.vn</span>
+                                        </i>
+                                    </span><br>
+                                    <span class="facebook">
+
+                                        <a href="https://www.facebook.com/linhvai.hon"><i
+                                                class="fa-brands fa-facebook"></i>Facebook</a>
+                                    </span>
+                                    <p class="thank">THFashion rất hân hạnh được hỗ trợ quý khách.</p>
+                                </div>
                             </div>
-                        </div>
-                        <script src="../js/contact.js"></script>
+                            <script src="../js/contact.js"></script>
                         </li>
                         <li class="navbar-item">
                             <a href="../html/gioithieu.php" class="navbar__link">Giới Thiệu</a>
@@ -188,44 +191,46 @@
                         <header class="header__notify-header">
                             <h3>THÔNG BÁO MỚI NHẬN</h3>
                         </header>
-                            <a href="../html/gioithieu.php" class="link-notify">
+                        <a href="../html/gioithieu.php" class="link-notify">
 
-                                <div class="header__notify-list">
-                                    <div class="header__notify-item">
-                                        <div class="header__notify-link">
-                                            <img src="../img/we.jpg" alt="" class="header__notify-img">
-                                            <div class="header__notify-info">
-                                                <div class="header__notify-name">Bài giới thiệu</div>
-                                                <div class="header__notify-description">Hãy xem bài viết giới thiệu về shop của chúng tôi để hiểu rõ về chúng tôi hơn.</div>
-                                            </div>
+                            <div class="header__notify-list">
+                                <div class="header__notify-item">
+                                    <div class="header__notify-link">
+                                        <img src="../img/we.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <div class="header__notify-name">Bài giới thiệu</div>
+                                            <div class="header__notify-description">Hãy xem bài viết giới thiệu về shop
+                                                của chúng tôi để hiểu rõ về chúng tôi hơn.</div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="../html/baiviet.php" class="link-notify">
+                            </div>
+                        </a>
+                        <a href="../html/baiviet.php" class="link-notify">
 
-                                <div class="header__notify-list">
-                                    <div class="header__notify-item">
-                                        <div class="header__notify-link">
-                                            <img src="../img/myshop.jpg" alt="" class="header__notify-img">
-                                            <div class="header__notify-info">
-                                                <div class="header__notify-name">Các bài viết về Shop</div>
-                                                <div class="header__notify-description">Hãy xem các bài viết của chúng tôi để hiểu rõ hơn về nhu cầu của bạn.</div>
-                                            </div>
+                            <div class="header__notify-list">
+                                <div class="header__notify-item">
+                                    <div class="header__notify-link">
+                                        <img src="../img/myshop.jpg" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <div class="header__notify-name">Các bài viết về Shop</div>
+                                            <div class="header__notify-description">Hãy xem các bài viết của chúng tôi
+                                                để hiểu rõ hơn về nhu cầu của bạn.</div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                    
-                            <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
-                            <script>
-                                document.querySelector('.seeall').addEventListener('click', function(event) {
-                                    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                                    alert('Không có thông báo mới');
-                                });
-                            </script>
-                        
-                        
+                            </div>
+                        </a>
+
+                        <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
+                        <script>
+                        document.querySelector('.seeall').addEventListener('click', function(event) {
+                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                            alert('Không có thông báo mới');
+                        });
+                        </script>
+
+
                     </div>
                     <div class="action__cart">
                         <!-- <a href=""> -->
@@ -284,7 +289,31 @@
         </div>
     </div>
 
-    <main>
+    <main><?php
+            require_once "../html/connectdb.php";
+            $conn = new mysqli($host, $username, $password, $dbname);
+            // Lấy ID sản phẩm từ URL
+            // Lấy ID sản phẩm từ URL
+            $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : null;
+            if ($idSP === null) {
+                die("ID sản phẩm không được cung cấp");
+            }
+
+            // Chuẩn bị câu truy vấn SQL
+            $sql = "SELECT * FROM sanpham WHERE idSP = ?";
+
+            // Chuẩn bị statement để tránh SQL injection
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("s", $idSP);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+
+                    // Hiển thị thông tin sản phẩm vào HTML
+                    echo '
         <div class="container">
             <div class="item">
                 <div class="detail-item">
@@ -304,16 +333,16 @@
                     </div>
                 </div>
                 <div class="img-items">
-                    <img src="../img/i26.png" alt="" class="img">
-                    <img src="../img/i26-26.png" alt="">
+                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img">
+                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="">
 
                 </div>
             </div>
             <div class="item-sidebar">
                 <div class="detail-item-sidebar">
-                    <div class="name-item">SNAPBACK CAP</div>
+                    <div class="name-item">' . htmlspecialchars($row["tenSP"]) . '</div>
                     <div class="masp">SKU: HBHT0001</div>
-                    <div class="cost"><span>332.000</span><sup>đ</sup></div>
+                    <div class="cost"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
                     <div class="color">
                         Màu sắc
                         <div class="color-item"></div>
@@ -324,25 +353,35 @@
                         <div class="size-item size-l" onclick="selectBox(this)">L</div>
                         <div class="size-item size-xl" onclick="selectBox(this)">XL</div>
                     </div>
-                    <script>
-                    function selectBox(element) {
-                        // Xóa trạng thái chọn khỏi tất cả các ô
-                        var boxes = document.querySelectorAll('.size-item');
-                        boxes.forEach(function(box) {
-                            box.classList.remove('selected');
-                        });
-
-                        // Thêm trạng thái chọn cho ô hiện tại
-                        element.classList.add('selected');
-                    }
-                    </script>
                     <div class="add">THÊM VÀO GIỎ</div>
                     <div class="buys">MUA NGAY</div>
                 </div>
-                <div class="cart">
-                    <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
-                    <div class="cart-content">
-                        <!-- <div class="cart-box">
+    ';
+                    break;
+                }
+            } else {
+                echo "Sản phẩm không tồn tại";
+            }
+
+            $stmt->close();
+            $conn->close();
+            ?>
+        <script>
+        function selectBox(element) {
+            // Xóa trạng thái chọn khỏi tất cả các ô
+            var boxes = document.querySelectorAll('.size-item');
+            boxes.forEach(function(box) {
+                box.classList.remove('selected');
+            });
+
+            // Thêm trạng thái chọn cho ô hiện tại
+            element.classList.add('selected');
+        }
+        </script>
+        <div class="cart">
+            <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
+            <div class="cart-content">
+                <!-- <div class="cart-box">
           <img src="../img/2.png" alt="" class="cart-img">
           <div class="detail-box">
             <div class="cart-product-title">STUFFED WOLF TEE</div>
@@ -351,88 +390,68 @@
           </div>
           <i class="fa-solid fa-trash cart-remove"></i>
         </div> -->
-                    </div>
-                    <!-- total -->
-                    <div class="total">
-                        <div class="total-title">Tổng tiền:</div>
-                        <div class="total-price"><span>0</span><sup>đ</sup></div>
-                    </div>
-                    <!-- button -->
-                    <button type="button" class="btn-buy"><a href="../html/checkout.php">Thanh toán</a></button>
-                    <!-- close -->
-                    <i class="fa-solid fa-x" id="close-cart"></i>
-                </div>
-                <script src="../js/cart.js"></script>
             </div>
+            <!-- total -->
+            <div class="total">
+                <div class="total-title">Tổng tiền:</div>
+                <div class="total-price"><span>0</span><sup>đ</sup></div>
+            </div>
+            <!-- button -->
+            <button type="button" class="btn-buy"><a href="../html/checkout.php">Thanh toán</a></button>
+            <!-- close -->
+            <i class="fa-solid fa-x" id="close-cart"></i>
+        </div>
+        <script src="../js/cart.js"></script>
+        </div>
         </div>
         <div class="lq">SẢN PHẨM LIÊN QUAN</div>
         <div class="layout">
             <div class="layout__item">
+                <div class="layout__item">
+                    <?php
+                    require_once "../html/connectdb.php";
+                    // Assuming you have a database connection established
+                    $conn = new mysqli($host, $username, $password, $dbname);
+                    // Lấy loai từ URL
+                    $loai = isset($_GET['loai']) ? $_GET['loai'] : '';
 
-                <a href="../sp/lamp.php?idSP=T8">
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i31.png" alt="" class="img-item">
-                            <img src="../img/i31-31.png" alt="" class="img-hover img-31">
-                            <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                              <i class="fa-solid fa-cart-shopping"></i> -->
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">LAMP LEGEND TEE</div>
-                        <div class="cost-item" align="center">420,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/lor.php?idSP=QS5">
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i33.png" alt="" class="img-item">
-                            <img src="../img/i33-33.png" alt="" class="img-hover img-33">
-                            <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                              <i class="fa-solid fa-cart-shopping"></i> -->
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">LORRYLOAD CARGO SHORT</div>
-                        <div class="cost-item" align="center">270,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/classic.php?idSP=N4">
+                    // Chuẩn bị câu truy vấn SQL
+                    $stmt = $conn->prepare("SELECT * FROM sanpham WHERE loai LIKE ? LIMIT 4");
 
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i27.png" alt="" class="img-item">
-                            <img src="../img/i27-27.png" alt="" class="img-hover">
-                            <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                              <i class="fa-solid fa-cart-shopping"></i> -->
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">CLASSIC CAP</div>
-                        <div class="cost-item" align="center">275,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
-                <a href="../sp/tracer.php">
+                    // Bind the parameter
+                    $stmt->bind_param("s", $loai);
 
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/i24.png" alt="" class="img-item">
-                            <img src="../img/i24-24.png" alt="" class="img-hover">
-                            <div class="icon">
-                                <!-- <i class="fa-solid fa-plus"></i>
-                              <i class="fa-solid fa-cart-shopping"></i> -->
+                    // Execute the query
+                    $stmt->execute();
+
+                    // Fetch product data
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            // Populate the HTML form with product data
+                            echo '
+                        
+                            <div class="each-item">
+                                <div class="img">
+                                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
+                                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
+                                </div>
+                                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
+                                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
                             </div>
-                        </div>
-                        <div class="name-item" align="center">TRACER SLEEVES BOXY SHIRT</div>
-                        <div class="cost-item" align="center">495,000VND</div>
-                        <a href="" class="buy">Mua ngay</a>
-                    </div>
-                </a>
+                        ';
+                        }
+                    } else {
+                        echo "Product not found.";
+                    }
+
+                    $conn->close();
+                    ?>
+
+                </div>
             </div>
-        </div>
     </main>
 
 

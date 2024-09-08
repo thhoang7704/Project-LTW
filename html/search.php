@@ -58,13 +58,13 @@
                 </nav>
                 <!-- SEARCH -->
                 <div class="search-bar">
-                        <form action="search.php" method="get">
-                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
-                            <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                
-                
+                    <form action="search.php" method="get">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" name="query">
+                        <button type="submit" name="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+
+
                 <div class="action">
                     <div class="action__notify">
                         <a href="">
@@ -128,54 +128,57 @@
             <script src="../js/login.js"></script>
         </div>
     </div>
-   
+
     <br /><br />
     <main>
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-            <?php
-            require_once "connectdb.php";
+                <?php
+                require_once "connectdb.php";
 
-            // Tạo kết nối
-            $conn = new mysqli($host, $username, $password, $dbname);
+                // Tạo kết nối
+                $conn = new mysqli($host, $username, $password, $dbname);
 
-            // Kiểm tra kết nối
-            if ($conn->connect_error) {
-                die("Kết nối thất bại: " . $conn->connect_error);
-            }
+                // Kiểm tra kết nối
+                if ($conn->connect_error) {
+                    die("Kết nối thất bại: " . $conn->connect_error);
+                }
 
-            // Lấy giá trị từ thanh tìm kiếm
-            $search_query = isset($_GET['query']) ? $_GET['query'] : '';
+                // Lấy giá trị từ thanh tìm kiếm
+                $search_query = isset($_GET['query']) ? $_GET['query'] : '';
 
-            // Thoát kí tự đặc biệt để tránh lỗi SQL Injection
-            $search_query = $conn->real_escape_string($search_query);
+                // Thoát kí tự đặc biệt để tránh lỗi SQL Injection
+                $search_query = $conn->real_escape_string($search_query);
 
-            if ($search_query != '') {
-                // Truy vấn tìm kiếm sản phẩm theo tên hoặc phân loại
-                $sql = "SELECT * FROM sanpham WHERE tenSP LIKE '%$search_query%' OR loai LIKE '%$search_query%'";
-                
+                if ($search_query != '') {
+                    // Truy vấn tìm kiếm sản phẩm theo tên hoặc phân loại
+                    $sql = "SELECT * FROM sanpham WHERE tenSP LIKE '%$search_query%' OR loai LIKE '%$search_query%'";
 
-                $result = $conn->query($sql);
 
-                if ($result) {
-                    if ($result->num_rows > 0) {
-                        // Hiển thị kết quả tìm kiếm
-                        while ($row = $result->fetch_assoc()) {
-                            // Xác định trang sản phẩm dựa trên phân loại
-                            $product_page = '';
-                            if ($row["loai"] == 'áo') {
-                                $product_page = 'thun.php'; // Đảm bảo tên file đúng
-                            } elseif ($row["loai"] == 'quần') {
-                                $product_page = 'pants.php'; // Đảm bảo tên file đúng
-                            } elseif ($row["loai"] == 'giày') {
-                                $product_page = 'shoes.php'; // Đảm bảo tên file đúng
-                            } else {
-                                $product_page = 'product.php'; // Trang mặc định cho các loại khác
-                            }
+                    $result = $conn->query($sql);
 
-                            echo '
-                        <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($row["idSP"]) . '">
+                    if ($result) {
+                        if ($result->num_rows > 0) {
+                            // Hiển thị kết quả tìm kiếm
+                            while ($row = $result->fetch_assoc()) {
+                                // Xác định trang sản phẩm dựa trên phân loại
+                                $product_page = '';
+                                if ($row["loai"] == 'áo') {
+                                    $product_page = 'thun.php'; // Đảm bảo tên file đúng
+                                } elseif ($row["loai"] == 'quần') {
+                                    $product_page = 'pants.php'; // Đảm bảo tên file đúng
+                                } elseif ($row["loai"] == 'giày') {
+                                    $product_page = 'shoes.php'; // Đảm bảo tên file đúng
+                                } else {
+                                    $product_page = 'product.php'; // Trang mặc định cho các loại khác
+                                }
+
+                                echo '
+                  <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
+
+
+
                                 <div class="each-item">
                                     <div class="img">
                                         <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
@@ -187,21 +190,21 @@
                                 </div>
                             </a>
                             ';
+                            }
+                        } else {
+                            echo "Không tìm thấy sản phẩm nào.";
                         }
                     } else {
-                        echo "Không tìm thấy sản phẩm nào.";
+                        echo "Lỗi trong truy vấn: " . $conn->error;
                     }
                 } else {
-                    echo "Lỗi trong truy vấn: " . $conn->error;
+                    echo "Vui lòng nhập từ khóa tìm kiếm.";
                 }
-            } else {
-                echo "Vui lòng nhập từ khóa tìm kiếm.";
-            }
 
-            // Đóng kết nối
-            $conn->close();
-            ?>
-               
+                // Đóng kết nối
+                $conn->close();
+                ?>
+
 
             </div>
 
@@ -255,8 +258,9 @@
     </footer>
     </div>
 </body>
-    
+
 </html>
 
 </body>
+
 </html>

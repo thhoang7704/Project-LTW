@@ -51,97 +51,97 @@
                         </li>
                         <li class="navbar-item">
                             <style>
-                            .contact-overlay {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5);
-                                /* Màu nền mờ tối */
-                                z-index: 998;
-                                /* Dưới modal nhưng trên các nội dung khác */
-                            }
+                                .contact-overlay {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    /* Màu nền mờ tối */
+                                    z-index: 998;
+                                    /* Dưới modal nhưng trên các nội dung khác */
+                                }
 
-                            .contact-modal {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                right: 0;
-                                height: 100%;
-                                width: 30%;
-                                background-color: white;
-                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999;
-                                /* Trên overlay */
-                                overflow-y: auto;
-                                border-radius: 5px;
-                            }
+                                .contact-modal {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 30%;
+                                    background-color: white;
+                                    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                    z-index: 999;
+                                    /* Trên overlay */
+                                    overflow-y: auto;
+                                    border-radius: 5px;
+                                }
 
-                            .contact-modal-content {
-                                padding: 20px;
-                                position: relative;
-                                top: 80px;
-                            }
+                                .contact-modal-content {
+                                    padding: 20px;
+                                    position: relative;
+                                    top: 80px;
+                                }
 
-                            .contact-close {
-                                color: #aaa;
-                                float: right;
-                                font-size: 28px;
-                                font-weight: bold;
-                            }
+                                .contact-close {
+                                    color: #aaa;
+                                    float: right;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                }
 
-                            .contact-close:hover,
-                            .contact-close:focus {
-                                color: black;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
+                                .contact-close:hover,
+                                .contact-close:focus {
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
 
-                            .facebook {
-                                display: flex;
-                            }
+                                .facebook {
+                                    display: flex;
+                                }
 
 
-                            .contact-modal-content h2 {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #990000;
-                                font-size: 33px;
-                            }
+                                .contact-modal-content h2 {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #990000;
+                                    font-size: 33px;
+                                }
 
-                            p {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+                                p {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
 
-                            .sdt {}
+                                .sdt {}
 
-                            .sdt i {
-                                padding: 15px 0px;
-                                font-size: 20px;
+                                .sdt i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
 
-                            }
+                                }
 
-                            .email-contact i {
-                                padding: 15px 0px;
-                                font-size: 20px;
-                            }
+                                .email-contact i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
+                                }
 
-                            .facebook a {
-                                padding-top: 15px;
-                                padding-bottom: 40px;
-                            }
+                                .facebook a {
+                                    padding-top: 15px;
+                                    padding-bottom: 40px;
+                                }
 
-                            .thank {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 18px;
-                            }
+                                .thank {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                }
                             </style>
                             <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
@@ -230,10 +230,10 @@
 
                         <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
                         <script>
-                        document.querySelector('.seeall').addEventListener('click', function(event) {
-                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                            alert('Không có thông báo mới');
-                        });
+                            document.querySelector('.seeall').addEventListener('click', function(event) {
+                                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                                alert('Không có thông báo mới');
+                            });
                         </script>
 
 
@@ -298,19 +298,20 @@
         <div class="layout">
             <div class="layout__item">
                 <?php
-        require_once "../html/connectdb.php";
-        // Assuming you have a database connection established
-        $conn = new mysqli($host, $username, $password, $dbname);
+                require_once "../html/connectdb.php";
+                // Assuming you have a database connection established
+                $conn = new mysqli($host, $username, $password, $dbname);
 
-        // Fetch product data
-        $sql = "SELECT * FROM sanpham WHERE loai='nón mũ'";
+                // Fetch product data
+                $sql = "SELECT * FROM sanpham WHERE loai='nón mũ'";
 
-        $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            // Populate the HTML form with product data
-            echo '
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Populate the HTML form with product data
+                        echo '
+            <a href="../sp/product.php?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
                             <div class="each-item">
                                 <div class="img">
                                     <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
@@ -321,13 +322,13 @@
                                 <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
                             </div>
                         ';
-          }
-        } else {
-          echo "Product not found.";
-        }
+                    }
+                } else {
+                    echo "Product not found.";
+                }
 
-        $conn->close();
-        ?>
+                $conn->close();
+                ?>
                 <!-- <a href="../sp/backpack.php?idSP=N1">
 
                     <div class="each-item">
