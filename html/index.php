@@ -347,38 +347,88 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <?php
-                require_once "connectdb.php";
-                // Assuming you have a database connection established
-                $conn = new mysqli($host, $username, $password, $dbname);
+            <?php
+// Kết nối cơ sở dữ liệu
+require_once "../html/connectdb.php";
+$conn = new mysqli($host, $username, $password, $dbname);
 
-                // Fetch product data
-                $sql = "SELECT * FROM sanpham LIMIT 16";
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
 
-                $result = $conn->query($sql);
+// Bước 1: Lấy tất cả các loại sản phẩm
+$sql_types = "SELECT DISTINCT loai FROM sanpham";
+$types_result = $conn->query($sql_types);
 
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        // Populate the HTML form with product data
-                        echo '
-                        <a href="../sp/product.php?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
-                            <div class="each-item">
-                                <div class="img">
-                                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
-                                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
-                                </div>
-                                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
-                                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
-                            </div>
-                        ';
-                    }
-                } else {
-                    echo "Product not found.";
-                }
+$types = [];
+while ($row = $types_result->fetch_assoc()) {
+    $types[] = $row['loai'];
+}
 
-                $conn->close();
-                ?>
+// Bước 2: Lấy ngẫu nhiên 16 sản phẩm từ các loại khác nhau
+$products = [];
+$max_products = 16;
+
+while (count($products) < $max_products) {
+    $random_type = $types[array_rand($types)]; // Chọn ngẫu nhiên loại sản phẩm
+
+    // Lấy sản phẩm ngẫu nhiên của loại sản phẩm này
+    $sql_products = "SELECT * FROM sanpham WHERE loai = ? ORDER BY RAND() LIMIT 1";
+    $stmt = $conn->prepare($sql_products);
+    $stmt->bind_param("s", $random_type);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            if (count($products) >= $max_products) {
+                break 2; // Thoát khỏi vòng lặp while khi đạt số lượng mong muốn
+            }
+            $products[] = $row;
+        }
+    }
+}
+
+$conn->close();
+
+// Bước 3: Hiển thị sản phẩm
+if (!empty($products)) {
+    foreach ($products as $product) {
+        $product_page = '';
+        if ($product["loai"] == 'áo thun') {
+            $product_page = 'thun.php';
+        } elseif ($product["loai"] == 'quần jean') {
+            $product_page = 'jeans.php';
+        } elseif ($product["loai"] == 'áo sơ mi') {
+            $product_page = 'somi.php';
+        } elseif ($product["loai"] == 'nón') {
+            $product_page = 'non.php';
+        } else {
+            $product_page = 'product.php'; // Trang mặc định cho các loại khác
+        }
+
+        echo '
+        <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($product["idSP"]) . '&loai=' . urlencode(htmlspecialchars($product["loai"])) . '">
+            <div class="each-item">
+                <div class="img">
+                    <img src="../img/' . htmlspecialchars($product["image"]) . '" alt="" class="img-item">
+                    <img src="../img/' . htmlspecialchars($product["hover_image"]) . '" alt="" class="img-hover">
+                </div>
+                <div class="name-item" style="text-align: center">' . htmlspecialchars($product["tenSP"]) . '</div>
+                <div class="cost-item" style="text-align: center"><span>' . number_format($product["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                <a href="../html/checkout.php?idSP=' . htmlspecialchars($product["idSP"]) . '" class="buy">Mua ngay</a>
+            </div>
+        </a>
+        ';
+    }
+} else {
+    echo "Không tìm thấy sản phẩm.";
+}
+?>
+
+
+
+
                 <!-- <a href="../sp/stuffed.php?idSP=T1">
 
                     <div class="each-item">

@@ -300,38 +300,56 @@
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-                <?php
-        require_once "connectdb.php";
-        // Assuming you have a database connection established
-        $conn = new mysqli($host, $username, $password, $dbname);
+            <?php
+// Kết nối cơ sở dữ liệu
+require_once "../html/connectdb.php";
+$conn = new mysqli($host, $username, $password, $dbname);
 
-        // Fetch product data
-        $sql = "SELECT * FROM sanpham";
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
 
-        $result = $conn->query($sql);
+// Lấy tất cả sản phẩm và sắp xếp ngẫu nhiên
+$sql = "SELECT * FROM sanpham ORDER BY RAND()";
+$result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            // Populate the HTML form with product data
-            echo '
-            <a href="../sp/product.php?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
-                            <div class="each-item">
-                                <div class="img">
-                                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
-                                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
-                                </div>
-                                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
-                                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
-                            </div>
-                        ';
-          }
+$conn->close();
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Xác định trang sản phẩm dựa trên phân loại
+        $product_page = '';
+        if ($row["loai"] == 'áo thun') {
+            $product_page = 'thun.php';
+        } elseif ($row["loai"] == 'quần jean') {
+            $product_page = 'jeans.php';
+        } elseif ($row["loai"] == 'áo sơ mi') {
+            $product_page = 'somi.php';
+        } elseif ($row["loai"] == 'nón') {
+            $product_page = 'non.php';
         } else {
-          echo "Product not found.";
+            $product_page = 'product.php'; // Trang mặc định cho các loại khác
         }
 
-        $conn->close();
-        ?>
+        echo '
+        <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
+            <div class="each-item">
+                <div class="img">
+                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
+                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="" class="img-hover">
+                </div>
+                <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
+                <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
+            </div>
+        </a>
+        ';
+    }
+} else {
+    echo "Không tìm thấy sản phẩm.";
+}
+?>
+
                 <!-- <a href="../sp/stuffed.php?idSP=T1">
                 <div class="layout__item">
                     <div class="each-item">
