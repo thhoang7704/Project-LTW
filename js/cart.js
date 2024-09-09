@@ -3,7 +3,6 @@ let cartIcon = document.querySelector('.fa-solid.fa-cart-shopping.cart__head')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
 const btn = document.querySelector('.add')
-console.log(product.querySelector('.img'));
 
 // console.log(btn)
 // open cart
@@ -34,7 +33,13 @@ function ready(){
           var preProduct = btnItem.parentElement;
           var ppProduct = preProduct.parentElement;
           var product = ppProduct.parentElement;
-          var productImg = product.querySelector('.img').src;
+          var imgElement = product.querySelector('.img');
+          if (!imgElement) {
+            console.error("Element with class '.img' not found in product!");
+          } else {
+              var productImg = imgElement.src;
+              console.log("Product image source:", productImg);
+          }
           var productName = product.querySelector('.name-item').innerText;
           var productPrice = product.querySelector('.cost span').innerText;
         //   console.log(productImg, productName, productPrice);
@@ -147,4 +152,4 @@ function loadCartFromLocalStorage() {
     });
   } else {
     ready();
-  } 
+  }

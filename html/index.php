@@ -132,6 +132,9 @@ if (isset($_SESSION['success_message'])) {
                                     align-items: center;
                                 }
 
+                                .sdt {
+                                    left: 3px;
+                                }
 
                                 .sdt i {
                                     padding: 15px 0px;
@@ -168,7 +171,7 @@ if (isset($_SESSION['success_message'])) {
 
                                     <br>
                                     <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
-                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                    <span class="sdt"><i class="fa-solid fa-phone">0976925204</i> </span>
                                     <span class="email">
                                         <i class="fa-regular fa-envelope">
                                             <span class="email-detail">2251040023@ut.edu.vn</span>
