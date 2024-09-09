@@ -129,11 +129,11 @@ if (isset($_SESSION['success_message'])) {
                                 align-items: center;
                             }
 
-                            .sdt {
+                            .contact-sdt {
                                 left: 3px;
                             }
 
-                            .sdt i {
+                            .contact-sdt i {
                                 padding: 15px 0px;
                                 font-size: 20px;
 
@@ -167,8 +167,8 @@ if (isset($_SESSION['success_message'])) {
                                     <p>Trung tâm Tư vấn Khách hàng</p>
 
                                     <br>
-                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
-                                    <span class="sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
+                                    <span class="contact-sdt"><i class="fa-solid fa-phone">0372605077</i> </span> <br>
+                                    <span class="contact-sdt"><i class="fa-solid fa-phone">0372605077</i> </span>
                                     <span class="email">
                                         <i class="fa-regular fa-envelope">
                                             <span class="email-detail">2251040023@ut.edu.vn</span>
