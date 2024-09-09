@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Hiển thị thông báo nếu có
+if (isset($_SESSION['success_message'])) {
+    echo '<div class="success-message">' . $_SESSION['success_message'] . '</div>';
+    // Xóa thông báo sau khi hiển thị để tránh lặp lại khi tải lại trang
+    unset($_SESSION['success_message']);
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -18,6 +28,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/baiviet.css">
     <link rel="stylesheet" href="../css/notify.css">
+    <link rel="stylesheet" href="../css/info.css">
 
     <title>Clean Coin</title>
 </head>
@@ -242,11 +253,38 @@
                     <i class="fa-solid fa-cart-shopping cart__head"></i>
                     </a>
                 </div>
-                <div class="action__login">
-                    <a href="../html/login.php">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </div>
+                <script>
+                        // Tự động ẩn thông báo sau 2 giây
+                        setTimeout(function() {
+                            const message = document.querySelector('.success-message');
+                            if (message) {
+                                message.style.display = 'none';
+                            }
+                        }, 2000); // 2 giây
+                    </script>
+                    
+                    <!-- Bấm vào hiện form -->
+                     
+                       <div class="action__login">
+                        
+                            <a href="#" id="loginIcon">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                            <div id="userInfo" class="user-info">
+                            <h2>THÔNG TIN CỦA BẠN</h2>
+                                <?php if (isset($_SESSION['login'])): ?>
+                                    <div class="information">
+
+                                        <p class="name-login"><strong>Họ và tên:<span class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span> </strong> </p>
+                                        <p class="email-login"><strong>Email:<span class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong> </p>
+                                        <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong> </p>
+                                    </div>
+                                    <a href="logout.php" class="logout">Đăng xuất</a>
+                                <?php else: ?>
+                                    <p>Bạn chưa đăng nhập</p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
             </div>
         </div>
 
