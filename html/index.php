@@ -28,6 +28,7 @@ if (isset($_SESSION['success_message'])) {
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/notify.css">
+    <link rel="stylesheet" href="../css/info.css">
 
     <!-- js -->
     <script src="../js/login.js"></script>
@@ -266,161 +267,9 @@ if (isset($_SESSION['success_message'])) {
                             }
                         }, 2000); // 2 giây
                     </script>
-                    <style>
-                       .success-message {
-                            background-color: #4CAF50; /* Màu nền xanh lá cây cho thông báo thành công */
-                            color: white;
-                            padding: 10px;
-                            margin: 0;
-                            border-radius: 5px;
-                            width: 100%;
-                            text-align: center;
-                            position: fixed; /* Đặt vị trí cố định */
-                            top: 0; /* Gắn vào vị trí trên cùng của trang */
-                            left: 0;
-                            z-index: 9999; /* Đặt z-index cao nhất */
-                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ cho thông báo */
-                        } 
-
-                    </style>
+                    
                     <!-- Bấm vào hiện form -->
-                     <style>
-                        /* CSS cho phần chứa thông tin người dùng */
-                        .user-info {
-                            display: none;
-                            position: absolute;
-                            background-color: white;
-                            border: 1px solid #ccc;
-                            padding: 10px;
-                            z-index: 1000; /* Đảm bảo nó ở trên cùng */
-                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-                            right: -17px;
-                            top: 34px;
-                            width: 350px;
-                            border-radius: 8px;
-                        }
-
-                        /* Hiển thị thông tin khi hover vào biểu tượng */
-                        .action__login:hover .user-info {
-                            display: block;
-                        }
-
-                        .action__login {
-                            position: relative;
-                        }
-                        .logout-btn {
-                            padding: 10px;
-                            background-color: #d74b4b;
-                            color: white;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            font-weight: bold;
-                            width: 100%;
-                            margin-top: 10px;
-                            
-                        }
-
-                        .logout-btn:hover {
-                            background-color: #ac3b3b;
-                        }
-                        .name-login{
-                            display: flex;
-                            position: relative;
-                            left: -45px;
-                        }
-
-                        .name-login strong{
-                            display: flex;
-                            font-size: 20px;
-                            font-family: "Asap", sans-serif;
-                        }
-
-                        .email-login{
-                            display: flex;
-                            position: relative;
-                            left: -33px;
-                        }
-
-                        .email-login strong{
-                            display: flex;
-                            font-size: 20px;
-                            font-family: "Asap", sans-serif;
-                            
-                        }
-                        .sdt{
-                            display: flex;
-                            position: relative;
-                            left: -87px;
-                        }
-
-                        .sdt strong{
-                            display: flex;
-                            font-size: 20px;
-                            font-family: "Asap", sans-serif;
-                        }
-
-                        .logout{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            position: relative;
-                            left: 60px;
-                            text-decoration: none;
-                            font-family: "Asap", sans-serif;
-                            padding: 10px 0px;
-                            width: 200px;
-                            
-                            border-radius: 10px;
-                        }
-
-                        .information__user-name{
-                            position: relative;
-                            left: 15px;
-                        }
-
-                        .information__user-email{
-                            position: relative;
-                            left: 50px;
-                        }
-
-                        .information__user-sdt{
-                            position: relative;
-                            left: 59px;
-                        }
-
-                        .user-info h2{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            font-family: "Asap", sans-serif;
-                            font-weight: bold;
-                        }
-
-                        .information{
-                            position: relative;
-                            top: 10px;
-                            padding-bottom: 30px;
-                        }
-
-                        .user-info a:hover{
-                            text-decoration: none;
-                            background-color: #C0C0C0;
-                            color: #770000;
-                        }
-
-                        .user-info::after {
-                            content: '';
-                            position: absolute;
-                            top: -10px; /* Vị trí của tam giác */
-                            right: 10px; /* Vị trí của tam giác */
-                            width: 0;
-                            height: 0;
-                            border-left: 15px solid transparent; /* Phần cạnh trái của tam giác */
-                            border-right: 15px solid transparent; /* Phần cạnh phải của tam giác */
-                            border-bottom: 15px solid #fff; /* Màu nền của tam giác, giống màu nền của thông tin người dùng */
-                        }
-                     </style>
+                     
                        <div class="action__login">
                         
                             <a href="#" id="loginIcon">
@@ -537,65 +386,77 @@ if (isset($_SESSION['success_message'])) {
         <div class="layout">
             <div class="layout__item">
             <?php
-// Kết nối cơ sở dữ liệu
+                
+                // Kết nối cơ sở dữ liệu
                 require_once "../html/connectdb.php";
                 $conn = new mysqli($host, $username, $password, $dbname);
-
+                
                 if ($conn->connect_error) {
                     die("Kết nối thất bại: " . $conn->connect_error);
                 }
-
+                
                 // Bước 1: Lấy tất cả các loại sản phẩm
                 $sql_types = "SELECT DISTINCT loai FROM sanpham";
                 $types_result = $conn->query($sql_types);
-
+                
                 $types = [];
                 while ($row = $types_result->fetch_assoc()) {
                     $types[] = $row['loai'];
                 }
-
-                // Bước 2: Lấy ngẫu nhiên 16 sản phẩm từ các loại khác nhau
+                
+                // Bước 2: Lấy ngẫu nhiên 16 sản phẩm từ các loại khác nhau mà không bị trùng
                 $products = [];
                 $max_products = 16;
-
+                $selected_ids = []; // Mảng lưu các ID sản phẩm đã chọn
+                
                 while (count($products) < $max_products) {
                     $random_type = $types[array_rand($types)]; // Chọn ngẫu nhiên loại sản phẩm
-
+                
                     // Lấy sản phẩm ngẫu nhiên của loại sản phẩm này
                     $sql_products = "SELECT * FROM sanpham WHERE loai = ? ORDER BY RAND() LIMIT 1";
                     $stmt = $conn->prepare($sql_products);
                     $stmt->bind_param("s", $random_type);
                     $stmt->execute();
                     $result = $stmt->get_result();
-
+                
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             if (count($products) >= $max_products) {
                                 break 2; // Thoát khỏi vòng lặp while khi đạt số lượng mong muốn
                             }
-                            $products[] = $row;
+                            // Kiểm tra nếu sản phẩm đã tồn tại trong danh sách sản phẩm
+                            if (!in_array($row['idSP'], $selected_ids)) {
+                                $products[] = $row;
+                                $selected_ids[] = $row['idSP']; // Thêm ID sản phẩm vào danh sách đã chọn
+                            }
                         }
                     }
                 }
-
+                
                 $conn->close();
-
+                
                 // Bước 3: Hiển thị sản phẩm
                 if (!empty($products)) {
                     foreach ($products as $product) {
                         $product_page = '';
-                        if ($product["loai"] == 'áo thun') {
-                            $product_page = 'thun.php';
-                        } elseif ($product["loai"] == 'quần jean') {
-                            $product_page = 'jeans.php';
-                        } elseif ($product["loai"] == 'áo sơ mi') {
-                            $product_page = 'somi.php';
-                        } elseif ($product["loai"] == 'nón') {
-                            $product_page = 'non.php';
-                        } else {
-                            $product_page = 'product.php'; // Trang mặc định cho các loại khác
+                        switch ($product["loai"]) {
+                            case 'áo thun':
+                                $product_page = 'thun.php';
+                                break;
+                            case 'quần jean':
+                                $product_page = 'jeans.php';
+                                break;
+                            case 'áo sơ mi':
+                                $product_page = 'somi.php';
+                                break;
+                            case 'nón':
+                                $product_page = 'non.php';
+                                break;
+                            default:
+                                $product_page = 'product.php'; // Trang mặc định cho các loại khác
+                                break;
                         }
-
+                
                         echo '
                         <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($product["idSP"]) . '&loai=' . urlencode(htmlspecialchars($product["loai"])) . '">
                             <div class="each-item">
@@ -614,6 +475,7 @@ if (isset($_SESSION['success_message'])) {
                     echo "Không tìm thấy sản phẩm.";
                 }
                 ?>
+                
 
 
 
