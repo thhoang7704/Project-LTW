@@ -33,13 +33,7 @@ function ready(){
           var preProduct = btnItem.parentElement;
           var ppProduct = preProduct.parentElement;
           var product = ppProduct.parentElement;
-          var imgElement = product.querySelector('.img');
-          if (!imgElement) {
-            console.error("Element with class '.img' not found in product!");
-          } else {
-              var productImg = imgElement.src;
-              console.log("Product image source:", productImg);
-          }
+          var productImg = product.querySelector('.img').src;
           var productName = product.querySelector('.name-item').innerText;
           var productPrice = product.querySelector('.cost span').innerText;
         //   console.log(productImg, productName, productPrice);
@@ -152,4 +146,4 @@ function loadCartFromLocalStorage() {
     });
   } else {
     ready();
-  }
+  } 
