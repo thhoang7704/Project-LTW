@@ -63,97 +63,97 @@ if (isset($_SESSION['success_message'])) {
                         </li>
                         <li class="navbar-item">
                             <style>
-                            .contact-overlay {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5);
-                                /* Màu nền mờ tối */
-                                z-index: 998;
-                                /* Dưới modal nhưng trên các nội dung khác */
-                            }
+                                .contact-overlay {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    /* Màu nền mờ tối */
+                                    z-index: 998;
+                                    /* Dưới modal nhưng trên các nội dung khác */
+                                }
 
-                            .contact-modal {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                right: 0;
-                                height: 100%;
-                                width: 30%;
-                                background-color: white;
-                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999;
-                                /* Trên overlay */
-                                overflow-y: auto;
-                                border-radius: 5px;
-                            }
+                                .contact-modal {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 30%;
+                                    background-color: white;
+                                    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                    z-index: 999;
+                                    /* Trên overlay */
+                                    overflow-y: auto;
+                                    border-radius: 5px;
+                                }
 
-                            .contact-modal-content {
-                                padding: 20px;
-                                position: relative;
-                                top: 80px;
-                            }
+                                .contact-modal-content {
+                                    padding: 20px;
+                                    position: relative;
+                                    top: 80px;
+                                }
 
-                            .contact-close {
-                                color: #aaa;
-                                float: right;
-                                font-size: 28px;
-                                font-weight: bold;
-                            }
+                                .contact-close {
+                                    color: #aaa;
+                                    float: right;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                }
 
-                            .contact-close:hover,
-                            .contact-close:focus {
-                                color: black;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
+                                .contact-close:hover,
+                                .contact-close:focus {
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
 
-                            .facebook {
-                                display: flex;
-                            }
+                                .facebook {
+                                    display: flex;
+                                }
 
 
-                            .contact-modal-content h2 {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #990000;
-                                font-size: 33px;
-                            }
+                                .contact-modal-content h2 {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #990000;
+                                    font-size: 33px;
+                                }
 
-                            p {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+                                p {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
 
-                            .sdt {}
+                                .sdt {}
 
-                            .sdt i {
-                                padding: 15px 0px;
-                                font-size: 20px;
+                                .sdt i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
 
-                            }
+                                }
 
-                            .email-contact i {
-                                padding: 15px 0px;
-                                font-size: 20px;
-                            }
+                                .email-contact i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
+                                }
 
-                            .facebook a {
-                                padding-top: 15px;
-                                padding-bottom: 40px;
-                            }
+                                .facebook a {
+                                    padding-top: 15px;
+                                    padding-bottom: 40px;
+                                }
 
-                            .thank {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 18px;
-                            }
+                                .thank {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                }
                             </style>
                             <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
@@ -242,10 +242,10 @@ if (isset($_SESSION['success_message'])) {
 
                         <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
                         <script>
-                        document.querySelector('.seeall').addEventListener('click', function(event) {
-                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                            alert('Không có thông báo mới');
-                        });
+                            document.querySelector('.seeall').addEventListener('click', function(event) {
+                                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                                alert('Không có thông báo mới');
+                            });
                         </script>
 
 
@@ -263,29 +263,35 @@ if (isset($_SESSION['success_message'])) {
                             }
                         }, 2000); // 2 giây
                     </script>
-                    
-                    <!-- Bấm vào hiện form -->
-                     
-                       <div class="action__login">
-                        
-                            <a href="#" id="loginIcon">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                            <div id="userInfo" class="user-info">
-                            <h2>THÔNG TIN CỦA BẠN</h2>
-                                <?php if (isset($_SESSION['login'])): ?>
-                                    <div class="information">
 
-                                        <p class="name-login"><strong>Họ và tên:<span class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span> </strong> </p>
-                                        <p class="email-login"><strong>Email:<span class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong> </p>
-                                        <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong> </p>
-                                    </div>
-                                    <a href="logout.php" class="logout">Đăng xuất</a>
-                                <?php else: ?>
-                                    <p>Bạn chưa đăng nhập</p>
-                                <?php endif; ?>
-                            </div>
+                    <!-- Bấm vào hiện form -->
+
+                    <div class="action__login">
+
+                        <a href="#" id="loginIcon">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        <div id="userInfo" class="user-info">
+                            <h2>THÔNG TIN CỦA BẠN</h2>
+                            <?php if (isset($_SESSION['login'])): ?>
+                                <div class="information">
+
+                                    <p class="name-login"><strong>Họ và tên:<span
+                                                class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span>
+                                        </strong> </p>
+                                    <p class="email-login"><strong>Email:<span
+                                                class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong>
+                                    </p>
+                                    <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span
+                                                    class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong>
+                                    </p>
+                                </div>
+                                <a href="logout.php" class="logout">Đăng xuất</a>
+                            <?php else: ?>
+                                <p>Bạn chưa đăng nhập</p>
+                            <?php endif; ?>
                         </div>
+                    </div>
                 </div>
             </div>
     </div>
@@ -338,38 +344,38 @@ if (isset($_SESSION['success_message'])) {
         <div class="allitem">TẤT CẢ SẢN PHẨM</div>
         <div class="layout">
             <div class="layout__item">
-            <?php
-// Kết nối cơ sở dữ liệu
-require_once "../html/connectdb.php";
-$conn = new mysqli($host, $username, $password, $dbname);
+                <?php
+                // Kết nối cơ sở dữ liệu
+                require_once "../html/connectdb.php";
+                $conn = new mysqli($host, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+                if ($conn->connect_error) {
+                    die("Kết nối thất bại: " . $conn->connect_error);
+                }
 
-// Lấy tất cả sản phẩm và sắp xếp ngẫu nhiên
-$sql = "SELECT * FROM sanpham ORDER BY RAND()";
-$result = $conn->query($sql);
+                // Lấy tất cả sản phẩm và sắp xếp ngẫu nhiên
+                $sql = "SELECT * FROM sanpham ORDER BY RAND()";
+                $result = $conn->query($sql);
 
-$conn->close();
+                $conn->close();
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        // Xác định trang sản phẩm dựa trên phân loại
-        $product_page = '';
-        if ($row["loai"] == 'áo thun') {
-            $product_page = 'thun.php';
-        } elseif ($row["loai"] == 'quần jean') {
-            $product_page = 'jeans.php';
-        } elseif ($row["loai"] == 'áo sơ mi') {
-            $product_page = 'somi.php';
-        } elseif ($row["loai"] == 'nón') {
-            $product_page = 'non.php';
-        } else {
-            $product_page = 'product.php'; // Trang mặc định cho các loại khác
-        }
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Xác định trang sản phẩm dựa trên phân loại
+                        $product_page = '';
+                        // if ($row["loai"] == 'áo thun') {
+                        //     $product_page = 'thun.php';
+                        // } elseif ($row["loai"] == 'quần jean') {
+                        //     $product_page = 'jeans.php';
+                        // } elseif ($row["loai"] == 'áo sơ mi') {
+                        //     $product_page = 'somi.php';
+                        // } elseif ($row["loai"] == 'nón') {
+                        //     $product_page = 'non.php';
+                        // } else {
+                        $product_page = 'product.php'; // Trang mặc định cho các loại khác
+                        // }
 
-        echo '
+                        echo '
         <a href="../sp/' . htmlspecialchars($product_page) . '?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
             <div class="each-item">
                 <div class="img">
@@ -382,437 +388,12 @@ if ($result->num_rows > 0) {
             </div>
         </a>
         ';
-    }
-} else {
-    echo "Không tìm thấy sản phẩm.";
-}
-?>
+                    }
+                } else {
+                    echo "Không tìm thấy sản phẩm.";
+                }
+                ?>
 
-                <!-- <a href="../sp/stuffed.php?idSP=T1">
-                <div class="layout__item">
-                    <div class="each-item">
-                        <div class="img">
-                            <img src="../img/2.png" alt="" class="img-item">
-                            <img src="../img/i1-1.png" alt="" class="img-hover">
-                            <div class="icon">
-                              
-                            </div>
-                        </div>
-                        <div class="name-item" align="center">STUFFED WOLF TEE</div>
-                        <div class="cost-item" align="center"><span>470.000</span><sup>đ</sup></div>
-                        <a href="../html/checkout.php" class="buy">Mua ngay</a>
-                    </div>
-            </a>
-            <a href="../sp/obs.php?idSP=SM1">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i2.png" alt="" class="img-item">
-                        <img src="../img/i2-2.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">OBSTREPEROUS VARSITY JACKET</div>
-                    <div class="cost-item" align="center">1,900,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/sym.php?idSP=QJ1">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i3.png" alt="" class="img-item">
-                        <img src="../img/i3-3.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">SYMMETRY PANTS</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/backpack.php?idSP=N1">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i4.png" alt="" class="img-item">
-                        <img src="../img/i4-4.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">BACKPACK LEATHER 24</div>
-                    <div class="cost-item" align="center">795,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/mascot.php?idSP=SM2">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i5.png" alt="" class="img-item">
-                        <img src="../img/i5-5.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">MASCOT HOCKEY JERSEY</div>
-                    <div class="cost-item" align="center">590,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/astral.php?idSP=SM3">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i6.png" alt="" class="img-item">
-                        <img src="../img/i6-6.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">WHITE ASTRAL SHIRT</div>
-                    <div class="cost-item sale" style="text-align: center"><del>700.000<sup>đ</sup></del>
-                        <div class="cost-item discount"><span>560.000</span><sup>đ</sup></div>
-                    </div>
-                    <div class="icon-sale">
-                        -25%
-                    </div>
-                    <a href="" class="buy buy-sale">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/abypant.php?idSP=QJ2">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i17.png" alt="" class="img-item">
-                        <img src="../img/i17-17.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">ABYSS SS24 ECHINIDERM PANTS</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/abytee.php?idSP=T2">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i8.png" alt="" class="img-item">
-                        <img src="../img/i8-8.png " alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">ABYSS SS24 INSECT AFFECTION TEE</div>
-                    <div class="cost-item" align="center">200,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/splin.php?idSP=QJ3">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i9.png" alt="" class="img-item">
-                        <img src="../img/i9-9.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">SPLINTERED PANTS</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/striped.php?idSP=SM4">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i10.png" alt="" class="img-item">
-                        <img src="../img/i10-10.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">STRIPED SHIRT 24</div>
-                    <div class="cost-item" align="center">495,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/brokenheart.php?idSP=T3">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i11.png" alt="" class="img-item">
-                        <img src="../img/i11-11.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">BROKEN HEART TEE</div>
-                    <div class="cost-item" align="center">450,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/essence.php?idSP=T4">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i12.png" alt="" class="img-item">
-                        <img src="../img/i12-12.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">ESSENCE TEE</div>
-                    <div class="cost-item" align="center">450,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/cerise.php?idSP=SM5">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i13.png" alt="" class="img-item">
-                        <img src="../img/i13-13.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">CERISE CRAVAT TEE</div>
-                    <div class="cost-item" align="center">450,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/wash.php?idSP=QS1">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i14.png" alt="" class="img-item">
-                        <img src="../img/i14-14.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">WASH JEANS SHORT</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/tornado.php">
-
-                <div class="each-item item1">
-                    <div class="img">
-                        <img src="../img/i15.png" alt="" class="img-item">
-                        <img src="../img/i15-15.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">TORNADO ROUTE PANTS</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/scuffer.php?idSP=SM6">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i16.png" alt="" class="img-item">
-                        <img src="../img/i16-16.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">SCUFFERS LOVE POLO</div>
-                    <div class="cost-item" align="center">450,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/abyss.php?idSP=T9">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i18.png" alt="" class="img-item">
-                        <img src="../img/i18-18.png" alt="" class="img-hover img-18">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">ABYSS SS24 MYSTIC WING WAX TEE</div>
-                    <div class="cost-item" align="center">490,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/cap5.php?idSP=N2">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i19.png" alt="" class="img-item">
-                        <img src="../img/i19-19.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">CAP 5</div>
-                    <div class="cost-item" align="center">490,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/plaid.php?idSP=QJ5">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i20.png" alt="" class="img-item">
-                        <img src="../img/i20-20.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">PLAID CASUAL PANTS</div>
-                    <div class="cost-item" align="center">690,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/basic.php?idSP=T5">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i29.png" alt="" class="img-item">
-                        <img src="../img/i29-29.png" alt="" class="img-hover img-29">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">GUARDIAN BASIC TEE</div>
-                    <div class="cost-item" align="center">460,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/angle.php?idSP=T6">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i21.png" alt="" class="img-item">
-                        <img src="../img/i21-21.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">GUARDIAN ANGLE TEE</div>
-                    <div class="cost-item" align="center">460,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/boxer.php?idSP=QS2">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i22.png" alt="" class="img-item">
-                        <img src="../img/i22-22.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">STRIPED BOXERS</div>
-                    <div class="cost-item" align="center">280,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/boxer2.php?idSP=QS3">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i23.png" alt="" class="img-item">
-                        <img src="../img/i23-23.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">STRIPED BOXERS 2</div>
-                    <div class="cost-item" align="center">280,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/tracer.php?idSP=SM7">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i24.png" alt="" class="img-item">
-                        <img src="../img/i24-24.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">TRACER SLEEVES BOXY SHIRT</div>
-                    <div class="cost-item" align="center">495,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/sheen.php?idSP=QS6">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i25.png" alt="" class="img-item">
-                        <img src="../img/i25-25.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">SHEENYBEL SHORT</div>
-                    <div class="cost-item" align="center">680,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/snapback.php?idSP=N3">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i26.png" alt="" class="img-item">
-                        <img src="../img/i26-26.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">SNAPBACK CAP</div>
-                    <div class="cost-item" align="center">332,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/classic.php?idSP=N4">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i27.png" alt="" class="img-item">
-                        <img src="../img/i27-27.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">CLASSIC CAP</div>
-                    <div class="cost-item" align="center">275,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a>
-            <a href="../sp/reflect.php?idSP=QS4">
-
-                <div class="each-item">
-                    <div class="img">
-                        <img src="../img/i28.png" alt="" class="img-item">
-                        <img src="../img/i28-28.png" alt="" class="img-hover">
-                        <div class="icon">
-                           
-                        </div>
-                    </div>
-                    <div class="name-item" align="center">REFLECTED PARACHUTE SHORTS</div>
-                    <div class="cost-item" align="center">450,000VND</div>
-                    <a href="" class="buy">Mua ngay</a>
-                </div>
-            </a> -->
 
             </div>
 

@@ -13,7 +13,7 @@ function add_product($con)
 {
     $idSP = $_POST['idSP'];
     $tenSP = $_POST['tenSP'];
-    $gia = $_POST['price'];
+    $gia = $_POST['price'] * 1000;
     $image = $_FILES['image']['name'];
 
     $target_dir = "../img/";
@@ -160,6 +160,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'add') {
     <table border="1">
         <tr>
             <th>ID</th>
+            <th>Hình ảnh</th>
             <th>Tên sản phẩm</th>
             <th>Giá</th>
             <th>Hành động</th>
@@ -171,6 +172,8 @@ if (isset($_POST['action']) && $_POST['action'] == 'add') {
         ?>
             <tr>
                 <td><?php echo $row['idSP']; ?></td>
+                <td><?php echo "<img style='width: 100px; height: 100px  ;' src='../img/{$row['image']}' alt='Image'>"; ?>
+                </td>
                 <td><?php echo $row['tenSP']; ?></td>
                 <td><?php echo number_format($row['price'], 0, ',', '.'); ?> đ</td>
                 <td>

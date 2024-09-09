@@ -257,29 +257,35 @@ if (isset($_SESSION['success_message'])) {
                             }
                         }, 2000); // 2 giây
                     </script>
-                    
-                    <!-- Bấm vào hiện form -->
-                     
-                       <div class="action__login">
-                        
-                            <a href="#" id="loginIcon">
-                                <i class="fa-regular fa-user"></i>
-                            </a>
-                            <div id="userInfo" class="user-info">
-                            <h2>THÔNG TIN CỦA BẠN</h2>
-                                <?php if (isset($_SESSION['login'])): ?>
-                                    <div class="information">
 
-                                        <p class="name-login"><strong>Họ và tên:<span class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span> </strong> </p>
-                                        <p class="email-login"><strong>Email:<span class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong> </p>
-                                        <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong> </p>
-                                    </div>
-                                    <a href="logout.php" class="logout">Đăng xuất</a>
-                                <?php else: ?>
-                                    <p>Bạn chưa đăng nhập</p>
-                                <?php endif; ?>
-                            </div>
+                    <!-- Bấm vào hiện form -->
+
+                    <div class="action__login">
+
+                        <a href="#" id="loginIcon">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        <div id="userInfo" class="user-info">
+                            <h2>THÔNG TIN CỦA BẠN</h2>
+                            <?php if (isset($_SESSION['login'])): ?>
+                                <div class="information">
+
+                                    <p class="name-login"><strong>Họ và tên:<span
+                                                class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span>
+                                        </strong> </p>
+                                    <p class="email-login"><strong>Email:<span
+                                                class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong>
+                                    </p>
+                                    <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span
+                                                    class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong>
+                                    </p>
+                                </div>
+                                <a href="logout.php" class="logout">Đăng xuất</a>
+                            <?php else: ?>
+                                <p>Bạn chưa đăng nhập</p>
+                            <?php endif; ?>
                         </div>
+                    </div>
                 </div>
             </div>
     </div>
@@ -331,7 +337,6 @@ if (isset($_SESSION['success_message'])) {
     <main><?php
             require_once "../html/connectdb.php";
             $conn = new mysqli($host, $username, $password, $dbname);
-            // Lấy ID sản phẩm từ URL
             // Lấy ID sản phẩm từ URL
             $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : null;
             if ($idSP === null) {
@@ -392,8 +397,8 @@ if (isset($_SESSION['success_message'])) {
                         <div class="size-item size-l" onclick="selectBox(this)">L</div>
                         <div class="size-item size-xl" onclick="selectBox(this)">XL</div>
                     </div>
-                    <div class="add">THÊM VÀO GIỎ</div>
-                    <div class="buys">MUA NGAY</div>
+                    <div><button type="submit" class="add" name="add_to_cart">THÊM VÀO GIỎ</button></div>
+                    <div><a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buys">Mua ngay</a></div>
                 </div>
     ';
                     break;

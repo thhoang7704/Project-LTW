@@ -3,6 +3,8 @@ let cartIcon = document.querySelector('.fa-solid.fa-cart-shopping.cart__head')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
 const btn = document.querySelector('.add')
+console.log(product.querySelector('.img'));
+
 // console.log(btn)
 // open cart
 cartIcon.onclick = () => {
@@ -25,7 +27,7 @@ else{
 function ready(){
     //remove items from cart
     // quantity changes
-    //add to cart
+    //add to cart 
     if (btn) {
         btn.addEventListener('click', function(event) {
           var btnItem = event.target;
