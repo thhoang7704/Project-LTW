@@ -132,11 +132,11 @@ if (isset($_SESSION['success_message'])) {
                                     align-items: center;
                                 }
 
-                                .sdt {
+                                .contact-sdt {
                                     left: 3px;
                                 }
 
-                                .sdt i {
+                                .contact-sdt i {
                                     padding: 15px 0px;
                                     font-size: 20px;
 
