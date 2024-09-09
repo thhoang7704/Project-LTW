@@ -4,6 +4,7 @@
    left: 10%;
    top: 50px;
    font-size: 25px;
+   
 }
 .img-slide{
     height: 700px;
@@ -19,6 +20,7 @@
    left: 10%;
    top: 90px;
    font-size: 25px;
+   font-family: "Asap", sans-serif;
 }
 .container{
     min-height: 2000px;
