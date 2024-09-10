@@ -252,8 +252,7 @@ if (isset($_SESSION['success_message'])) {
 
                     </div>
                     <div class="action__cart">
-                        <i class="fa-solid fa-cart-shopping cart__head"></i>
-                        </a>
+                        <a href="../sp/cart.php"><i class="fa-solid fa-cart-shopping cart__head"></i></a>
                     </div>
                     <script>
                     // Tự động ẩn thông báo sau 2 giây
@@ -365,7 +364,7 @@ if (isset($_SESSION['success_message'])) {
                                 </div>
                                 <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
                                 <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
+                                <a href="../html/muangay.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
                             </div>
                         ';
                     }

@@ -30,7 +30,8 @@ if (isset($_SESSION['success_message'])) {
     <link rel="stylesheet" href="../css/notify.css">
     <link rel="stylesheet" href="../css/info.css">
 
-    <title>Clean Coin</title>
+    <script src="../js/login.js"></script>
+    <title>TH Fashion</title>
 </head>
 
 <body>
@@ -243,11 +244,43 @@ if (isset($_SESSION['success_message'])) {
 
 
                     </div>
+                    <style>
+                        /* Ẩn giỏ hàng mặc định */
+                        .cart-modal {
+                            display: none;
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            width: 300px;
+                            height: 100%;
+                            background: white;
+                            border-left: 1px solid #ccc;
+                            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+                            z-index: 1000;
+                        }
+
+                        .cart-content {
+                            padding: 20px;
+                            overflow-y: auto;
+                        }
+
+                        .close-btn {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            background: #f5f5f5;
+                            border: none;
+                            padding: 10px;
+                            cursor: pointer;
+                        }
+                    </style>
                     <div class="action__cart">
-                        <!-- <a href=""> -->
-                        <i class="fa-solid fa-cart-shopping cart__head"></i>
-                        </a>
+                        <a href="../sp/cart.php"> <i class="fa-solid fa-cart-shopping cart__head"></i></a>
                     </div>
+
+
+
+                    <script src="../js/cart.js"></script>
                     <script>
                         // Tự động ẩn thông báo sau 2 giây
                         setTimeout(function() {
@@ -334,120 +367,110 @@ if (isset($_SESSION['success_message'])) {
         </div>
     </div>
 
-    <main><?php
-            require_once "../html/connectdb.php";
-            $conn = new mysqli($host, $username, $password, $dbname);
-            // Lấy ID sản phẩm từ URL
-            $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : null;
-            if ($idSP === null) {
-                die("ID sản phẩm không được cung cấp");
-            }
+    <main>
 
-            // Chuẩn bị câu truy vấn SQL
-            $sql = "SELECT * FROM sanpham WHERE idSP = ?";
+        <?php
+        require_once "../html/connectdb.php";
+        $conn = new mysqli($host, $username, $password, $dbname);
 
-            // Chuẩn bị statement để tránh SQL injection
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $idSP);
-            $stmt->execute();
+        // Lấy ID sản phẩm từ URL
+        $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : null;
+        if ($idSP === null) {
+            die("ID sản phẩm không được cung cấp");
+        }
 
-            $result = $stmt->get_result();
+        // Chuẩn bị câu truy vấn SQL
+        $sql = "SELECT * FROM sanpham WHERE idSP = ?";
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
+        // Chuẩn bị statement để tránh SQL injection
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $idSP);
+        $stmt->execute();
 
-                    // Hiển thị thông tin sản phẩm vào HTML
-                    echo '
-        <div class="container">
-            <div class="item">
-                <div class="detail-item">
-                    <h2>THÔNG TIN</h2>
-                    <ul class="info-item">
-                        <li>Form basic mới</li>
-                        <li>Graphic mặt trước áo được in kéo lụa</li>
-                        <li>Logo thêu nổi ở tay áo</li>
-                        <li>Chất liệu: Cotton 2 chiều</li>
-                    </ul><br>
-                    <div class="warning">
-                        <strong>Lưu ý</strong>
-                        <span>Màu sắc sản phẩm có thể khác trên ảnh <br>do điều kiện ánh sáng khi chụp.</span>
-                    </div><br>
-                    <div class="vc">
-                        Vận chuyển từ 2-3 ngày. <br>Thiết kế và sản xuất bởi THF.
-                    </div>
-                </div>
-                <div class="img-items">
-                    <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img">
-                    <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="">
+        $result = $stmt->get_result();
 
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            // Hiển thị thông tin sản phẩm vào HTML
+            echo '
+    <div class="container">
+        <div class="item">
+            <div class="detail-item">
+                <h2>THÔNG TIN</h2>
+                <ul class="info-item">
+                   
+                </ul><br>
+                <div class="warning">
+                    <strong>Lưu ý</strong>
+                    <span>Màu sắc sản phẩm có thể khác trên ảnh <br>do điều kiện ánh sáng khi chụp.</span>
+                </div><br>
+                <div class="vc">
+                    Vận chuyển từ 2-3 ngày. <br>Thiết kế và sản xuất bởi THF.
                 </div>
             </div>
-            <div class="item-sidebar">
-                <div class="detail-item-sidebar">
-                    <div class="name-item">' . htmlspecialchars($row["tenSP"]) . '</div>
-                    <div class="masp">SKU: HBHT0001</div>
-                    <div class="cost"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                    <div class="color">
-                        Màu sắc
-                        <div class="color-item"></div>
-                    </div>
-                    <div class="size">
-                        <div class="size-item size-s" onclick="selectBox(this)">S</div>
-                        <div class="size-item size-m" onclick="selectBox(this)">M</div>
-                        <div class="size-item size-l" onclick="selectBox(this)">L</div>
-                        <div class="size-item size-xl" onclick="selectBox(this)">XL</div>
-                    </div>
-                    <div><button type="submit" class="add" name="add_to_cart">THÊM VÀO GIỎ</button></div>
-                    <div><a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buys">Mua ngay</a></div>
+            <div class="img-items">
+                <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="Ảnh sản phẩm chính" class="img">
+                <img src="../img/' . htmlspecialchars($row["hover_image"]) . '" alt="Ảnh sản phẩm khi hover" class="img-hover">
+            </div>
+        </div>
+        <div class="item-sidebar">
+            <div class="detail-item-sidebar">
+                <div class="name-item">' . htmlspecialchars($row["tenSP"]) . '</div>
+                <div class="masp">SKU: ' . htmlspecialchars($row["idSP"]) . '</div>
+                <div class="cost"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
+                <div class="color">
+                    Màu sắc
+                    
                 </div>
-    ';
-                    break;
+                <div class="size">
+                    <div class="size-item size-s" onclick="selectBox(this)">S</div>
+                    <div class="size-item size-m" onclick="selectBox(this)">M</div>
+                    <div class="size-item size-l" onclick="selectBox(this)">L</div>
+                    <div class="size-item size-xl" onclick="selectBox(this)">XL</div>
+                </div>
+                <div>
+                    <button type="button" class="add" onclick="addToCart(\'' . htmlspecialchars($row["idSP"]) . '\')">THÊM VÀO GIỎ</button>
+                </div>
+                <div>
+                    <a href="../html/muangay.php?idSP= ' . urlencode(trim($row["idSP"])) . '&quantity=1" class="buys">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function selectBox(element) {
+            // Xóa trạng thái chọn khỏi tất cả các ô
+            var boxes = document.querySelectorAll(".size-item");
+            boxes.forEach(function (box) {
+                box.classList.remove("selected");
+            });
+
+            // Thêm trạng thái chọn cho ô hiện tại
+            element.classList.add("selected");
+        }
+
+        function addToCart(idSP) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../sp/add_to_cart.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert("Sản phẩm đã được thêm vào giỏ hàng!");
+                } else {
+                    alert("Có lỗi xảy ra!");
                 }
-            } else {
-                echo "Sản phẩm không tồn tại";
-            }
+            };
+            xhr.send("idSP=" + encodeURIComponent(idSP));
+        }
+    </script>
+    ';
+        } else {
+            echo "Sản phẩm không tồn tại";
+        }
 
-            $stmt->close();
-            $conn->close();
-            ?>
-        <script>
-            function selectBox(element) {
-                // Xóa trạng thái chọn khỏi tất cả các ô
-                var boxes = document.querySelectorAll('.size-item');
-                boxes.forEach(function(box) {
-                    box.classList.remove('selected');
-                });
-
-                // Thêm trạng thái chọn cho ô hiện tại
-                element.classList.add('selected');
-            }
-        </script>
-        <div class="cart">
-            <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
-            <div class="cart-content">
-                <!-- <div class="cart-box">
-          <img src="../img/2.png" alt="" class="cart-img">
-          <div class="detail-box">
-            <div class="cart-product-title">STUFFED WOLF TEE</div>
-            <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
-            <input type="number" value="1" class="cart-quantity">
-          </div>
-          <i class="fa-solid fa-trash cart-remove"></i>
-        </div> -->
-            </div>
-            <!-- total -->
-            <div class="total">
-                <div class="total-title">Tổng tiền:</div>
-                <div class="total-price"><span>0</span><sup>đ</sup></div>
-            </div>
-            <!-- button -->
-            <button type="button" class="btn-buy"><a href="../html/checkout.php">Thanh toán</a></button>
-            <!-- close -->
-            <i class="fa-solid fa-x" id="close-cart"></i>
-        </div>
-        <script src="../js/cart.js"></script>
-        </div>
-        </div>
+        $stmt->close();
+        $conn->close();
+        ?>
         <div class="lq">SẢN PHẨM LIÊN QUAN</div>
         <div class="layout">
             <div class="layout__item">
@@ -475,7 +498,7 @@ if (isset($_SESSION['success_message'])) {
                         while ($row = $result->fetch_assoc()) {
                             // Populate the HTML form with product data
                             echo '
-                        
+                        <a href="../sp/product.php?idSP=' . htmlspecialchars($row["idSP"]) . '&loai=' . urlencode(htmlspecialchars($row["loai"])) . '">
                             <div class="each-item">
                                 <div class="img">
                                     <img src="../img/' . htmlspecialchars($row["image"]) . '" alt="" class="img-item">
@@ -496,6 +519,41 @@ if (isset($_SESSION['success_message'])) {
 
                 </div>
             </div>
+            <div id="cart-modal" style="display: none;">
+                <div id="cart-content"></div>
+                <button id="close-cart-modal">Đóng</button>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('view-cart-button').addEventListener('click', function() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", "../path/to/view_cart.php", true);
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                var cartItems = JSON.parse(xhr.responseText);
+                                var cartContent = document.getElementById('cart-content');
+                                cartContent.innerHTML = '';
+                                if (cartItems.length > 0) {
+                                    cartItems.forEach(function(item) {
+                                        cartContent.innerHTML += '<div class="cart-item">' +
+                                            '<img src="' + item.image + '" alt="' + item.name +
+                                            '" width="100">' +
+                                            '<span>' + item.name + '</span>' +
+                                            '<span>' + item.price + ' đ</span>' +
+                                            '<span>Số lượng: ' + item.quantity + '</span>' +
+                                            '</div>';
+                                    });
+                                } else {
+                                    cartContent.innerHTML = '<p>Giỏ hàng của bạn hiện đang trống.</p>';
+                                }
+                                document.getElementById('cart-modal').style.display = 'block';
+                            }
+                        };
+                        xhr.send();
+                    });
+                });
+            </script>
+
     </main>
 
 

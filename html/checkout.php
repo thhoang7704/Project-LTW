@@ -9,138 +9,146 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="column1">
-            <h2><a href="../html/index.php">TH FASHION</a></h2>
-            <p><span>Thông tin giao hàng</span></p>
-            <input placeholder="Họ và tên" autocapitalize="off" spellcheck="false" type="text" id="hoten" size="30" />
-            <input placeholder="Email" autocapitalize="off" spellcheck="false" type="email" id="email" />
-            <input placeholder="Số điện thoại" autocapitalize="off" spellcheck="false" type="tel" id="sdt" />
-            <input placeholder="Địa chỉ" autocapitalize="off" spellcheck="false" type="text" id="address" />
-            <div class="tinh">
-                <label class="fiel-label" for="shipping_province">Tỉnh/Thành</label>
-                <select name="shipping_province" id="shipping_province" class="diachi">
-                    <option value="">Tỉnh/thành phố</option>
-                </select>
+    <?php
+    require_once "../html/connectdb.php";
+    $conn = new mysqli($host, $username, $password, $dbname);
+    // // Xử lý idSP và quantity từ URL
+    // $idSP = isset($_GET['idSP']) ? trim($_GET['idSP']) : null;
+    // $quantity = isset($_GET['quantity']) ? (int)$_GET['quantity'] : 1; // Mặc định là 1 nếu không có quantity
+
+    // // Loại bỏ dấu cách và ký tự không hợp lệ
+    // $idSP = str_replace('%20', '', $idSP); // Loại bỏ dấu cách mã hóa
+    // $idSP = preg_replace('/[^a-zA-Z0-9]/', '', $idSP);
+
+    // if (empty($idSP)) {
+    //     die("Không có sản phẩm nào để thanh toán.");
+    // }
+    // Lấy danh sách idSP từ URL
+    $idSPArray = isset($_GET['idSP']) ? $_GET['idSP'] : null;
+    $quantityArray = isset($_GET['quantity']) ? $_GET['quantity'] : null;
+
+    if ($idSPArray === null || !is_array($idSPArray)) {
+        die("Không có sản phẩm nào để thanh toán.");
+    }
+
+    // Hiển thị form đặt hàng
+    echo "<form action='#' method='post' id='orderForm'>";
+    echo '<div class="container">
+            <div class="column1">
+                <h2><a href="../html/index.php">TH FASHION</a></h2>
+                <p><span>Thông tin giao hàng</span></p>
+                <input placeholder="Họ và tên" autocapitalize="off" spellcheck="false" type="text" id="hoten" name="hoten" size="30" required/>
+                <input placeholder="Email" autocapitalize="off" spellcheck="false" type="email" id="email" name="email" required />
+                <input placeholder="Số điện thoại" autocapitalize="off" spellcheck="false" type="tel" id="sdt" name="sdt" required />
+                <input placeholder="Địa chỉ" autocapitalize="off" spellcheck="false" type="text" id="address" name="address" required />
+
+                <p><span>Phương thức vận chuyển</span></p>
+                <input type="text" readonly value="Giao hàng tận nơi" id="vanchuyen" />
+                <p><span>Phương thức thanh toán</span></p>
+                <input type="text" readonly value="Thanh toán khi giao hàng (COD)" id="vanchuyen" />
             </div>
-            <div class="huyen">
-                <label class="fiel-label" for="shipping_district">Quận/huyện</label>
-                <select name="shipping_district" id="shipping_district" class="diachi" disabled>
-                    <option value="">Quận/huyện</option>
-                </select>
-            </div>
-            <div class="xa">
-                <label class="fiel-label" for="shipping_ward">Phường/xã</label>
-                <select name="shipping_ward" id="shipping_ward" class="diachi" disabled>
-                    <option value="">Phường/xã</option>
-                </select>
-            </div>
-            <p><span>Phương thức vận chuyển</span></p>
-            <input type="text" readonly value="Giao hàng tận nơi" id="vanchuyen" />
-            <p><span>Phương thức thanh toán</span></p>
-            <input type="text" readonly value="Thanh toán khi giao hàng (COD)" id="vanchuyen" />
+            <div class="divider"></div>
+            <div class="column2">';
+
+    $totalPrice = 0;
+    $shippingCost = 30000; // Giá cố định cho phí vận chuyển
+
+    // Lặp qua các sản phẩm trong giỏ hàng
+    foreach ($idSPArray as $index => $idSP) {
+        $quantity = isset($quantityArray[$index]) ? intval($quantityArray[$index]) : 1;
+
+        // Truy vấn sản phẩm từ cơ sở dữ liệu
+        $sql = "SELECT * FROM sanpham WHERE idSP = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $idSP);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+
+        if ($row) {
+            $price = floatval(str_replace(',', '', $row['price']));
+            $itemTotal = $price * $quantity;
+            $totalPrice += $itemTotal;
+
+            // Hiển thị thông tin sản phẩm
+            echo "<div class='cart-content'>";
+            echo "<div class='cart-box'>";
+            echo "<img src='../img/" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['tenSP']) . "' class='cart-img' />";
+            echo "<div class='detail-box'>";
+            echo "<div class='cart-product-title'>" . htmlspecialchars($row['tenSP']) . "</div>";
+            echo "<div class='cart-price'><span>" . number_format($price, 0, ',', '.') . "</span><sup>đ</sup></div>";
+            echo "<div>Số lượng: " . $quantity . "</div>";
+            echo "</div>";
+            echo "<div class='border'></div>";
+            echo "</div>";
+            echo "</div>";
+        }
+        $stmt->close();
+    }
+
+    $finalTotal = $totalPrice + $shippingCost;
+
+    echo "
+        <div class='border'></div>
+        <div class='calculate'>
+            <div class='calculate-title'>Tạm tính</div>
+            <div class='calculate-price'><span>" . number_format($totalPrice, 0, ',', '.') . "</span><sup>đ</sup></div>
         </div>
-        <div class="divider"></div>
-        <div class="column2">
-            <?php
-            require_once "../html/connectdb.php";
-            $conn = new mysqli($host, $username, $password, $dbname);
-            // Lấy ID sản phẩm từ URL
-            // Lấy ID sản phẩm từ URL
-            $idSP = isset($_GET['idSP']) ? $_GET['idSP'] : null;
-            if ($idSP === null) {
-                die("ID sản phẩm không được cung cấp");
-            }
+        <div class='ship'>
+            <div class='shipping-title'>Phí vận chuyển</div>
+            <div class='shipping-price'><span>" . number_format($shippingCost, 0, ',', '.') . "</span><sup>đ</sup></div>
+        </div>
+        <div class='border'></div>
+        <div class='total'>
+            <div class='total-title'>Tổng tiền</div>
+            <div class='total-price'><span>" . number_format($finalTotal, 0, ',', '.') . "</span><sup>đ</sup></div>
+        </div>
+        <div class='dat-hang'>
+            <button class='dat' type='submit'>Đặt hàng</button>
+        </div>
+    </div>
+    </form>";
 
-            // Chuẩn bị câu truy vấn SQL
+    // Xử lý đơn hàng khi nhấn nút "Đặt hàng"
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $hoTen = htmlspecialchars($_POST['hoten']);
+        $email = htmlspecialchars($_POST['email']);
+        $sdt = htmlspecialchars($_POST['sdt']);
+        $address = htmlspecialchars($_POST['address']);
+
+        foreach ($idSPArray as $index => $idSP) {
+            $quantity = isset($quantityArray[$index]) ? intval($quantityArray[$index]) : 1;
+
+            // Truy vấn sản phẩm
             $sql = "SELECT * FROM sanpham WHERE idSP = ?";
-
-            // Chuẩn bị statement để tránh SQL injection
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s", $idSP);
             $stmt->execute();
             $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    // Tính giá cả và phí vận chuyển
-                    $price = floatval(str_replace(',', '', $row['price']));
-                    $quantity = 1; // Số lượng mua
-                    $shippingCost = 30000; // Giá cố định cho phí vận chuyển
-
-                    // Tính tổng tiền
-                    $totalPrice = $price * $quantity + $shippingCost;
-
-                    // Hiển thị thông tin sản phẩm
-                    echo "<form action='#' method='post' id='orderForm'>";
-                    echo "<div class='cart-content'>";
-                    echo "<div class='cart-box'>";
-                    echo "<img src='../img/" . htmlspecialchars($row['image']) . "' alt='" . htmlspecialchars($row['tenSP']) . "' class='cart-img' />";
-                    echo "<div class='detail-box'>";
-                    echo "<div class='cart-product-title'>" . htmlspecialchars($row['tenSP']) . "</div>";
-                    echo "<div class='cart-price'><span>" . number_format(floatval(str_replace(',', '', $row['price'])), 0, ',', '.') . "</span><sup>đ</sup></div>";
-                    echo "<input type='number' value='1' min='1' class='cart-quantity' />";
-                    echo "</div>";
-                    echo "<div class='border'></div>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "
-              <div class='discount'>
-                  <input type='text' placeholder='Mã giảm giá' id='code' name='discountCode' />
-                  <button id='use'>Sử dụng</button>
-              </div>
-              <div class='border'></div>
-              <div class='calculate'>
-                  <div class='calculate-title'>Tạm tính</div>
-                  <div class='calculate-price'><span>" . number_format($price * $quantity, 0, ',', '.') . "</span><sup>đ</sup></div>
-              </div>
-              <div class='ship'>
-                  <div class='shipping-title'>Phí vận chuyển</div>
-                  <div class='shipping-price'><span>" . number_format($shippingCost, 0, ',', '.') . "</span><sup>đ</sup></div>
-              </div>
-              <div class='border'></div>
-              <div class='total'>
-                  <div class='total-title'>Tổng tiền</div>
-                  <div class='total-price'><span>" . number_format($totalPrice, 0, ',', '.') . "</span><sup>đ</sup></div>
-              </div>
-              <div class='dat-hang'>
-                  <button class='dat' type='submit'>Đặt hàng</button>
-              </div>
-          </form>
-          ";
-                    break;
-                }
-            } else {
-                echo "Sản phẩm không tồn tại";
-            }
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Lấy thông tin từ form
+            if ($row) {
                 $tenSP = htmlspecialchars($row['tenSP']);
                 $image = htmlspecialchars($row['image']);
                 $price = floatval(str_replace(',', '', $row['price']));
-                $quantity = 1;
-
-                // Tính toán tổng tiền
-                $totalPrice = $price * $quantity + 30000;
+                $itemTotal = $price * $quantity;
 
                 // Lưu thông tin vào bảng order
-                // $sql = "INSERT INTO orders (idSP,tenSP, image, quantity,price, totalPrice)
-                //         VALUES (('" . $idSP . "', '" . $tenSP . "', '" . $image . "', '" . $quantity . "','" . $price . "','" . $totalPrice . "')";
-                $sql = "INSERT INTO orders (idSP, tenSP, image, quantity, price, totalPrice)
-        VALUES (?, ?, ?, ?, ?, ?)";
-                $stmt1 = $conn->prepare($sql);
-                $stmt1->bind_param("ssssss", $idSP, $tenSP, $image, $quantity, $price, $totalPrice);
-
-                if ($stmt1->execute()) {
-                    echo "<script>alert('Đặt hàng thành công!');</script>";
-                } else {
-                    echo "<script>alert('Lỗi khi lưu đơn hàng. Vui lòng thử lại.');</script>";
-                }
+                $sqlOrder = "INSERT INTO orders (idSP, tenSP, image, quantity, price, totalPrice, hoTen, email, sdt, address)
+                             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $stmtOrder = $conn->prepare($sqlOrder);
+                $stmtOrder->bind_param("ssssssssss", $idSP, $tenSP, $image, $quantity, $price, $itemTotal, $hoTen, $email, $sdt, $address);
+                $stmtOrder->execute();
+                $stmtOrder->close();
             }
             $stmt->close();
-            $conn->close();
-            ?>
-        </div>
+        }
+
+        echo "<script>alert('Đặt hàng thành công!');</script>";
+    }
+
+    $conn->close();
+    ?>
 </body>
 <script src="../js/address.js"></script>
 

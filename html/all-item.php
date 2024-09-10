@@ -63,99 +63,99 @@ if (isset($_SESSION['success_message'])) {
                         </li>
                         <li class="navbar-item">
                             <style>
-                            .contact-overlay {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background-color: rgba(0, 0, 0, 0.5);
-                                /* Màu nền mờ tối */
-                                z-index: 998;
-                                /* Dưới modal nhưng trên các nội dung khác */
-                            }
+                                .contact-overlay {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    /* Màu nền mờ tối */
+                                    z-index: 998;
+                                    /* Dưới modal nhưng trên các nội dung khác */
+                                }
 
-                            .contact-modal {
-                                display: none;
-                                position: fixed;
-                                top: 0;
-                                right: 0;
-                                height: 100%;
-                                width: 30%;
-                                background-color: white;
-                                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-                                z-index: 999;
-                                /* Trên overlay */
-                                overflow-y: auto;
-                                border-radius: 5px;
-                            }
+                                .contact-modal {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    right: 0;
+                                    height: 100%;
+                                    width: 30%;
+                                    background-color: white;
+                                    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                                    z-index: 999;
+                                    /* Trên overlay */
+                                    overflow-y: auto;
+                                    border-radius: 5px;
+                                }
 
-                            .contact-modal-content {
-                                padding: 20px;
-                                position: relative;
-                                top: 80px;
-                            }
+                                .contact-modal-content {
+                                    padding: 20px;
+                                    position: relative;
+                                    top: 80px;
+                                }
 
-                            .contact-close {
-                                color: #aaa;
-                                float: right;
-                                font-size: 28px;
-                                font-weight: bold;
-                            }
+                                .contact-close {
+                                    color: #aaa;
+                                    float: right;
+                                    font-size: 28px;
+                                    font-weight: bold;
+                                }
 
-                            .contact-close:hover,
-                            .contact-close:focus {
-                                color: black;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
+                                .contact-close:hover,
+                                .contact-close:focus {
+                                    color: black;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
 
-                            .facebook {
-                                display: flex;
-                            }
+                                .facebook {
+                                    display: flex;
+                                }
 
 
-                            .contact-modal-content h2 {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #990000;
-                                font-size: 33px;
-                            }
+                                .contact-modal-content h2 {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #990000;
+                                    font-size: 33px;
+                                }
 
-                            p {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+                                p {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
 
-                            .contact-sdt {
-                                left: 3px;
-                            }
+                                .contact-sdt {
+                                    left: 3px;
+                                }
 
-                            .contact-sdt i {
-                                padding: 15px 0px;
-                                font-size: 20px;
+                                .contact-sdt i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
 
-                            }
+                                }
 
-                            .email-contact i {
-                                padding: 15px 0px;
-                                font-size: 20px;
-                            }
+                                .email-contact i {
+                                    padding: 15px 0px;
+                                    font-size: 20px;
+                                }
 
-                            .facebook a {
-                                padding-top: 15px;
-                                padding-bottom: 40px;
-                            }
+                                .facebook a {
+                                    padding-top: 15px;
+                                    padding-bottom: 40px;
+                                }
 
-                            .thank {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 18px;
-                            }
+                                .thank {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 18px;
+                                }
                             </style>
                             <a href="#" class="navbar__link" id="contactModalLink">Liên Hệ</a>
 
@@ -244,26 +244,26 @@ if (isset($_SESSION['success_message'])) {
 
                         <a href="" class="seeall" style="text-decoration: none;">Xem tất cả</a>
                         <script>
-                        document.querySelector('.seeall').addEventListener('click', function(event) {
-                            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-                            alert('Không có thông báo mới');
-                        });
+                            document.querySelector('.seeall').addEventListener('click', function(event) {
+                                event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+                                alert('Không có thông báo mới');
+                            });
                         </script>
 
 
                     </div>
                     <div class="action__cart">
-                        <i class="fa-solid fa-cart-shopping cart__head"></i>
-                        </a>
+                        <a href="../sp/cart.php"><i class="fa-solid fa-cart-shopping cart__head"></i></a>
+
                     </div>
                     <script>
-                    // Tự động ẩn thông báo sau 2 giây
-                    setTimeout(function() {
-                        const message = document.querySelector('.success-message');
-                        if (message) {
-                            message.style.display = 'none';
-                        }
-                    }, 2000); // 2 giây
+                        // Tự động ẩn thông báo sau 2 giây
+                        setTimeout(function() {
+                            const message = document.querySelector('.success-message');
+                            if (message) {
+                                message.style.display = 'none';
+                            }
+                        }, 2000); // 2 giây
                     </script>
 
                     <!-- Bấm vào hiện form -->
@@ -276,21 +276,21 @@ if (isset($_SESSION['success_message'])) {
                         <div id="userInfo" class="user-info">
                             <h2>THÔNG TIN CỦA BẠN</h2>
                             <?php if (isset($_SESSION['login'])): ?>
-                            <div class="information">
+                                <div class="information">
 
-                                <p class="name-login"><strong>Họ và tên:<span
-                                            class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span>
-                                    </strong> </p>
-                                <p class="email-login"><strong>Email:<span
-                                            class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong>
-                                </p>
-                                <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span
-                                                class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong>
-                                </p>
-                            </div>
-                            <a href="logout.php" class="logout">Đăng xuất</a>
+                                    <p class="name-login"><strong>Họ và tên:<span
+                                                class="information__user-name"><?php echo htmlspecialchars($_SESSION['login']); ?></span>
+                                        </strong> </p>
+                                    <p class="email-login"><strong>Email:<span
+                                                class="information__user-email"><?php echo htmlspecialchars($_SESSION['email']); ?></span></strong>
+                                    </p>
+                                    <p class="sdt"><strong>SĐT :<span class="information__user-sdt"><span
+                                                    class="sdt-have0">0</span><?php echo htmlspecialchars($_SESSION['sdt']); ?></span></strong>
+                                    </p>
+                                </div>
+                                <a href="logout.php" class="logout">Đăng xuất</a>
                             <?php else: ?>
-                            <p>Bạn chưa đăng nhập</p>
+                                <p>Bạn chưa đăng nhập</p>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -386,7 +386,7 @@ if (isset($_SESSION['success_message'])) {
                 </div>
                 <div class="name-item" style="text-align: center">' . htmlspecialchars($row["tenSP"]) . '</div>
                 <div class="cost-item" style="text-align: center"><span>' . number_format($row["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                <a href="../html/checkout.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
+                <a href="../html/muangay.php?idSP=' . htmlspecialchars($row["idSP"]) . '" class="buy">Mua ngay</a>
             </div>
         </a>
         ';

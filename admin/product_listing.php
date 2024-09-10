@@ -48,39 +48,73 @@ function add_product($con)
 // Hàm để cập nhật sản phẩm
 function update_product($con)
 {
-    global $con;
-    $idSP = $_GET['idSP'];
-    $tenSP = $_POST['tenSP'];
-    $gia = $_POST['price'];
-    $image = $_FILES['image']['name'];
+    $idSP = $_GET['idSP']; // Lấy từ POST thay vì GET
+    $updates = [];
 
-    $target_dir = "../img/";
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    $uploadOk = 1;
-    $imageType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    // Kiểm tra và cập nhật tên sản phẩm
+    if (!empty($_POST['tenSP'])) {
+        $tenSP = mysqli_real_escape_string($con, $_POST['tenSP']);
+        $updates[] = "tenSP='$tenSP'";
+    }
 
-    if ($imageType != "jpg" && $imageType != "png" && $imageType != "jpeg") {
-        echo "Vui lòng tải lên hình ảnh có định dạng JPG, JPEG, PNG.";
+    // Kiểm tra và cập nhật giá sản phẩm
+    if (!empty($_POST['price'])) {
+        $gia = mysqli_real_escape_string($con, $_POST['price']);
+        $updates[] = "price='$gia'";
+    }
+
+    // Kiểm tra và xử lý hình ảnh nếu có upload
+    if (!empty($_FILES['image']['name'])) {
+        $image = $_FILES['image']['name'];
+        $target_dir = "../img/";
+        $target_file = $target_dir . basename($image);
+        $imageType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check file type
+        if ($imageType != "jpg" && $imageType != "png" && $imageType != "jpeg") {
+            echo "Vui lòng tải lên hình ảnh có định dạng JPG, JPEG, PNG.";
+            return false;
+        }
+
+        // Check file size
+        if ($_FILES["image"]["size"] > 500000) {
+            echo "Hình ảnh vượt quá kích thước cho phép. Kích thước tối đa là 500KB.";
+            return false;
+        }
+
+        // Kiểm tra trạng thái upload file
+        if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            // Move uploaded file
+            if (!move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                echo "Có lỗi xảy ra khi upload hình ảnh.";
+                return false;
+            }
+
+            // Thêm cột image vào câu lệnh update nếu hình ảnh upload thành công
+            $updates[] = "image='$image'";
+        } else {
+            echo "Lỗi upload hình ảnh: " . $_FILES['image']['error'];
+            return false;
+        }
+    }
+
+    // Kiểm tra xem có thay đổi gì không
+    if (empty($updates)) {
         return false;
     }
 
-    if ($_FILES["image"]["size"] > 500000) {
-        echo "Hình ảnh vượt quá kích thước cho phép. Kích thước tối đa là 500KB.";
-        return false;
-    }
+    // Câu lệnh SQL để cập nhật
+    $sql = "UPDATE sanpham SET " . implode(", ", $updates) . " WHERE idSP='$idSP'";
 
-    if (!move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        echo "Có lỗi xảy ra khi upload hình ảnh.";
-        return false;
-    }
-
-    $sql = "UPDATE sanpham SET tenSP='" . $tenSP . "', price='" . $gia . "', image='" . $image . "' WHERE idSP='" . $idSP . "'";
+    // Thực hiện truy vấn
     if (mysqli_query($con, $sql)) {
         echo "Sản phẩm đã được cập nhật thành công!";
     } else {
         echo "Lỗi khi cập nhật sản phẩm: " . mysqli_error($con);
     }
 }
+
+
 
 // Hàm để xóa sản phẩm
 function delete_product($con)
@@ -125,7 +159,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'add') {
 
     <!-- Form cập nhật sản phẩm -->
     <?php
-    if (isset($_GET['action']) && $_GET['action'] == 'edit') {
+    if (isset($_GET['action']) && $_GET['action'] == 'update') {
         $idSP = $_GET['idSP'];
         $sql = "SELECT * FROM sanpham WHERE idSP='$idSP'";
         $result = mysqli_query($con, $sql);
@@ -137,11 +171,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'add') {
             <label for="tenSP">Tên sản phẩm:</label>
             <input type="text" id="tenSP" name="tenSP" value="<?php echo $row['tenSP']; ?>" required><br><br>
             <label for="gia">Giá:</label>
-            <input type="number" id="gia" name="gia" value="<?php echo $row['price']; ?>" required><br><br>
+            <input type="number" id="gia" name="price" value="<?php echo $row['price']; ?>" required><br><br>
+            <!-- Chỉnh lại name thành "price" -->
             <label for="image">Hình ảnh:</label>
             <input type="file" id="image" name="image" accept="image/*"><br><br>
             <button type="submit" name="submit">Cập nhật sản phẩm</button>
         </form>
+
     <?php
     }
     ?>
@@ -177,7 +213,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'add') {
                 <td><?php echo $row['tenSP']; ?></td>
                 <td><?php echo number_format($row['price'], 0, ',', '.'); ?> đ</td>
                 <td>
-                    <a href="?action=edit&idSP=<?php echo $row['idSP']; ?>">Sửa</a> |
+                    <a href="?action=update&idSP=<?php echo $row['idSP']; ?>">Sửa</a> |
                     <a href="?action=delete&idSP=<?php echo $row['idSP']; ?>"
                         onclick="return confirm('Bạn chắc chắn muốn xóa sản phẩm này?')">Xóa</a>
                 </td>

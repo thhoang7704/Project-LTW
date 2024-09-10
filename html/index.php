@@ -258,8 +258,9 @@ if (isset($_SESSION['success_message'])) {
 
                     </div>
                     <div class="action__cart">
-                        <i class="fa-solid fa-cart-shopping cart__head"></i>
-                        </a>
+                        <a href="../sp/cart.php"><i class="fa-solid fa-cart-shopping cart__head"></i></a>
+
+
                     </div>
                     <script>
                         // Tự động ẩn thông báo sau 2 giây
@@ -475,7 +476,7 @@ if (isset($_SESSION['success_message'])) {
                                 </div>
                                 <div class="name-item" style="text-align: center">' . htmlspecialchars($product["tenSP"]) . '</div>
                                 <div class="cost-item" style="text-align: center"><span>' . number_format($product["price"], 0, ',', '.') . '</span><sup>đ</sup></div>
-                                <a href="../html/checkout.php?idSP=' . htmlspecialchars($product["idSP"]) . '" class="buy">Mua ngay</a>
+                                <a href="../html/muangay.php?idSP=' . htmlspecialchars($product["idSP"]) . '" class="buy">Mua ngay</a>
                             </div>
                         </a>
                         ';
@@ -494,29 +495,6 @@ if (isset($_SESSION['success_message'])) {
         <span> Xem thêm >
         </span>
     </a>
-    <div class="cart">
-        <h2 class="cart-title">GIỎ HÀNG CỦA BẠN</h2>
-        <!-- <div class="cart-content">
-            <div class="cart-box">
-                <img src="../img/2.png" alt="" class="cart-img">
-                <div class="detail-box">
-                    <div class="cart-product-title">STUFFED WOLF TEE</div>
-                    <div class="cart-price"><span>490.000</span><sup>đ</sup></div>
-                    <input type="number" value="1" class="cart-quantity">
-                </div>
-                <i class="fa-solid fa-trash cart-remove"></i>
-            </div>
-        </div> -->
-        <!-- total -->
-        <div class="total">
-            <div class="total-title">Tổng tiền:</div>
-            <div class="total-price"><span>0</span><sup>đ</sup></div>
-        </div>
-        <!-- button -->
-        <button type="button" class="btn-buy">Thanh toán</button>
-        <!-- close -->
-        <i class="fa-solid fa-x" id="close-cart"></i>
-    </div>
     <script src="../js/cart.js"></script>
     <footer>
         <div class="footer-container">
